@@ -5,11 +5,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
 }
-
+body, input, select, textarea {
+  font-size: 1.5rem;
+  font-family: 'Poppins',helvetica, arial;
+}
+#root {
+  height: 100vh;
+  margin: 0;
+}
 .ff-pop {
   font-family: 'Poppins', sans-serif;
 }
 .ff-itali{
   font-family: 'Italianno', cursive;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #203040;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* custom */
+.content {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.main {
+  flex: 3 60rem;
+}
+.sidebar {
+  flex: 1 20rem;
+}
+.tst{
+  border: 1px solid #000;
+}
+/* height */
+.h-20 {
+  height: 20vh;
+}
+.h-40 {
+  height: 40vh;
+}
+.h-50 {
+  height: 50vh;
+}
+.h-60 {
+  height: 60vh;
+}
+.h-75 {
+  height: 75vh;
+}
+.h-80 {
+  height: 80vh;
+}
+
+/* card decoration */
+.card-deco-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  margin: 8vh auto 4vh;
 }
