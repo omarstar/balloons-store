@@ -1,0 +1,49 @@
+.nav-box {
+    position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 12vh;
+}
+
+.navbar-brand img {
+  width: 11vw;
+}
+.nav-item {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  outline: 0;
+  letter-spacing: 0.075em;
+  padding: 0.5em 0.8em 0.5em 0.8em;
+  
+}
+.navbar-collapse ul {
+  margin: auto;
+}
+.nav-item a:hover {
+  color: #4f0;
+  box-shadow: 2px 2px 3px #405;
+  border-radius: 50px;
+}
+.nav-item a {
+  color: #405;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #405;
+  }
+  .nav-item a {
+    color: #fff;
+  }
+  .dropdown-menu a {
+    color: #405;
+    
+  }
+  .dropdown-menu a:hover,.nav-item a:hover {
+    box-shadow: none;    
+  }
+
+}
