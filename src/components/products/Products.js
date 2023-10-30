@@ -1,6 +1,8 @@
 import "./products.css"
 import Product from "./Product";
 const Products = ({products}) => {
+    console.log('products', products)
+    console.log('products', products.length)
     return ( 
         <>
         {/* <div className="product">
@@ -19,12 +21,19 @@ const Products = ({products}) => {
         
         <div>
             <ul className="products">
-                {products.map(product => (
-                    <li>
-                        <Product product={product} />
-                    </li>
-                )
-                )}
+                {
+                    products.length === 0 ?
+                         <p>no results using this filter</p>
+                    :
+                    products.map(product => {
+                        return (
+                        <li key={product._id}>
+                            <Product product={product} />
+                        </li>
+                        )
+                    } )
+                    
+                }
             </ul>
         </div>
         </>

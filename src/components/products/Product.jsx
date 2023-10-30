@@ -1,5 +1,3 @@
-import pla from "../../assets/images/Facebook-Post-1-600x600.jpg"
-import pla2 from "../../assets/images/BBM209-82656_300x.webp"
 import formatCurrency from "../../utils/helpers";
 
 const Product = ({product}) => {
@@ -12,7 +10,6 @@ const Product = ({product}) => {
         }
     }
 
-    console.log('first', getDoctorImage(product.image))
     return ( 
         <>
             <div class="item-container item-inner">

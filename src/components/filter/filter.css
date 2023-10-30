@@ -1,0 +1,17 @@
+.filter-wrapper {
+    background: #405;
+}
+.filter-inner {
+    justify-content: space-around;
+}
+.filter-inner div {
+    width: 20vw;
+    color: white;
+    flex: 1;
+}
+.filter-flex-space{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0.1rem #c0c0c0 solid;
+}
