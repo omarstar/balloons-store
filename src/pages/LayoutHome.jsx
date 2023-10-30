@@ -8,8 +8,8 @@ const LayoutHome = () => {
             <main>
                 <div className="content flex-column">
                     <section className="decoration-section"><DecorationList/></section>
-                    <div className="main"><ContactUs /></div>
-                    <div className="sidebar"><AboutUs/></div>
+                    <div id="contactus" className="main"><ContactUs /></div>
+                    <div id="aboutus" className="sidebar"><AboutUs /></div>
                 </div>
             </main>
         </>

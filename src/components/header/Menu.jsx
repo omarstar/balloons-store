@@ -31,10 +31,10 @@ const Menu = () => {
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT US</a>
+                    <a class="nav-link" href="#aboutus">ABOUT US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT US</a>
+                    <a class="nav-link" href="#contactus">CONTACT US</a>
                 </li>
                 </ul>
             </div>

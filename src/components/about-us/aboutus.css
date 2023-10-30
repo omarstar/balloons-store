@@ -1,9 +1,9 @@
 .aboutus-desc h3{
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .aboutus-desc p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .aboutus-image-box {
     display: flex;
@@ -14,10 +14,12 @@
     width: 20vw;
     height: auto;
 }
-.aboutus-title {
+
+.aboutus-title h3 {
+    font-family: Italianno;
     color: #000;
     text-align: center;
-    font-family: Italianno;
+    
     font-size: 4rem;
     font-style: normal;
     font-weight: 400;
