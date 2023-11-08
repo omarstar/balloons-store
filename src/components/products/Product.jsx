@@ -1,14 +1,14 @@
-import formatCurrency from "../../utils/helpers";
+import formatCurrency, { getDoctorImage } from "../../utils/helpers";
 
-const Product = ({product}) => {
+const Product = ({product, addtoCart}) => {
 
-    const getDoctorImage = (id) => {
-        try {
-            return  require(`../../assets/images/balloons/${id}.png`)
-        } catch (error) {
-            return null
-        }
-    }
+    // const getDoctorImage = (id) => {
+    //     try {
+    //         return  require(`../../assets/images/balloons/${id}.png`)
+    //     } catch (error) {
+    //         return null
+    //     }
+    // }
 
     return ( 
         <>
@@ -38,7 +38,7 @@ const Product = ({product}) => {
                     <i class="fa-solid fa-star-half-stroke"></i>
                 </ul>
                 <p class="item-price">{formatCurrency(product.price)} <sup>$</sup></p>
-                <button class="item-cart-btn">Add To Cart</button>
+                <button onClick={()=> addtoCart(product)} class="item-cart-btn">Add To Cart</button>
             </div>    
         </>
      );

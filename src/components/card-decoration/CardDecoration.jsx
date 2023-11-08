@@ -45,7 +45,7 @@ const CardDecoration = ({data, align}) => {
         {/* <div className="container"> */}
         <ContainerDeco theme={{bgcolor: data.bgColor}} br={borderRadiusSide}>
 
-            <div className="row">
+            <div className="row h-70">
                 <div className={"col-12 col-lg-6 "+ alignOrder}>
                     {/* <div className="image-wrapper">
                         <div className="image-deco"/>
@@ -53,8 +53,8 @@ const CardDecoration = ({data, align}) => {
                     <img className=" mx-auto d-block img-box" src={data.srcUrl} alt="img"/>
                 </div>
                 <div className="col-12 col-lg-6">
-                    <div className="row h-20 deco-title ff-itali">Balloon Arches</div>
-                    <div className="row h-60 px-4 deco-desc">
+                    <div className="row h-15 deco-title ff-itali">Balloon Arches</div>
+                    <div className="row h-40 px-4 deco-desc">
                         <div className="col">
                             <ul>
                                 <li>Transform your room instantly with our ceilingand wall décor</li>
@@ -63,7 +63,7 @@ const CardDecoration = ({data, align}) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="row  h-20 justify-content-center align-items-center">
+                    <div className="row  h-15 justify-content-center align-items-center">
                         <ButtonDeco theme={{btncolor: data.btnColor, txtcolor: data.txtColor}} >Learn More</ButtonDeco>
                     </div>
                 </div>

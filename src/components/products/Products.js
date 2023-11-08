@@ -1,8 +1,6 @@
 import "./products.css"
 import Product from "./Product";
-const Products = ({products}) => {
-    console.log('products', products)
-    console.log('products', products.length)
+const Products = ({products, addtoCart}) => {
     return ( 
         <>
         {/* <div className="product">
@@ -28,7 +26,7 @@ const Products = ({products}) => {
                     products.map(product => {
                         return (
                         <li key={product._id}>
-                            <Product product={product} />
+                            <Product product={product} addtoCart={addtoCart} />
                         </li>
                         )
                     } )

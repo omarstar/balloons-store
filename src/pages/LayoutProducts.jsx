@@ -2,12 +2,14 @@ import { useState } from "react";
 import Filter from "../components/filter/Filter";
 import Products from "../components/products/Products";
 import data from "../data.json"
+import Cart from "../components/cart/Cart";
 
 const LayoutProducts = () => {
 
     const [products, setProducts] = useState(data.products);
     const [size, setSize] = useState("")
     const [sort, setSort] = useState("")
+    const [cartItems, setCartItems] = useState([])
 
     const  filterProducts = (event)=>{
         const {value} = event.target;
@@ -24,6 +26,24 @@ const LayoutProducts = () => {
         }))
         }
     }
+
+    const handleAddtoCart = (product) => {
+        const cart = cartItems.slice();
+        console.log('cart', cart)
+        let alreadyInCart = false;
+        cart.forEach(item => {
+            if(item._id === product._id){
+                item.count ++;
+                alreadyInCart = true;
+            }
+        });
+        if(!alreadyInCart){
+            cart.push({...product, count: 1})
+        }
+        console.log('after push', cart)
+        setCartItems(cart);
+    }
+
     const sortProducts = (event) => {
         const sortValue = event.target.value;
         console.log('sortValue', sortValue)
@@ -40,17 +60,31 @@ const LayoutProducts = () => {
         )))
     }
 
+const handleRemoveCart = (product) => {
+    const cart = cartItems.slice();
+    const updatedCart = cart.filter(item=> {
+        return item._id !== product._id
+    })
+    setCartItems(updatedCart)
+
+}
+
     return ( 
         <>
-        <div className="main">
-            <Filter 
-            count={products.length} 
-            sort={sort} 
-            size={size}
-            filterProducts={filterProducts}
-            sortProducts={sortProducts}
-             />
-            <Products products={products}/>
+        <div className="content">
+            <div className="main">
+                <Filter
+                count={products.length}
+                sort={sort}
+                size={size}
+                filterProducts={filterProducts}
+                sortProducts={sortProducts}
+                 />
+                <Products products={products} addtoCart={handleAddtoCart} />
+            </div>
+            <div className="sidebar">
+                <Cart cartItems={cartItems} removeCartFromCart={handleRemoveCart} />
+            </div>
         </div>
         </>
      );
