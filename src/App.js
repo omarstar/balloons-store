@@ -5,14 +5,6 @@ import Footer from "./components/footer/Footer";
 import { Routes } from "./routes";
 
 class App extends React.Component{
-  // constructor(){
-  //   super();
-  //   this.state = {
-  //     products: data.products,
-  //     size: "",
-  //     sort: ""
-  //   };
-  // }
   
   render(){
           
