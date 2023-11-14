@@ -88,6 +88,8 @@ main {
 }
 .main {
   flex: 3 50rem;
+  margin: 1rem 0;
+  box-shadow: 0 3px 10px rgba(4,0,5,0.2);
 }
 .sidebar {
   flex: 1 20rem;

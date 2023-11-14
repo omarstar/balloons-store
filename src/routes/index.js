@@ -1,4 +1,4 @@
-// import AnonymousLayout from "../layouts/AnonymousLayout"
+import AnonymousLayout from "../layouts/AnonymousLayout"
 import MainLayout from "../layouts/MainLayout"
 import LayoutCart from "../pages/LayoutCart";
 import LayoutHome from "../pages/LayoutHome"
@@ -8,19 +8,19 @@ import { renderRoutes } from "./generate-routes";
 /* isPublic used if page is public or require login */
 /* hasSiderLink to check to render on menu or not */
 export const routes = [
-    // {
-    //     layout: AnonymousLayout,
-    //     routes: [
-    //         {
-    //             name: 'login',
-    //             title: 'Login page',
-    //             component: Login,
-    //             path: '/login',
-    //             isPublic: true
-    //         }
-    //     ]
+    {
+        layout: AnonymousLayout,
+        routes: [
+            {
+                name: 'login',
+                title: 'Login page',
+                component: LayoutProducts,
+                path: '/login',
+                // isPublic: true
+            }
+        ]
         
-    // },
+    },
     {
         layout: MainLayout,
         routes: [

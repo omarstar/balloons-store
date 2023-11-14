@@ -1,6 +1,6 @@
 const CartColumns = () => {
     return ( 
-      <div className="container-fluid text-center d-none d-lg-block">
+      <div className="container-fluid text-center d-none d-lg-block border-bottom">
         <div className="row">
           <div className="col-10 mx-auto col-lg-6">
             <p className="text-uppercase">products</p>
@@ -11,12 +11,12 @@ const CartColumns = () => {
           </div> */}
           {/* <div className="col-10 mx-auto col-lg-2">
           </div> */}
-          <div className="col-10 mx-auto col-lg-2">
+          <div className="col-10 mx-auto col-lg-4">
             <p className="text-uppercase">quantity</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
+          {/* <div className="col-10 mx-auto col-lg-2">
             <p className="text-uppercase">remove</p>
-          </div>
+          </div> */}
           <div className="col-10 mx-auto col-lg-2">
             <p className="text-uppercase">total</p>
           </div>

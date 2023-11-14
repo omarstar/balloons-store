@@ -7,11 +7,11 @@ const Footer = () => {
 				<div>
 					<a
 						href="https://wa.me/971553208899"
-						class="whatsapp_float"
+						className="whatsapp_float"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+						<i className="fa-brands fa-whatsapp whatsapp-icon"></i>
 					</a>
 				</div>
 				<footer id="footer" className="">

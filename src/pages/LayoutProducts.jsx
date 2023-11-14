@@ -90,7 +90,7 @@ const ImageDeco = styled.div.attrs(()=>({
 }))`
         width: 100%;
         height: 300px;
-        background: url(${props => props.imgPath}), lightgray no-repeat 60% / cover ;
+        background: url(${props => props.imgpath}), lightgray no-repeat 60% / cover ;
         `
     return ( 
         <>
@@ -98,7 +98,7 @@ const ImageDeco = styled.div.attrs(()=>({
             <div className="main">
                 <div className="category-banner-container bg-gray">
                     {/* banner */}
-                    <ImageDeco imgPath={getImage("../assets/images/banners/NationalDay-Banner.webp")}>
+                    <ImageDeco imgpath={getImage("../assets/images/banners/NationalDay-Banner.webp")}>
                         <div className="container position-relative">
                             <div className="row">
                                 <div className="pl-lg-5 pb-5 pb-md-0 col-md-5 col-xl-4 col-lg-4 offset-1">

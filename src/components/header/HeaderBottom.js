@@ -6,7 +6,7 @@ const HeaderBottom = () => {
     return ( 
         <div className="header-bottom">
             <div className="navigation-main main-nav clearfix hidden-xs hidden-sm">
-                <div class="menu-header-menu-container">
+                <div className="menu-header-menu-container">
                     <MenuDesktop />
                     {/* <Menu /> */}
                 </div>

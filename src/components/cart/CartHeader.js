@@ -1,7 +1,7 @@
 const CartHeader = ({itemsCount}) => {
     return ( 
         <div className="cart cart-header">
-            you have {itemsCount} in the cart{" "}
+            Shopping Cart: {itemsCount} selections in the cart{" "}
         </div>
      );
 }

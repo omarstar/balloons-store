@@ -1,7 +1,7 @@
 import "./filter.css"
 const Filter = ({count, sort, size, filterProducts, sortProducts}) => {
     return ( 
-        <div Name="filter-wrapper">
+        <div className="filter-wrapper">
             <div className="row filter-inner filter-flex-space">
                 <div className="filter-result">
                     {count} items

@@ -56,3 +56,14 @@
     cursor: pointer;
     transition: all .3s linear;
 }
+.qty-wheel {
+   border: 1px solid #405;
+}
+.cart_item-wrapper {
+   border-top: 1px solid #e7e2de;
+}
+.cart-icon {
+   position: absolute;
+  bottom: 0.5rem;
+  width: 100%;
+}
