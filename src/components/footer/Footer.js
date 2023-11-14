@@ -50,12 +50,12 @@ const Footer = () => {
 												<div className="col-12 col-lg-6" styles={"padding-left: 20px"}>
 												<dl className="contact">
 													<dt>LinkedIn</dt>
-													<dd><a href="https://www.linkedin.com/company/13413794/">linkedin.com/Infracom</a></dd>
+													<dd><a href="https://www.linkedin.com/company/funkyballoons">linkedin.com/funkyballoons</a></dd>
 													<dt>Facebook</dt>
-													<dd><a href="https://business.facebook.com/Infracom-200770853788242/">facebook.com/Infracom</a></dd>
+													<dd><a href="https://business.facebook.com/funkyballoons/">facebook.com/funkyballoons</a></dd>
 													<dt>WWW</dt>
-													<dd><a href="https://infracommunication.com">infracommunication.com</a></dd>
-													<dd><a href="mailto:sales@infracommunication.com">Sales@infracommunication.com</a></dd>
+													<dd><a href="https://infracommunication.com">funkyballoons.com</a></dd>
+													<dd><a href="mailto:sales@infracommunication.com">Sales@funkyballoons.com</a></dd>
 												</dl>
 											</div>
 											<div className="col-12 col-lg-6">

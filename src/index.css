@@ -91,6 +91,7 @@ main {
 }
 .sidebar {
   flex: 1 20rem;
+  margin: 2rem;
 }
 .tst{
   border: 1px solid #000;
@@ -132,6 +133,9 @@ main {
 }
 .h-80 {
   height: 80vh;
+}
+.h-100 {
+  
 }
 
 /* card decoration */

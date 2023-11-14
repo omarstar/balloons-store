@@ -11,11 +11,11 @@ const CardDecoration = ({data, align}) => {
         background-color: ${props => props.theme.btncolor};
         color: ${props => props.theme.txtcolor};
         border: none;
-        padding: 1.5rem;
+        // padding: 1.5rem;
         // font-size: 1.875rem;
-        width: 289px;
+        width: 235px;
         // height: 91px;
-        margin-bottom: 10vh;
+        // margin-bottom: 10vh;
     `
 
     // const themecolors = {
@@ -63,7 +63,7 @@ const CardDecoration = ({data, align}) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="row  h-15 justify-content-center align-items-center">
+                    <div className="row justify-content-center align-items-center buttonDeco-wrapper w-100">
                         <ButtonDeco theme={{btncolor: data.btnColor, txtcolor: data.txtColor}} >Learn More</ButtonDeco>
                     </div>
                 </div>
