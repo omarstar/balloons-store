@@ -2,17 +2,9 @@ footer {
     margin: 2.5em 0 0 0;
 }
 #footer-wrapper {
-    /*background: linear-gradient(to bottom right, var(--primary-color), 15%, transparent), radial-gradient(circle at 100% 0%, rgba(255,255,255,.2) 10%, transparent 20%) center center / 15px 15px, linear-gradient(to bottom right, var(--logo-blue), var(--logo-blue));*/
-     /* background-color: var(--primary-color); 
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("images/bg03.png"), url("images/bg02.png");
-    background-repeat: repeat-x, no-repeat, repeat;
-    position: relative;
-    background-size: 100% 100%, 100% 15em, auto auto;
-    background-position: top left, top center, top left;
-    padding: 7em 0 7em 0; */
+    background-color: #405;
+    /* background: linear-gradient(to bottom right, var(--primary-color), 15%, transparent), radial-gradient(circle at 100% 0%, rgba(255,255,255,.2) 10%, transparent 20%) center center / 15px 15px, linear-gradient(to bottom right, var(--logo-blue), var(--logo-blue)); */
+    
 }
 
 #footer {
@@ -26,7 +18,9 @@ footer {
     #footer h2 {
         font-size: 1.35em;
         color: #fff;
-        text-transform: uppercase;    }
+        text-transform: uppercase; 
+        margin: 1.5rem auto 1.5rem;
+    }
 
     #footer strong {
         color: #fff;
@@ -34,6 +28,7 @@ footer {
 
     #footer a {
         color: white;
+        text-decoration: none;
     }
 
     #footer .button.alt {
@@ -52,14 +47,19 @@ footer {
     }
     #footer ul{
         list-style: none;
+        border-left: 1px solid cornsilk;
+    }
+    #footer ol{
+        list-style: none;
     }
     #footer ul.menu {
         margin: 0;
     }
 
-    #footer dl.contact dt {
+    #footer dl.contact dt, #footer dl.contact dd {
         color: #ddd;
     }
+
 
 #copyright {
     border-top: solid 1px;

@@ -1,5 +1,5 @@
 import "./cart.css"
-import formatCurrency, { getDoctorImage } from "../../utils/helpers";
+import formatCurrency, { getImportedImage } from "../../utils/helpers";
 import CartEmpty from "./CartEmpty";
 import CartHeader from "./CartHeader";
 // import CartItem from "./CartItem";
@@ -29,14 +29,14 @@ const Cart = ({cartItems, removeCartFromCart}) => {
                             {
                                 cartItems && cartItems.map(item => (
                                 <li key={item._id}>
-                                    <div><img className="cart-image" src={getDoctorImage(item.image)} alt="cart look" /></div>
+                                    <div><img className="cart-image" src={getImportedImage(item.image)} alt="cart look" /></div>
                                     <div>
                                         <div>{item.title}</div>
                                         <div>{item.count}</div>
                                         <div className="right">
                                             {formatCurrency(item.price)} x {item.count}{" "}
                                             <div className="remove-button"
-                                            onClick={() => removeCartFromCart(item)}><i class="fa-solid fa-trash"></i></div>
+                                            onClick={() => removeCartFromCart(item)}><i className="fa-solid fa-trash"></i></div>
                                             {/* <button className="button"
                                             onClick={() => removeCartFromCart(item)}>Remove</button> */}
                                         </div>

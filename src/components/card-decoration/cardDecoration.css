@@ -4,14 +4,14 @@
 .deco-title {
     color: #000;
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: 400;
     justify-content: center;
     align-items: center;
 }
 .deco-desc {
     font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 300;
     flex-shrink: 0;
     /* width: 507px; */
@@ -30,5 +30,5 @@
 .img-box {
     width: auto;
     height: 60vh;
-    
+    border-radius: 0 0 10px 10px;
 }

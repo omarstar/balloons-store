@@ -4,7 +4,7 @@ import aboutusImage from "../../assets/images/icons/balloons.jpg"
 const AboutUs = () => {
     return ( 
         <>
-        <div class="aboutus-wrapper">
+        <div className="aboutus-wrapper">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

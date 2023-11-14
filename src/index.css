@@ -4,6 +4,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+html {
+  font-size: 16px;
+  letter-spacing: .01em;
+  line-height: 21px;
+  text-align: left;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,9 +19,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
 }
+:root {
+  --primary-color: #405;
+  --primary-light-color: #43ff64;
+}
+p {
+  margin: 0
+}
+ol,ul {
+  list-style: none;
+}
 body, input, select, textarea {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Poppins',helvetica, arial;
+}
+select {
+  padding: 0 10px;
 }
 #root {
   height: 100vh;
@@ -27,21 +46,26 @@ body, input, select, textarea {
 .ff-itali{
   font-family: 'Italianno', cursive;
 }
-a:hover {
+a {
   text-decoration: none;
 }
-
+a:hover {
+  color:#405
+}
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+/* grid */
 .grid-container {
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 11rem 1fr 5rem;
   grid-template-columns: 1fr;
   height: 100%;
 }
-header {
+.grid-header {
   grid-area: header;
-  background-color: #203040;
-  color: white;
   display: flex;
   align-items: center;
   padding: 0.5rem;
@@ -49,7 +73,7 @@ header {
 main {
   grid-area: main;
 }
-footer {
+.grid-footer {
   grid-area: footer;
   background-color: #405;
   color: white;
@@ -75,12 +99,21 @@ footer {
   font-size: 0.9rem;
   display: block;
 }
+.text-center {
+  text-align: center;
+}
 /* height */
 .h-15 {
   height: 15vh;
 }
 .h-20 {
   height: 20vh;
+}
+.h-30 {
+  height: 30vh;
+}
+.h-35 {
+  height: 35vh;
 }
 .h-40 {
   height: 40vh;
@@ -135,3 +168,4 @@ footer {
 .button-default-style {
   
 }
+

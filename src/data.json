@@ -4,7 +4,7 @@
             "_id":1,
             "image":"bbc",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs m 129",
             "availableSizes": ["XS","M"],
             "price":29.95
         },
@@ -12,7 +12,7 @@
             "_id":2,
             "image":"cbm",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs 231",
             "availableSizes": ["XS"],
             "price":31.45
         },
@@ -20,7 +20,7 @@
             "_id":3,
             "image":"uni",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon m 331",
             "availableSizes": ["M"],
             "price":31.45
         },
@@ -28,7 +28,7 @@
             "_id":4,
             "image":"gwc",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs 425",
             "availableSizes": ["XS"],
             "price":25.9
         },
@@ -36,7 +36,7 @@
             "_id":5,
             "image":"cbm",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon m 531",
             "availableSizes": ["M"],
             "price":31.45
         },
@@ -44,7 +44,7 @@
             "_id":6,
             "image":"bbc",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs m 615",
             "availableSizes": ["XS","M"],
             "price":15.25
         },
@@ -52,7 +52,7 @@
             "_id":7,
             "image":"uni",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs m 731",
             "availableSizes": ["XS","M"],
             "price":31.45
         },
@@ -60,7 +60,7 @@
             "_id":8,
             "image":"gwc",
             "title":"some title name",
-            "description":"Navy Metallic Latex Balloon",
+            "description":"Navy Metallic Latex Balloon xs m 855",
             "availableSizes": ["XS","M"],
             "price":55
         }

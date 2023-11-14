@@ -4,11 +4,17 @@ import CardDecoration from "./CardDecoration";
 const DecorationList = () => {
     return ( 
         <>
-            <div class="card-deco-wrapper f-right">
+            <div className="card-deco-wrapper f-right">
             <CardDecoration data={decorationItems[0]} align={"right"} />
             </div>
-            <div class="card-deco-wrapper">
+            <div className="card-deco-wrapper">
             <CardDecoration data={decorationItems[1]}/>
+            </div>
+            <div className="card-deco-wrapper f-right">
+            <CardDecoration data={decorationItems[2]} align={"right"} />
+            </div>
+            <div className="card-deco-wrapper">
+            <CardDecoration data={decorationItems[3]}/>
             </div>
         </>
      );

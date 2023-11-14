@@ -3,13 +3,17 @@ import Filter from "../components/filter/Filter";
 import Products from "../components/products/Products";
 import data from "../data.json"
 import Cart from "../components/cart/Cart";
+import { getImage, getLocalStorageValue } from "../utils/helpers";
+import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
+import styled from "styled-components";
 
 const LayoutProducts = () => {
 
     const [products, setProducts] = useState(data.products);
     const [size, setSize] = useState("")
     const [sort, setSort] = useState("")
-    const [cartItems, setCartItems] = useState([])
+    const [cartItems, setCartItems] = useState(getLocalStorageValue("cartItems") ? JSON.parse(getLocalStorageValue("cartItems")) : [])
+    const [crumbs, setCrumbs] = useState(['Home','Category','Sub Category'])
 
     const  filterProducts = (event)=>{
         const {value} = event.target;
@@ -29,7 +33,6 @@ const LayoutProducts = () => {
 
     const handleAddtoCart = (product) => {
         const cart = cartItems.slice();
-        console.log('cart', cart)
         let alreadyInCart = false;
         cart.forEach(item => {
             if(item._id === product._id){
@@ -40,8 +43,11 @@ const LayoutProducts = () => {
         if(!alreadyInCart){
             cart.push({...product, count: 1})
         }
-        console.log('after push', cart)
         setCartItems(cart);
+        console.log('cart after update', cart)
+        console.log('cart items after update', cartItems)
+        localStorage.setItem("cartItems", JSON.stringify(cart));
+        console.log('ls', getLocalStorageValue("cartItems"))
     }
 
     const sortProducts = (event) => {
@@ -66,24 +72,58 @@ const handleRemoveCart = (product) => {
         return item._id !== product._id
     })
     setCartItems(updatedCart)
-
+    console.log('cart items after remove', cartItems)
+    console.log('cart updated items after remove', updatedCart)
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart))
+    console.log('ls', getLocalStorageValue("cartItems"))
 }
 
+const selectedCrumb = (crumb) => {
+    console.log('crumb', crumb)
+}
+// {/* <div className="sidebar">
+//     <Cart cartItems={cartItems} removeCartFromCart={handleRemoveCart} />
+//                 </div> */}
+
+const ImageDeco = styled.div.attrs(()=>({
+    className: 'category-banner banner text-uppercase'
+}))`
+        width: 100%;
+        height: 300px;
+        background: url(${props => props.imgPath}), lightgray no-repeat 60% / cover ;
+        `
     return ( 
         <>
         <div className="content">
             <div className="main">
-                <Filter
-                count={products.length}
-                sort={sort}
-                size={size}
-                filterProducts={filterProducts}
-                sortProducts={sortProducts}
-                 />
-                <Products products={products} addtoCart={handleAddtoCart} />
-            </div>
-            <div className="sidebar">
-                <Cart cartItems={cartItems} removeCartFromCart={handleRemoveCart} />
+                <div className="category-banner-container bg-gray">
+                    {/* banner */}
+                    <ImageDeco imgPath={getImage("../assets/images/banners/NationalDay-Banner.webp")}>
+                        <div className="container position-relative">
+                            <div className="row">
+                                <div className="pl-lg-5 pb-5 pb-md-0 col-md-5 col-xl-4 col-lg-4 offset-1">
+                                    
+                                </div>
+                                <div className="pl-lg-3 col-md-4 offset-md-0 offset-1 pt-3">
+
+                                </div>
+                            </div>
+                        </div>
+                    </ImageDeco>
+                </div>
+
+                <div className="container">
+                    <NavBreadCrumb crumbs={crumbs} selected={selectedCrumb} />
+                    <Filter
+                    count={products.length}
+                    sort={sort}
+                    size={size}
+                    filterProducts={filterProducts}
+                    sortProducts={sortProducts}
+                     />
+                    <Products products={products} addtoCart={handleAddtoCart} />
+                </div>
+                                
             </div>
         </div>
         </>

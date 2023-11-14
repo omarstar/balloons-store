@@ -2,15 +2,25 @@ import "./footer.css"
 const Footer = () => {
     return ( 
         <>
-        {/* id="footer-wrapper" with padding making the huge line below */}
+        {/* id="footer-wrapper" with padding is making the huge line below */}
             <div id="footer-wrapper">
-				<footer id="footer" class="">
-					<div class="row">
-						<div class="col-lg-2 col-md-6 col-12">
+				<div>
+					<a
+						href="https://wa.me/971553208899"
+						class="whatsapp_float"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+					</a>
+				</div>
+				<footer id="footer" className="">
+					<div className="row">
+						<div className="col-lg-2 col-md-6 col-12">
 
 							<section>
-								<h2 className="ff-itali">Site map</h2>
-								<ul class="divided">
+								<h2 className="">Site map</h2>
+								<ul className="divided">
 									<li><a href="">HOME</a></li>
 									<li><a href="">ABOUT US</a></li>
 									<li><a href="">CONTACT US</a></li>
@@ -18,11 +28,11 @@ const Footer = () => {
 							</section>
 
 					    </div>
-					    <div class="col-lg-3 col-md-6 col-12">
+					    <div className="col-lg-3 col-md-6 col-12">
 
 							<section>
-								<h2 className="ff-itali">bALLOONS</h2>
-								<ul class="divided">
+								<h2 className="">bALLOONS</h2>
+								<ul className="divided">
 									<li><a href="">Bulk Balloons</a></li>
 									<li><a href="">Balloon Decorations</a></li>
 									<li><a href="">Holidays & events</a></li>
@@ -31,14 +41,14 @@ const Footer = () => {
 								</ul>
 							</section>
 						</div>
-						<div class="col-12 col-md-6 imp-medium">
+						<div className="col-12 col-md-6 imp-medium">
 
 
 								<section>
-									<h2 className="ff-itali">Get in touch</h2>
-											<div class="row">
-												<div class="col-12 col-lg-6" styles={"padding-left: 20px"}>
-												<dl class="contact">
+									<h2 className="">Get in touch</h2>
+											<div className="row">
+												<div className="col-12 col-lg-6" styles={"padding-left: 20px"}>
+												<dl className="contact">
 													<dt>LinkedIn</dt>
 													<dd><a href="https://www.linkedin.com/company/13413794/">linkedin.com/Infracom</a></dd>
 													<dt>Facebook</dt>
@@ -48,10 +58,10 @@ const Footer = () => {
 													<dd><a href="mailto:sales@infracommunication.com">Sales@infracommunication.com</a></dd>
 												</dl>
 											</div>
-											<div class="col-12 col-lg-6">
-												<dl class="contact">
+											<div className="col-12 col-lg-6">
+												<dl className="contact">
 													<dt>Our Address</dt>
-													<dd class="text-gray">
+													<dd className="text-gray">
 														<address>
 															JAFZA 14 | Office 434 | PO Box 262995<br />
 															Jebel Ali | Dubai<br />
@@ -59,21 +69,21 @@ const Footer = () => {
 														</address>
 													</dd>
 													<dt>Phone Us</dt>
-													<dd class="text-gray"><a href="tel:+97148876763">+971 4 887 6763</a> <br/> <a href="tel:+971553208899">+971 55 320 8899</a></dd>
+													<dd className="text-gray"><a href="tel:+97148876763">+971 4 887 6763</a> <br/> <a href="tel:+971553208899">+971 55 320 8899</a></dd>
 													<dt>Email Us</dt>
-													<dd class="text-gray"><a href="mailto:omar@infracom.me">balloon support mail</a></dd>
+													<dd className="text-gray"><a href="mailto:omar@infracom.me">balloon support mail</a></dd>
 												</dl>
 											</div>
 										</div>
 								</section>
 
 						</div>
-						<div class="col-12">
+						<div className="col-12">
 							<div id="copyright">
-								<ul class="menu">
+								<ol className="menu">
 									<li>&copy; Funky Balloons 2023. All rights reserved</li>
                                     <li>Design: <a href="https://www.">Omar Barakat | Balloon</a></li>
-								</ul>
+								</ol>
 							</div>
 						</div>
 					</div>

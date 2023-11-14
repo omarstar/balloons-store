@@ -4,9 +4,9 @@ const Products = ({products, addtoCart}) => {
     return ( 
         <>
         {/* <div className="product">
-            <div class="item-inner">
+            <div className="item-inner">
                 <a href={"#" + products[0]._id} className="item-image_wrapper">
-                    <div class="item-image-box">
+                    <div className="item-image-box">
                         <img src={pla} alt="prod_image" className="lazyloaded"></img>
                     </div>
                 </a>

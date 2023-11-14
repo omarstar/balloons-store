@@ -1,5 +1,6 @@
 // import AnonymousLayout from "../layouts/AnonymousLayout"
 import MainLayout from "../layouts/MainLayout"
+import LayoutCart from "../pages/LayoutCart";
 import LayoutHome from "../pages/LayoutHome"
 import LayoutProducts from "../pages/LayoutProducts"
 import NotFound from "../pages/NotFound";
@@ -46,6 +47,20 @@ export const routes = [
                         hasSiderLink: true,
                         component: LayoutProducts,
                         path: '/balloons'
+                    }
+                ]
+            },
+            {
+                name: 'car',
+                title: 'Cart',
+                hasSiderLink: true,
+                routes: [
+                    {
+                        name: 'cart-section',
+                        title: 'cart section',
+                        hasSiderLink: true,
+                        component: LayoutCart,
+                        path: 'balloons/cart'
                     }
                 ]
             },

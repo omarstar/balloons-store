@@ -39,3 +39,20 @@
    border-radius: 50% ;
    border-color: #405;
 }
+.cart-item-btn {
+   border: none;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    background-color: rgb(200, 142, 254);
+    color: #fff;
+    border-radius: .4rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s linear;
+}
