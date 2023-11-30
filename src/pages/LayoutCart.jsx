@@ -1,44 +1,43 @@
+import "../components/cart/cart.css"
+
+import { useSelector } from "react-redux";
 import CartColumns from "../components/cart/CartColumns";
 import CartEmpty from "../components/cart/CartEmpty";
 import CartHeader from "../components/cart/CartHeader";
 import { CartList } from "../components/cart/CartList";
 import CartTotal from "../components/cart/CartTotal";
+import Cart from "../components/cart/Cart";
 
 const LayoutCart = () => {
-    const cartItems = [{
-        "_id":1,
-        "image":"bbc",
-        "title":"some title name",
-        "description":"Navy Metallic Latex Balloon xs m 129",
-        "availableSizes": ["XS","M"],
-        "price":29.95
-    }]
+    const cart = useSelector((state)=> state.cart.cartItems);
+    console.log('cart', cart)
 
     return ( 
         <section>
-            <div className="container">
+            <Cart />
+            {/* <div className="container">
                 <div className="row">
-                    <CartHeader itemsCount={cartItems.length !== 0 ? cartItems.length : 0}/>
-                    {/* <div className="cart-header">
-                        <h1>My cart</h1>
-                    </div> */}
+                    <CartHeader itemsCount={cart.length !== 0 ? cart.length : 0}/>
                 </div>
                 {
-                    cartItems.length !== 0 ? (
+                    cart.length !== 0 ? (
                         <div className="content">
-                            <div className="main">
+                            <div className="cart-list">
                                 <CartColumns />
-                                <CartList cartItems={cartItems} />
+                                <CartList cartItems={cart} />
+
                             </div>
-                            <div className="sidebar">
-                            <CartTotal />
+                            <div className="cart-summary">
+                                <button className="clear-cart">Clear Cart</button>
+                                <CartTotal />
                             </div>
                         </div>
                     ) : (
                         <CartEmpty />
+
                     )
                 }
-            </div>
+            </div> */}
         </section>
      );
 }

@@ -5,9 +5,7 @@ export const CartList = ({cartItems}) => {
   return (
     <div className='container-fluid'>
         {cartItems && cartItems.map(
-            item => {
-                return <CartItem key={item.id} product={item} />
-            }
+            (item) => ( <CartItem key={item._id} product={item} /> )
         )}
     </div>
   )

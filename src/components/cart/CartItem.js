@@ -1,18 +1,18 @@
 import { getImportedImage } from "../../utils/helpers";
 
 const CartItem = ({product}) => {
-    const {image, title, price, total = 29.5, count = 0} = product;
+    const {image, title, description, price = 0, cartQuantity = 0} = product;
 
     const getFormatAmount= (amount) => {
         const updatedAmount = Number(amount).toFixed(2);
         return `AED ${updatedAmount}`
     }
     return ( 
-        <div className="row mb-1 p-3 text-capitalize text-center cart_item-wrapper">
-            <div className="col-10 mx-auto col-lg-2">
-                <img src={getImportedImage(image)} style={imgDesign} alt="product" className="img-fluid" />
+        <div key={product._id} className="row mb-1 p-3 text-capitalize text-center cart_item-wrapper">
+            <div className="col-10 mx-auto col-lg-2 cart-image">
+                <img src={getImportedImage(image)} style={imgDesign} alt={title} className="img-fluid" />
             </div>
-            <div className="col-10 mx-auto col-lg-4">
+            <div className="col-10 mx-auto col-lg-4 cart-name">
                 <div className="row">
                     <span className="d-lg-none">product : </span>
                     {title}
@@ -21,8 +21,11 @@ const CartItem = ({product}) => {
                     <span className="d-lg-none">price : </span>
                     {price}
                 </div>
+                {/* <h3>{title}</h3>
+                <p>{description}</p>
+                <button>Remove</button> */}
             </div>
-            <div className="col-10 mx-auto col-lg-4 my-2 my-lg-0 position-relative">
+            <div className="col-10 mx-auto col-lg-4 my-2 my-lg-0 position-relative cart-product-quantity">
                     <div className="row">
                         <div className="d-flex justify-content-center">
                             <div className="">
@@ -30,7 +33,7 @@ const CartItem = ({product}) => {
                                     -
                                 </span>
                                 <span className="btn btn-black mx-1">
-                                    {count}
+                                    {cartQuantity}
                                 </span>
                                 <span className="btn btn-black mx-1 qty-wheel" >
                                     +
@@ -42,11 +45,8 @@ const CartItem = ({product}) => {
                         </div>
                     </div>
             </div>
-            {/* <div className="col-10 mx-auto col-lg-2">
-                
-            </div> */}
-            <div className="col-10 mx-auto col-lg-2">
-                <strong>{getFormatAmount(total)}</strong>
+            <div className="col-10 mx-auto col-lg-2 cart-product-total-price">
+                <strong>{getFormatAmount(price * cartQuantity)}</strong>
             </div>
         </div>
      );

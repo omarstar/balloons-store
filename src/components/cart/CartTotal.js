@@ -3,14 +3,14 @@ const CartTotal = () => {
 
     return ( 
         <>
-            <div id="cart-total" className="cart-total-box">
+            <div id="cart-total" className="cart-total-box cart-checkout">
                 <div className="cart-total-inner">
                     <div className="row cart-total-title">
-                        <h3>Total</h3>
+                        <h3>Subtotal</h3>
                         <h3>AED <span>{totalAmount}</span></h3>
                     </div>
                     <div className="row more-text">
-                        <p>Shipping Calculated at next step</p>
+                        <p>Taxes and Shipping Calculated at checkout</p>
                     </div>
                     <div className="row btn">
                         <button className="cart-item-btn">
