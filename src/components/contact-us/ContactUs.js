@@ -8,21 +8,21 @@ const ContactUs = () => {
                         <div className="contactus-title ff-itali"><h3>Contact Us</h3></div>
                         <div className="contactus-desc"><p>Tell us your details and we'll get right back to you.</p></div>
                         <div className="contactus-form-wrapper">
-                        <div className="row">
+                        <div className="row form-row">
                                 <div className="col-12 col-lg-7">
                                     <div className="contact form-part">
                                         <form method="POST" action="sendmail.php" className="contact-form">
                                             <div className="row gtr-uniform">
-                                                <div className="col-6 col-12-xsmall form-group"><input className="form-control input-shadow" type="text" name="name" id="name" placeholder="Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="name" id="name" placeholder="Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars"/>
                                                     <div className="validation"></div>
                                                 </div>
-                                                <div className="col-6 col-12-xsmall form-group"><input className="form-control input-shadow" type="email" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="email" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email"/>
                                                     <div className="validation"></div>
                                                 </div>
-                                                <div className="col-6 col-12-xsmall form-group"><input className="form-control input-shadow" type="text" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject"/>
                                                     <div className="validation"></div>
                                                 </div>
-                                                <div className="col-6 col-12-xsmall form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputmode="numeric" id="phone" placeholder="Contact number" />
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputmode="numeric" id="phone" placeholder="Contact number" />
                                                     <div className="validation"></div>
                                                 </div>
                                                 <div className="col-12  form-group"><textarea className="form-control input-shadow" name="message" id="message" placeholder="Your Messages" data-rule="required" data-msg="Message" rows="6"></textarea>

@@ -21,9 +21,9 @@ const Footer = () => {
 							<section>
 								<h2 className="">Site map</h2>
 								<ul className="divided">
-									<li><a href="">HOME</a></li>
-									<li><a href="">ABOUT US</a></li>
-									<li><a href="">CONTACT US</a></li>
+									<li><a href="/home">HOME</a></li>
+									<li><a href="/home#aboutus">ABOUT US</a></li>
+									<li><a href="/home#contactus">CONTACT US</a></li>
 								</ul>
 							</section>
 
@@ -33,11 +33,11 @@ const Footer = () => {
 							<section>
 								<h2 className="">bALLOONS</h2>
 								<ul className="divided">
-									<li><a href="">Bulk Balloons</a></li>
-									<li><a href="">Balloon Decorations</a></li>
-									<li><a href="">Holidays & events</a></li>
-									<li><a href="">Balloons Bouquet</a></li>
-									<li><a href="">Create your won Bouquet</a></li>
+									<li><a href="/balloons">Bulk Balloons</a></li>
+									<li><a href="/balloons">Balloon Decorations</a></li>
+									<li><a href="/balloons">Holidays & events</a></li>
+									<li><a href="/balloons">Balloons Bouquet</a></li>
+									<li><a href="/balloons">Create your won Bouquet</a></li>
 								</ul>
 							</section>
 						</div>
@@ -55,7 +55,7 @@ const Footer = () => {
 													<dd><a href="https://business.facebook.com/funkyballoons/">facebook.com/funkyballoons</a></dd>
 													<dt>WWW</dt>
 													<dd><a href="https://infracommunication.com">funkyballoons.com</a></dd>
-													<dd><a href="mailto:sales@infracommunication.com">Sales@funkyballoons.com</a></dd>
+													<dd><a href="mailto:info@infracommunication.com">info@funkyballoons.com</a></dd>
 												</dl>
 											</div>
 											<div className="col-12 col-lg-6">
@@ -71,7 +71,7 @@ const Footer = () => {
 													<dt>Phone Us</dt>
 													<dd className="text-gray"><a href="tel:+97148876763">+971 4 887 6763</a> <br/> <a href="tel:+971553208899">+971 55 320 8899</a></dd>
 													<dt>Email Us</dt>
-													<dd className="text-gray"><a href="mailto:omar@infracom.me">balloon support mail</a></dd>
+													<dd className="text-gray"><a href="mailto:omar@infracom.me">constumer service email</a></dd>
 												</dl>
 											</div>
 										</div>

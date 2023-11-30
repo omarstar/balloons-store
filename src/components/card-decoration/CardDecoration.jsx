@@ -16,6 +16,8 @@ const CardDecoration = ({data, align}) => {
         width: 235px;
         // height: 91px;
         // margin-bottom: 10vh;
+        position: absolute;
+        bottom: 1.2rem;
     `
 
     // const themecolors = {
@@ -52,14 +54,14 @@ const CardDecoration = ({data, align}) => {
                     </div> */}
                     <img className=" mx-auto d-block img-box" src={data.srcUrl} alt="img"/>
                 </div>
-                <div className="col-12 col-lg-5">
-                    <div className="row h-15 deco-title ff-itali">Balloon Arches</div>
+                <div className="col-12 col-lg-5 position-relative pt-4">
+                    <div className="row h-15 deco-title ff-itali">{data.title}</div>
                     <div className="row px-4 deco-desc">
                         <div className="col">
                             <ul>
-                                <li>Transform your room instantly with our ceilingand wall décor</li>
-                                <li>Make a huge statement by framing out your wall or draping your ceiling with our beautiful balloons</li>
-                                <li>A great way to make your party truly magical</li>
+                                <p>{data.desc}</p>
+                                {/* <li>Make a huge statement by framing out your wall or draping your ceiling with our beautiful balloons</li>
+                                <li>A great way to make your party truly magical</li> */}
                             </ul>
                         </div>
                     </div>

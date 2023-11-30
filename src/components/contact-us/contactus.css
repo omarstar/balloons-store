@@ -23,6 +23,7 @@ html, body {
       text-align: center;
       min-height: 100vh;
       background:#A8D8DF;
+      padding: 2rem;
 }
 
 .form-holder .form-content {
@@ -151,8 +152,9 @@ html, body {
 
 /* contactus infra */
 form.contact-form {
-	max-width: 400px;
+	/* max-width: 400px; */
 	margin: 0 auto;
+    padding: 0 2.5rem;
   }
   
   form.contact-form .form-group {
@@ -213,10 +215,17 @@ form.contact-form {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    height: 4rem;
 }
 
 .contactus-desc p{
     font-size: 1.2rem;
+}
+
+.contactus-form-wrapper {
+    padding: 2rem 0 0;
+    width: 100%;
 }
 
 .contact.address-part {
@@ -259,6 +268,11 @@ ul.actions li {
     }
 .form-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-content: center;
     }
+.form-row {
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 90%;
+}

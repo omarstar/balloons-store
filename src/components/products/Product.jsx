@@ -1,7 +1,20 @@
+import { useDispatch } from "react-redux";
 import formatCurrency, { getImportedImage } from "../../utils/helpers";
+import { cartActions } from "../../store/cart/cart-slice";
 
-const Product = ({product, addtoCart}) => {
+const Product = ({product}) => {
+    //addtoCart as props
 
+
+    const dispatch = useDispatch();
+
+    const addToCart = (pr) => {
+        console.log('cliked', pr)
+        dispatch(
+            cartActions.addToCart(pr)
+        )
+    }
+//()=> addtoCart(product)
     return ( 
         <>
             <div className="item-container item-inner balloon-item">
@@ -12,7 +25,7 @@ const Product = ({product, addtoCart}) => {
                     
                 </div> */}
                 <div className="main-item">
-                    <img src={getImportedImage(product.image)} alt=""/>
+                    <img src={getImportedImage(product._id)} alt=""/>
                 </div>
                 <h3 className="item-heading">
                     {product.title} 
@@ -21,7 +34,7 @@ const Product = ({product, addtoCart}) => {
                     {product.description}
                 </p>
                 <p className="item-price">{formatCurrency(product.price)} <sup>$</sup></p>
-                <button onClick={()=> addtoCart(product)} className="item-cart-btn d-flex justify-content-between align-items-center">
+                <button onClick={()=>addToCart(product)} className="item-cart-btn d-flex justify-content-between align-items-center">
                     <p className="text-addcart">Add To Cart</p>
                     <div className="top-right-cart">
                         <i className="fa fa-cart-shopping"></i>

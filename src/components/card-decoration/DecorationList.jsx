@@ -16,6 +16,12 @@ const DecorationList = () => {
             <div className="card-deco-wrapper">
             <CardDecoration data={decorationItems[3]}/>
             </div>
+            <div className="card-deco-wrapper f-right">
+            <CardDecoration data={decorationItems[4]} align={"right"} />
+            </div>
+            <div className="card-deco-wrapper">
+            <CardDecoration data={decorationItems[5]}/>
+            </div>
         </>
      );
 }

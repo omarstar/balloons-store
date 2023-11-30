@@ -5,6 +5,23 @@
 .image-box .img_notfound {
     
 }
+/* home layout */
+.welcome-wrapper {
+    margin: 10px 0;
+  box-shadow: 0 -1px 6px green;
+}
+.welcome-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.2rem;
+}
+.welcome-text {
+    font-size: 11px;
+    width: 80%;
+}
 /* cart layout */
 .cart-header {
     padding: 35px 0;

@@ -3,6 +3,15 @@ import img2 from '../assets/images/decorations/cat-back.png'
 import img3 from "../assets/images/decorations/cat-baby.png"
 import img4 from "../assets/images/decorations/cat-love.png"
 
+// import Centerpieces from "../assets/images/decorations/centerpiece.webp"
+import Centerpieces from "../assets/images/decorations/Garland+replacement+photo-1920w.webp"
+import Columns from "../assets/images/decorations/column.webp"
+import Garland from "../assets/images/decorations/garland.webp"
+import Ceiling from "../assets/images/decorations/celing walls.jpg"
+// import Arches from "../assets/images/decorations/arches.jpeg"
+import Arches from "../assets/images/decorations/centerpiece.webp"
+import Sculptures from "../assets/images/decorations/scapt.webp"
+
 
 export const MenuItems = [
     {
@@ -72,32 +81,53 @@ export const menuSmallItems = [
 ]
 export const decorationItems = [
     {
-        title: "img1",
-        srcUrl: img1,
-        btnColor:"#DB7F2C",
-        bgColor:"#CABBAC",
-        txtColor:"#fff"
+        title: "Balloon Centerpieces",
+        srcUrl: Centerpieces,
+        btnColor:"#943740",
+        bgColor:"#F0C7D5",
+        txtColor:"#fff",
+        desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
+
     },
     {
-        title: "img2",
-        srcUrl: img2,
-        btnColor:"#A8D8DF",
-        bgColor:"#FBC965",
-        txtColor:"#000"
+        title: "Balloon Garland",
+        srcUrl: Garland,
+        btnColor:"#06315B",
+        bgColor:"#97BAD0",
+        txtColor:"#FFF",
+        desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
     },
     {
-        title: "img3",
-        srcUrl: img3,
-        btnColor:"#004B9A",
-        bgColor:"#CA4B78",
-        txtColor:"#fff"
+        title: "Columns",
+        srcUrl: Columns,
+        btnColor:"#A1C7B8",
+        bgColor:"#CEA4D2",
+        txtColor:"#000",
+        desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
     },
     {
-        title: "img4",
-        srcUrl: img4,
-        btnColor:"#AC230F",
-        bgColor:"#B9AF6C",
-        txtColor:"#000"
+        title: "Balloon Ceiling & Walls",
+        srcUrl: Ceiling,
+        btnColor:"#EDCED4",
+        bgColor:"#9EA9DF",
+        txtColor:"#000",
+        desc: "Make a huge statement and transform any space instantly with ceiling and wall decorations, frame out your walls and drape your ceilings with our beautiful balloons to add depth that can have your party space feel like a different dimension entirely."
+    },
+    {
+        title: "Balloon Arches",
+        srcUrl: Arches,
+        btnColor:"#B3A2D3",
+        bgColor:"#348CCA",
+        txtColor:"#000",
+        desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
+    },
+    {
+        title: "Balloon Sculptures",
+        srcUrl: Sculptures,
+        btnColor:"#92AB72",
+        bgColor:"#F18E76",
+        txtColor:"#000",
+        desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
     }
 ]
 
@@ -183,4 +213,7 @@ export const dropdownItems = {
             cName:'dropdown-link'
         }
     ],
+}
+export const toastOption = {
+    position: "bottom-left"
 }

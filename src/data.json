@@ -6,7 +6,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs m 129",
             "availableSizes": ["XS","M"],
-            "price":29.95
+            "price":29.95,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":2,
@@ -14,7 +17,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs 231",
             "availableSizes": ["XS"],
-            "price":31.45
+            "price":31.45,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":3,
@@ -22,7 +28,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon m 331",
             "availableSizes": ["M"],
-            "price":31.45
+            "price":31.45,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":4,
@@ -30,7 +39,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs 425",
             "availableSizes": ["XS"],
-            "price":25.9
+            "price":25.9,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":5,
@@ -38,7 +50,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon m 531",
             "availableSizes": ["M"],
-            "price":31.45
+            "price":31.45,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":6,
@@ -46,7 +61,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs m 615",
             "availableSizes": ["XS","M"],
-            "price":15.25
+            "price":15.25,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":7,
@@ -54,7 +72,10 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs m 731",
             "availableSizes": ["XS","M"],
-            "price":31.45
+            "price":31.45,
+            "inCart": false,
+            "quantity": 0
+            
         },
         {
             "_id":8,
@@ -62,8 +83,97 @@
             "title":"some title name",
             "description":"Navy Metallic Latex Balloon xs m 855",
             "availableSizes": ["XS","M"],
-            "price":55
+            "price":55,
+            "inCart": false,
+            "quantity": 0
+        },
+        {
+            "_id":9,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0},
+        {
+            "_id":10,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0
+        },
+        {
+            "_id":11,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0},
+        {
+            "_id":12,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0
+        },
+        {
+            "_id":13,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0},
+        {
+            "_id":14,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0
+        },
+        {
+            "_id":15,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0},
+        {
+            "_id":16,
+            "image":"gwc",
+            "title":"some title name",
+            "description":"Navy Metallic Latex Balloon xs m 855",
+            "availableSizes": ["XS","M"],
+            "price":55,
+            "inCart": false,
+            "quantity": 0
         }
         
-    ]
+    ],
+    "productDetails": {
+        "_id":99,
+        "image":"",
+        "title":"default title",
+        "description":"default desc xs m 855",
+        "availableSizes": ["XS","M"],
+        "price": 0,
+        "inCart": false,
+        "quantity": 0
+        
+    }
 }

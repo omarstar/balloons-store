@@ -1,19 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Filter from "../components/filter/Filter";
 import Products from "../components/products/Products";
 import data from "../data.json"
-import Cart from "../components/cart/Cart";
+// import Cart from "../components/cart/Cart";
 import { getImage, getLocalStorageValue } from "../utils/helpers";
 import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+// import { useDispatch } from "react-redux";
+// import { cartActions } from "../store/cart/cart-slice";
 
 const LayoutProducts = () => {
+
+    const breadcrumbs = useSelector(state => state.breadcrumb.breadcrumbs)
+    console.log('breadcrumbs', breadcrumbs)
 
     const [products, setProducts] = useState(data.products);
     const [size, setSize] = useState("")
     const [sort, setSort] = useState("")
     const [cartItems, setCartItems] = useState(getLocalStorageValue("cartItems") ? JSON.parse(getLocalStorageValue("cartItems")) : [])
-    const [crumbs, setCrumbs] = useState(['Home','Category','Sub Category'])
+    const [crumbs, setCrumbs] = useState([])
+    // const [crumbs, setCrumbs] = useState(['Home','Category','Sub Category'])
+
+    useEffect(() => {
+      setCrumbs(breadcrumbs);
+    
+    }, [breadcrumbs])
+    
+
+    // const dispatch = useDispatch();
 
     const  filterProducts = (event)=>{
         const {value} = event.target;
@@ -48,6 +63,8 @@ const LayoutProducts = () => {
         console.log('cart items after update', cartItems)
         localStorage.setItem("cartItems", JSON.stringify(cart));
         console.log('ls', getLocalStorageValue("cartItems"))
+        
+        
     }
 
     const sortProducts = (event) => {

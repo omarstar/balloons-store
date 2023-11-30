@@ -3,18 +3,34 @@ import { MenuItems, dropdownItems } from "../../../utils/constants";
 import imgBouque from "../../../assets/images/test1.png"
 import imgDecorations from "../../../assets/images/event-test.png"
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { breadcrumbsActions } from "../../../store/breadcrumb/breadcrumbsSlice";
 
 const MenuDesktop = () => {
 
+
     const [hoveredItem, setHoveredItem] = useState(null);
+
+    const dispatch = useDispatch();
     
     const handleMouseEnter = (itemId) => {
         setHoveredItem(itemId);
       };
     
-      const handleMouseLeave = () => {
-        setHoveredItem(null);
-      };
+    const handleMouseLeave = () => {
+    setHoveredItem(null);
+    };
+
+    const handleMenuItemClick = (catName, subCatName = null) => {
+
+        let newBreadcrumbs = [catName];
+        if(subCatName){
+            newBreadcrumbs = [...newBreadcrumbs, subCatName];
+        }
+        // dispatch(breadcrumbsActions.updateBreadcrumbs(newBreadcrumbs))
+
+        // window.location.href = `/balloons/${subCatName}`;
+    }
     
     return ( 
         <ul id="menu-header-menu" className="menu">
@@ -29,14 +45,14 @@ const MenuDesktop = () => {
                                 <div className="col-lg-4">
                                     <a href="#" className="nolink">Holidays</a>
                                     <ul className="submenu">
-                                        <li><a href="/balloons">HALOWEEN</a></li>
-                                        <li><a href="/balloons">NATIONAL & FLAG DAY</a></li>
-                                        <li><a href="/balloons">CHRISTMAS</a></li>
-                                        <li><a href="/balloons">NEW YEAR EVE</a></li>
-                                        <li><a href="/balloons">VALENTINE DAY</a></li>
-                                        <li><a href="/balloons">father's day</a></li>
-                                        <li><a href="/balloons">mother's day</a></li>
-                                        <li><a href="/balloons">easter</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'HALOWEEN')}>HALOWEEN</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'NATIONAL & FLAG DAY')}>NATIONAL & FLAG DAY</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'CHRISTMAS')}>CHRISTMAS</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'NEW YEAR EVE')}>NEW YEAR EVE</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'VALENTINE DAY')}>VALENTINE DAY</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'father\'s day')}>father's day</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'mother\'s day')}>mother's day</a></li>
+                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'easter')}>easter</a></li>
                                     </ul>
                                 </div>
 

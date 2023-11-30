@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import logoHeader from "../../assets/images/icons/balloon-delivery.png"
 import MenuSmall from "./elements/MenuSmall";
 // import "./header.css"
 
 const HeaderTop = () => {
+
+    const {cartTotalQuantity} = useSelector(state=> state.cart)
+
     return ( 
         <div className="header-top">
             {/* left part */}
@@ -37,15 +41,15 @@ const HeaderTop = () => {
                         <span></span>
                         <span></span>
                     </button>
-                    <a href="https://balloondelivery.com/my-account/orders" className="icon-link icon-link-my-orders hidden-xs hidden-sm">
+                    <a href="#" className="icon-link icon-link-my-orders hidden-xs hidden-sm">
                         <img className="icon-link-image icon-link-image-my-orders" src="https://balloondelivery.com/wp-content/themes/webcom-balloon-delivery/assets/images/icon-balloon.png" />                <span className="icon-link-text">My Orders</span>
                     </a>
-                    <a href="https://balloondelivery.com/my-account" className="icon-link icon-link-my-account">
+                    <a href="#" className="icon-link icon-link-my-account">
                         <img className="icon-link-image icon-link-image-sign-in" src="https://balloondelivery.com/wp-content/themes/webcom-balloon-delivery/assets/images/icon-lock.png" />                <span className="icon-link-text">Sign In</span>
                     </a>
-                    <a href="balloons/cart" className="icon-link icon-link-cart">
+                    <a href="/balloons/cart" className="icon-link icon-link-cart">
                         <img className="icon-link-image icon-link-image-cart" src="https://balloondelivery.com/wp-content/themes/webcom-balloon-delivery/assets/images/icon-cart.png" />                <span className="icon-link-text">Cart</span>
-                        <span className="icon-link-bubble"> 0 </span>
+                        <span className="icon-link-bubble"> {cartTotalQuantity} </span>
                     </a>
                 </div>
             </div>

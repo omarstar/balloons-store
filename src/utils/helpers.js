@@ -4,7 +4,8 @@ export default function formatCurrency(num) {
 
 export const getImportedImage = (id) => {
     try {
-        return  require(`../assets/images/balloons/${id}.png`)
+
+        return  require(`../assets/images/balloons/collections/${id}.jpg`)
     } catch (error) {
         return null
     }
