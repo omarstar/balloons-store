@@ -22,7 +22,7 @@ const Carousel = ({slidesData}) => {
             <BsArrowLeftCircleFill className='arrow arrow-left' onClick={prevSlide}/>
             {slidesData.map((carouselItem, ci) => {
                 return (
-                    <img src={carouselItem.src} alt={carouselItem.alt} key={ci} className={showSlide === ci ? "slide" : "slide slide-hidden"} />
+                    <img src={require(`../../assets/images/cover/${carouselItem.src}.webp`)} alt={carouselItem.alt} key={ci} className={showSlide === ci ? "slide" : "slide slide-hidden"} />
                 )
             })}
             <BsArrowRightCircleFill className='arrow arrow-right' onClick={nextSlide} />

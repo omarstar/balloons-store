@@ -1,16 +1,28 @@
 {
     "slides": [
         {
-            "src": "https://picsum.photos/seed/123/600/400",
+            "src": "balloonsCover",
             "alt": "slide-img1"
         },
         {
-            "src": "https://picsum.photos/seed/321/600/400",
+            "src": "HalloweenCover",
             "alt": "slide-img2"
         },
         {
-            "src": "https://picsum.photos/seed/555/600/400",
+            "src": "loveCover",
             "alt": "slide-img3"
+        },
+        {
+            "src": "signatureCover",
+            "alt": "slide-img4"
+        },
+        {
+            "src": "ThemeCover",
+            "alt": "slide-img5"
+        },
+        {
+            "src": "xmasCover",
+            "alt": "slide-img6"
         }
     ]
 }
