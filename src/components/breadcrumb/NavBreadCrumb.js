@@ -1,4 +1,6 @@
+import { useSelector } from "react-redux";
 import "./breadcrumb.css"
+import { useNavigate } from "react-router-dom";
 const breadcrumb = {
     color: "#000",
     backgroundColor: 'white',
@@ -6,15 +8,30 @@ const breadcrumb = {
     // borderRadius: '0.37rem'
 }
 
-const NavBreadCrumb = ({crumbs, selected}) => {
+const NavBreadCrumb = () => {
     
-    
+    //{crumbs, selected}
+    const crumbs = useSelector(state => state.breadcrumbs.crumbs)
+    const navigate = useNavigate();
 
     function isLast(index) {
         return index === crumbs.length-1;
     }
+
     function isHome(index) {
         return index === 0;
+    }
+
+    function selected(crumb, i) {
+        console.log('crumb selected', [crumb, i])
+        if(i === 0){
+            navigate('/home')
+        }
+        else if(i === 1){
+            navigate(`/category/${crumb}`)
+        }else if( i === 2){
+            navigate(`/collections/${crumb}`)
+        }
     }
 
     return ( 
@@ -29,13 +46,20 @@ const NavBreadCrumb = ({crumbs, selected}) => {
                                 key={ci}
                                 className="breadcrumb-item align-items-center"
                             >
-                                <a href="#" className={`btn btn-link ${disabled} text-decoration-none`} onClick={() => selected(crumb)}>
+                                <div className={`btn btn-link ${disabled} text-decoration-none`} onClick={() => selected(crumb, ci)}>
                                     {homeIcon ? (
                                         <i className="icon-home" >🏠</i>
                                     ) : (
                                         crumb
                                     )}
-                                </a>
+                                </div>
+                                {/* <a href={`/category/${crumbs[1]}`} className={`btn btn-link ${disabled} text-decoration-none`} onClick={() => selected(crumb)}>
+                                    {homeIcon ? (
+                                        <i className="icon-home" >🏠</i>
+                                    ) : (
+                                        crumb
+                                    )}
+                                </a> */}
                             </li>
                         )
                     })
