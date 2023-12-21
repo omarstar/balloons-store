@@ -11,6 +11,7 @@ const initialState = {
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
     showCart: false,
+    showCartView: false
 }
 const cartSlice = createSlice({
     name: 'cart',
@@ -36,6 +37,12 @@ const cartSlice = createSlice({
         },
         setShowCart(state) {
             state.showCart = true
+        },
+        setShowCartView(state) {
+            state.showCartView = true
+        },
+        setHideCartView(state) {
+            state.showCartView = false
         },
         clearCart(state, action){
             state.cartItems = [];

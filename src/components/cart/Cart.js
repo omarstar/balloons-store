@@ -36,7 +36,7 @@ const Cart = () => {
         <div className="cart-empty">
           <p>Your cart is currently empty</p>
           <div className="start-shopping">
-            <Link to="/balloons">
+            <Link to="/collections/all">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -102,7 +102,7 @@ const Cart = () => {
               <p>Taxes and shipping calculated at checkout</p>
               <button>Check out</button>
               <div className="continue-shopping">
-                <Link to="/balloons">
+                <Link to="/collections/continue">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

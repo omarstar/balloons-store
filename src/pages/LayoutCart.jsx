@@ -1,11 +1,11 @@
 import "../components/cart/cart.css"
 
 import { useSelector } from "react-redux";
-import CartColumns from "../components/cart/CartColumns";
-import CartEmpty from "../components/cart/CartEmpty";
-import CartHeader from "../components/cart/CartHeader";
-import { CartList } from "../components/cart/CartList";
-import CartTotal from "../components/cart/CartTotal";
+// import CartColumns from "../components/cart/CartColumns";
+// import CartEmpty from "../components/cart/CartEmpty";
+// import CartHeader from "../components/cart/CartHeader";
+// import { CartList } from "../components/cart/CartList";
+// import CartTotal from "../components/cart/CartTotal";
 import Cart from "../components/cart/Cart";
 
 const LayoutCart = () => {

@@ -1,12 +1,9 @@
-import { getImportedImage } from "../../utils/helpers";
+import { getFormatAmount, getImportedImage } from "../../utils/helpers";
 
 const CartItem = ({product}) => {
     const {image, title, description, price = 0, cartQuantity = 0} = product;
 
-    const getFormatAmount= (amount) => {
-        const updatedAmount = Number(amount).toFixed(2);
-        return `AED ${updatedAmount}`
-    }
+    
     return ( 
         <div key={product._id} className="row mb-1 p-3 text-capitalize text-center cart_item-wrapper">
             <div className="col-10 mx-auto col-lg-2 cart-image">
