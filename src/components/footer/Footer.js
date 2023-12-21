@@ -31,13 +31,14 @@ const Footer = () => {
 					    <div className="col-lg-3 col-md-6 col-12">
 
 							<section>
-								<h2 className="">bALLOONS</h2>
+								<h2 className="">BALLOONS</h2>
 								<ul className="divided">
-									<li><a href="/balloons">Bulk Balloons</a></li>
-									<li><a href="/balloons">Balloon Decorations</a></li>
-									<li><a href="/balloons">Holidays & events</a></li>
-									<li><a href="/balloons">Balloons Bouquet</a></li>
-									<li><a href="/balloons">Create your won Bouquet</a></li>
+									<li><a href="category">Bulk Balloons</a></li>
+									<li><a href="category">Balloon Decorations</a></li>
+									<li><a href="category">Holidays & events</a></li>
+									<li><a href="category">Balloons Bouquet</a></li>
+									<li><a href="/create-bouquet/">Create your won Bouquet</a></li>
+									<li><a href="/party-rentals/">Party Rentals</a></li>
 								</ul>
 							</section>
 						</div>
@@ -82,7 +83,7 @@ const Footer = () => {
 							<div id="copyright">
 								<ol className="menu">
 									<li>&copy; Funky Balloons 2023. All rights reserved</li>
-                                    <li>Design: <a href="https://www.">Omar Barakat | Balloon</a></li>
+                                    <li>Design: <a href="https://www.">funky balloons</a></li>
 								</ol>
 							</div>
 						</div>

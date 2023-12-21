@@ -48,6 +48,9 @@ select {
 }
 a {
   text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
 }
 a:hover {
   color:#405

@@ -1,7 +1,7 @@
-import img1 from '../assets/images/decorations/cat-gold.png'
-import img2 from '../assets/images/decorations/cat-back.png'
-import img3 from "../assets/images/decorations/cat-baby.png"
-import img4 from "../assets/images/decorations/cat-love.png"
+// import img1 from '../assets/images/decorations/cat-gold.png'
+// import img2 from '../assets/images/decorations/cat-back.png'
+// import img3 from "../assets/images/decorations/cat-baby.png"
+// import img4 from "../assets/images/decorations/cat-love.png"
 
 // import Centerpieces from "../assets/images/decorations/centerpiece.webp"
 import Centerpieces from "../assets/images/decorations/Garland+replacement+photo-1920w.webp"
@@ -12,6 +12,8 @@ import Ceiling from "../assets/images/decorations/celing walls.jpg"
 import Arches from "../assets/images/decorations/centerpiece.webp"
 import Sculptures from "../assets/images/decorations/scapt.webp"
 
+import catImg1 from "../assets/images/balloons/bbc.png"
+import catImg2 from "../assets/images/balloons/gwc.png"
 
 export const MenuItems = [
     {
@@ -132,88 +134,219 @@ export const decorationItems = [
 ]
 
 export const dropdownItems = {
-    "Decorations": [
+    "DECORATIONS": [
         {
             title:"centerpieces",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for centerpieces",
+            imgSrc: catImg1
         },{
             title:"arches",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for centerpieces",
+            imgSrc: catImg1
         },{
             title:"columns",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for centerpieces",
+            imgSrc: catImg2
         },{
             title:"letters & numbers",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for centerpieces",
+            imgSrc: catImg2
         }
     ],
-    "Bouquets": [
+    "OCCASIONS": [
         {
             title:"birthday",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
         },{
             title:"graduation",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
         },{
             title:"weddings",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
         },{
             title:"valentine",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
         },{
             title:"congrats",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
         },{
             title:"baby",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
         },{
             title:"anniversary",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
         }
     ],
-    "holidays": [
+    "HOLIDAYS": [
         {
             title:"haloween",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"xmas",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"new year eve",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"valentine",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"father's day",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"mother's day",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         },{
             title:"easter",
             path: "/",
-            cName:'dropdown-link'
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        }
+    ],
+    "BOUQUETS": [
+        {
+            title:"haloween",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"xmas",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"new year eve",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"valentine",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"father's day",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"mother's day",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"easter",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for HOIDAYS",
+            imgSrc: catImg1
+        },{
+            title:"birthday",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
+        },{
+            title:"graduation",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
+        },{
+            title:"weddings",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
+        },{
+            title:"valentine",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
+        },{
+            title:"congrats",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
+        },{
+            title:"baby",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg1
+        },{
+            title:"anniversary",
+            path: "/",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for occasions",
+            imgSrc: catImg2
         }
     ],
 }
 export const toastOption = {
     position: "bottom-left"
 }
+
+export const staticInfo = {
+    supervision: "ADULT SUPERVISION REQUIRED: Children under 8 years can choke or suffocate on uninflated or broken balloons. Keep uninflated balloons from children and discard broken balloons at once.",
+    delivery: "The image of the products is showed only for characteristic purpose; We make sure to deliver 100% as per the image shown. The delivered product may vary in design or shape according to the accessibility.; After the products are prepared for delivery, we cannot redirect to any change of delivery address.; If the addressee is not available, the products will be delivered at the delivery place.; Our majority of orders are delivered on time and the right place.",
+    care: "As per the image, the balloons will be delivered as blow-up.; To avoid the damages, kindly take care of your balloons from sharpened edges, or corners.; Keep separate the deflated balloons from the children and discard the broken balloons.; Enjoy the event with our quality balloons."
+}
+
+//just notes

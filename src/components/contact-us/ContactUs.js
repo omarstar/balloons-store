@@ -22,7 +22,7 @@ const ContactUs = () => {
                                                 <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject"/>
                                                     <div className="validation"></div>
                                                 </div>
-                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputmode="numeric" id="phone" placeholder="Contact number" />
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputMode="numeric" id="phone" placeholder="Contact number" />
                                                     <div className="validation"></div>
                                                 </div>
                                                 <div className="col-12  form-group"><textarea className="form-control input-shadow" name="message" id="message" placeholder="Your Messages" data-rule="required" data-msg="Message" rows="6"></textarea>

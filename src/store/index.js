@@ -10,7 +10,7 @@ const store = configureStore({
         auth: authSlice.reducer,
         cart: cartSlice.reducer,
         product: productSlice.reducer,
-        breadcrumb: breadcrumbsSlice.reducer
+        breadcrumbs: breadcrumbsSlice.reducer
     }
 })
 

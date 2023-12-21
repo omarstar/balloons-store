@@ -243,7 +243,7 @@
 }
 
 #header .ctas .cta {
-	background: #693794;
+	background: #1a452a5f;
 	color: #fff;
 	font-family: "Prompt", helvetica, arial sans-serif;
 	font-size: 12px;
@@ -257,7 +257,7 @@
 }
 
 #header .ctas .cta:nth-child(2) {
-	background: #cc1641
+	background: #693794
 }
 
 #header .icons {
@@ -293,7 +293,7 @@
 
 #header .icons .icon-link-image-cart {
 	height: 39px;
-	width: 24px
+	width: 37px
 }
 
 #header .icons .icon-link-text {
@@ -603,7 +603,7 @@
 
 	#header .icons .icon-link-image-cart {
 		height: 55px;
-		width: 34px
+		width: 52px
 	}
 
 	#header .icons .icon-link-text {

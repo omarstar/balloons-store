@@ -35,7 +35,7 @@ const HeaderTop = () => {
             */}
                 <div className="ctas hidden-xs hidden-sm">
                     <a href="/home#contactus" className="cta">contact us</a>
-                    <a href="tel:+971553208899" className="cta">+971 55 320 88 99</a>
+                    <a href="tel:+971553208899" className="cta"><i>📞</i>+971 55 320 88 99</a>
                 </div>
                 <div className="icons">
                     <button className="mobile-menu-button hidden-md hidden-lg" id="mobile-menu-button">
