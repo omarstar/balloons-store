@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import "./CartCard.css"
 const CatCard = ({category, ckey}) => {
-    const {briefText, title, imgSrc} = category;
+    const {briefText, title, imgSrc, path} = category;
 //https://i.imgur.com/2DhmtJ4.jpg
     const cardStatus = "Explore more"
     return ( 
         
         <li key={ckey}>
-    <a href="#" className="card">
+    <Link to={path} className="card">
       <img src={imgSrc} className="card__image" alt="" />
       <div className="card__overlay">        
         <div className="card__header">
@@ -19,7 +20,7 @@ const CatCard = ({category, ckey}) => {
         </div>
         <p className="card__description">{briefText}</p>
       </div>
-    </a>
+    </Link>
   </li>
      );
 }

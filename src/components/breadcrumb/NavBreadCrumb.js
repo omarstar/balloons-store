@@ -12,6 +12,7 @@ const NavBreadCrumb = () => {
     
     //{crumbs, selected}
     const crumbs = useSelector(state => state.breadcrumbs.crumbs)
+    console.log('crumbs in the bread: ', crumbs)
     const navigate = useNavigate();
 
     function isLast(index) {
@@ -23,14 +24,15 @@ const NavBreadCrumb = () => {
     }
 
     function selected(crumb, i) {
+
         console.log('crumb selected', [crumb, i])
         if(i === 0){
             navigate('/home')
         }
         else if(i === 1){
-            navigate(`/category/${crumb}`)
+            navigate(`/category/${crumb.toLowerCase()}`)
         }else if( i === 2){
-            navigate(`/collections/${crumb}`)
+            navigate(`/collections/${crumb.toLowerCase()}`)
         }
     }
 

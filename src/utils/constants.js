@@ -137,25 +137,25 @@ export const dropdownItems = {
     "DECORATIONS": [
         {
             title:"centerpieces",
-            path: "/",
+            path: "/collections/decorations/centerpieces",
             cName:'dropdown-link',
             briefText: "a wide range of styles for centerpieces",
             imgSrc: catImg1
         },{
             title:"arches",
-            path: "/",
+            path: "/collections/decorations/arches",
             cName:'dropdown-link',
             briefText: "a wide range of styles for centerpieces",
             imgSrc: catImg1
         },{
             title:"columns",
-            path: "/",
+            path: "/collections/decorations/columns",
             cName:'dropdown-link',
             briefText: "a wide range of styles for centerpieces",
             imgSrc: catImg2
         },{
             title:"letters & numbers",
-            path: "/",
+            path: "/collections/decorations/shapes",
             cName:'dropdown-link',
             briefText: "a wide range of styles for centerpieces",
             imgSrc: catImg2
@@ -164,43 +164,43 @@ export const dropdownItems = {
     "OCCASIONS": [
         {
             title:"birthday",
-            path: "/",
+            path: "/collections/occasions/birthday",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"graduation",
-            path: "/",
+            path: "/collections/occasions/graduation",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"weddings",
-            path: "/",
+            path: "/collections/occasions/wedding-anniversary",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"valentine",
-            path: "/",
+            path: "/collections/occasions/valentine",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"congrats",
-            path: "/",
+            path: "/collections/occasions/congratulations",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"baby",
-            path: "/",
+            path: "/collections/occasions/newborn",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"anniversary",
-            path: "/",
+            path: "/collections/occasions/wedding-anniversary",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
@@ -209,43 +209,49 @@ export const dropdownItems = {
     "HOLIDAYS": [
         {
             title:"haloween",
-            path: "/",
+            path: "/collections/holidays/haloween",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"xmas",
-            path: "/",
+            path: "/collections/holidays/xmas",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"new year eve",
-            path: "/",
+            path: "/collections/holidays/new-years-eve",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"valentine",
-            path: "/",
+            path: "/collections/holidays/valentine",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"father's day",
-            path: "/",
+            path: "/collections/holidays/fathers-day",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"mother's day",
-            path: "/",
+            path: "/collections/holidays/mothers-day",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
         },{
             title:"easter",
-            path: "/",
+            path: "/collections/holidays/easter",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"NATIONAL & FLAG DAY",
+            path: "/collections/holidays/national-flag-day",
             cName:'dropdown-link',
             briefText: "a wide range of styles for holidays",
             imgSrc: catImg1
@@ -253,89 +259,96 @@ export const dropdownItems = {
     ],
     "BOUQUETS": [
         {
-            title:"haloween",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"xmas",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"new year eve",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"valentine",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"father's day",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"mother's day",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
-            title:"easter",
-            path: "/",
-            cName:'dropdown-link',
-            briefText: "a wide range of styles for HOIDAYS",
-            imgSrc: catImg1
-        },{
             title:"birthday",
-            path: "/",
+            path: "/collections/occasions/birthday",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"graduation",
-            path: "/",
+            path: "/collections/occasions/graduation",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"weddings",
-            path: "/",
+            path: "/collections/occasions/wedding-anniversary",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"valentine",
-            path: "/",
+            path: "/collections/occasions/valentine",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"congrats",
-            path: "/",
+            path: "/collections/occasions/congratulations",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
         },{
             title:"baby",
-            path: "/",
+            path: "/collections/occasions/newborn",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg1
         },{
             title:"anniversary",
-            path: "/",
+            path: "/collections/occasions/wedding-anniversary",
             cName:'dropdown-link',
             briefText: "a wide range of styles for occasions",
             imgSrc: catImg2
+        },
+        {
+            title:"haloween",
+            path: "/collections/holidays/haloween",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"xmas",
+            path: "/collections/holidays/xmas",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"new year eve",
+            path: "/collections/holidays/new-years-eve",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"valentine",
+            path: "/collections/holidays/valentine",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"father's day",
+            path: "/collections/holidays/fathers-day",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"mother's day",
+            path: "/collections/holidays/mothers-day",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"easter",
+            path: "/collections/holidays/easter",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
+        },{
+            title:"NATIONAL & FLAG DAY",
+            path: "/collections/holidays/national-flag-day",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for holidays",
+            imgSrc: catImg1
         }
     ],
 }

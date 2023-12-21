@@ -1,17 +1,15 @@
-import { MenuItems, dropdownItems } from "../../../utils/constants";
+// import { MenuItems, dropdownItems } from "../../../utils/constants";
 
 import imgBouque from "../../../assets/images/test1.png"
-import imgDecorations from "../../../assets/images/event-test.png"
+// import imgDecorations from "../../../assets/images/event-test.png"
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { breadcrumbsActions } from "../../../store/breadcrumb/breadcrumbsSlice";
+// import { useDispatch } from "react-redux";
+// import { breadcrumbsActions } from "../../../store/breadcrumb/breadcrumbsSlice";
+import { Link } from "react-router-dom";
 
 const MenuDesktop = () => {
 
-
     const [hoveredItem, setHoveredItem] = useState(null);
-
-    const dispatch = useDispatch();
     
     const handleMouseEnter = (itemId) => {
         setHoveredItem(itemId);
@@ -21,21 +19,11 @@ const MenuDesktop = () => {
     setHoveredItem(null);
     };
 
-    const handleMenuItemClick = (catName, subCatName = null) => {
-
-        let newBreadcrumbs = [catName];
-        if(subCatName){
-            newBreadcrumbs = [...newBreadcrumbs, subCatName];
-        }
-        // dispatch(breadcrumbsActions.updateBreadcrumbs(newBreadcrumbs))
-
-        // window.location.href = `/balloons/${subCatName}`;
-    }
     
     return ( 
         <ul id="menu-header-menu" className="menu">
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page" onMouseEnter={() => handleMouseEnter("Bouquets")} onMouseLeave={handleMouseLeave}>
-                <a href="#">Bouquets</a>
+                <Link to="/category/bouquets">Bouquets</Link>
                 {
                     hoveredItem === "Bouquets" && (
 
@@ -43,29 +31,29 @@ const MenuDesktop = () => {
                             <div className="row">
 
                                 <div className="col-lg-4">
-                                    <a href="#" className="nolink">Holidays</a>
+                                    <Link to="/category/holidays" className="nolink">Holidays</Link>
                                     <ul className="submenu">
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'HALOWEEN')}>HALOWEEN</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'NATIONAL & FLAG DAY')}>NATIONAL & FLAG DAY</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'CHRISTMAS')}>CHRISTMAS</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'NEW YEAR EVE')}>NEW YEAR EVE</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'VALENTINE DAY')}>VALENTINE DAY</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'father\'s day')}>father's day</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'mother\'s day')}>mother's day</a></li>
-                                        <li><a href="/balloons" onClick={handleMenuItemClick("Bouquets",'easter')}>easter</a></li>
+                                        <li><a href="/collections/holidays/haloween" >HALOWEEN</a></li>
+                                        <li><a href="/collections/holidays/national-flag-day" >NATIONAL & FLAG DAY</a></li>
+                                        <li><a href="/collections/holidays/xmas" >CHRISTMAS</a></li>
+                                        <li><a href="/collections/holidays/new-years-eve" >NEW YEAR EVE</a></li>
+                                        <li><a href="/collections/holidays/valentine" >VALENTINE DAY</a></li>
+                                        <li><a href="/collections/holidays/fathers-day" >father's day</a></li>
+                                        <li><a href="/collections/holidays/mothers-day" >mother's day</a></li>
+                                        <li><a href="/collections/holidays/easter" >easter</a></li>
                                     </ul>
                                 </div>
 
                                 <div className="col-lg-4">
-                                    <a href="#" className="nolink">Occusions</a>
+                                    <Link to="/category/occasions" className="nolink">Occasions</Link>
                                     <ul className="submenu">
-                                        <li><a href="/balloons">FATHER'S DAY</a></li>
-                                        <li><a href="/balloons">BABE</a></li>
-                                        <li><a href="/balloons">WEDDINGS</a></li>
-                                        <li><a href="/balloons">GRADUATION</a></li>
-                                        <li><a href="/balloons">CONGRATULATIONS</a></li>
-                                        <li><a href="/balloons">valentine</a></li>
-                                        <li><a href="/balloons">anniversary</a></li>
+                                        <li><a href="/collections/occasions/birthday">BIRTHDAY</a></li>
+                                        <li><a href="/collections/occasions/newborn">BABE</a></li>
+                                        <li><a href="/collections/occasions/wedding-anniversary">WEDDINGS</a></li>
+                                        <li><a href="/collections/occasions/graduation">GRADUATION</a></li>
+                                        <li><a href="/collections/occasions/congratulations">CONGRATULATIONS</a></li>
+                                        <li><a href="/collections/occasions/valentine">valentine</a></li>
+                                        <li><a href="/collections/occasions/wedding-anniversary">anniversary</a></li>
                                         <li><a href="#">CREATE YOUR OWN</a></li>
                                     </ul>
                                 </div>
@@ -83,7 +71,7 @@ const MenuDesktop = () => {
                 }
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page" onMouseEnter={() => handleMouseEnter("Decorations")} onMouseLeave={handleMouseLeave}>
-                <a href="#">Decorations</a>
+                <Link to="/category/decorations">Decorations</Link>
                 {
                     hoveredItem === "Decorations" && (
 
@@ -91,35 +79,15 @@ const MenuDesktop = () => {
                             <div className="row">
 
                                 <div className="col-lg-12">
-                                    <a href="#" className="nolink">Indoor</a>
+                                    <p className="nolink">Indoor</p>
                                     <ul className="submenu">
-                                        <li><a href="/balloons">centerpieces</a></li>
-                                        <li><a href="/balloons">arches</a></li>
-                                        <li><a href="/balloons">columns</a></li>
-                                        <li><a href="/balloons">letters & numbers</a></li>
+                                        <li><a href="/collections/decorations/centerpieces">centerpieces</a></li>
+                                        <li><a href="/collections/decorations/arches">arches</a></li>
+                                        <li><a href="/collections/decorations/columns">columns</a></li>
+                                        <li><a href="/collections/decorations/shapes">letters & numbers</a></li>
                                     </ul>
                                 </div>
 
-                                {/* <div className="col-lg-4">
-                                    <a href="#" className="nolink">Indoor</a>
-                                    <ul className="submenu">
-                                        <li><a href="#">SCHOOL</a></li>
-                                        <li><a href="#">COMPANY</a></li>
-                                        <li><a href="#">STUDIOS</a></li>
-                                        <li><a href="#">MALL</a></li>
-                                        <li><a href="#">WEDDING</a></li>
-                                    </ul>
-                                </div>
-
-                                <div className="col-lg-4">
-                                    <a href="#" className="nolink">Outdoor</a>
-                                    <ul className="submenu">
-                                        <li><a href="product-extended-layout.html">SPORT EVENTS</a></li>
-                                        <li><a href="product-grid-layout.html">OPENING</a></li>
-                                        <li><a href="product-full-width.html">MARATHON</a></li>
-                                        <li><a href="product-sticky-info.html">CEREMONY</a></li>
-                                    </ul>
-                                </div> */}
 
                                 {/* <div className="col-lg-4 p-0">
                                     <div className="menu-banner menu-banner-2">
