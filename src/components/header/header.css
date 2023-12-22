@@ -318,7 +318,8 @@
 
 #header .navigation-main {
 	/* border-top: 1px solid #f4f4f4; */
-	background: rgba(165,136,194,.58) !important;
+	/* background: rgba(165,136,194,.58) !important; */
+	background: var(--pink-color) !important;
 	height: 55px;
 	padding: 0;
 	width: 100%;

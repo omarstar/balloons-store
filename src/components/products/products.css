@@ -103,7 +103,8 @@
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
   }
   .item-btn-container {
-    background-color: rgb(200, 142, 254);
+    /* background-color: rgb(200, 142, 254); */
+    background-color: var(--pink-color);
     color: #fff;
     width: 18rem;
     margin: 0 1rem;
