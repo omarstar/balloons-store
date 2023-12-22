@@ -1,4 +1,16 @@
 {
+    "productDetails": {
+        "_id":99,
+        "image":"",
+        "title":"12 Assorted color Balloon Bouquet with weight",
+        "description":"default desc xs m 855",
+        "availableSizes": ["XS","M"],
+        "price": 0,
+        "inCart": false,
+        "quantity": 0,
+        "floatTime": ""
+        
+    },
     "products": [
         {
             "_id":1,
@@ -8,8 +20,8 @@
             "availableSizes": ["XS","M"],
             "price":29.95,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":2,
@@ -19,8 +31,8 @@
             "availableSizes": ["XS"],
             "price":31.45,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":3,
@@ -30,8 +42,8 @@
             "availableSizes": ["M"],
             "price":31.45,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":4,
@@ -41,8 +53,8 @@
             "availableSizes": ["XS"],
             "price":25.9,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":5,
@@ -52,8 +64,8 @@
             "availableSizes": ["M"],
             "price":31.45,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":6,
@@ -63,8 +75,8 @@
             "availableSizes": ["XS","M"],
             "price":15.25,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":7,
@@ -74,8 +86,8 @@
             "availableSizes": ["XS","M"],
             "price":31.45,
             "inCart": false,
-            "quantity": 0
-            
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":8,
@@ -85,7 +97,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":9,
@@ -95,7 +108,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0},
+            "quantity": 0,
+        "floatTime": ""},
         {
             "_id":10,
             "image":"gwc",
@@ -104,7 +118,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":11,
@@ -114,7 +129,9 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0},
+            "quantity": 0,
+        "floatTime": ""
+        },
         {
             "_id":12,
             "image":"gwc",
@@ -123,7 +140,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":13,
@@ -133,7 +151,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0},
+            "quantity": 0,
+        "floatTime": ""},
         {
             "_id":14,
             "image":"gwc",
@@ -142,7 +161,8 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0
+            "quantity": 0,
+            "floatTime": ""
         },
         {
             "_id":15,
@@ -152,7 +172,9 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0},
+            "quantity": 0,
+            "floatTime": ""
+        },
         {
             "_id":16,
             "image":"gwc",
@@ -161,19 +183,9 @@
             "availableSizes": ["XS","M"],
             "price":55,
             "inCart": false,
-            "quantity": 0
+            "quantity": 0,
+            "floatTime": "Approx. 24 hours- 48Hours INDOOR; There are no guarantees for float time if balloons are displayed outdoors"
         }
         
-    ],
-    "productDetails": {
-        "_id":99,
-        "image":"",
-        "title":"default title",
-        "description":"default desc xs m 855",
-        "availableSizes": ["XS","M"],
-        "price": 0,
-        "inCart": false,
-        "quantity": 0
-        
-    }
+    ]
 }

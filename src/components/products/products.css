@@ -97,9 +97,16 @@
 .item-container {
     background-color: #fff;
     width: 18rem;
-    margin: 1rem;
+    margin: 1rem 1rem 0.4rem;
     padding: 1rem;
     /* border-radius: 1rem; */
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+  }
+  .item-btn-container {
+    background-color: rgb(200, 142, 254);
+    color: #fff;
+    width: 18rem;
+    margin: 0 1rem;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
   }
   
@@ -169,12 +176,12 @@
     background-color: transparent;
     margin: 0 auto;
     width: 100%;
-    border: 1px;
+    /* border: 1px; */
     font-weight: bold;
     padding: .5rem 1rem;
     background-color: rgb(200, 142, 254);
     color: #fff;
-    border-radius: .4rem;
+    /* border-radius: .4rem; */
     font-size: 1.2rem;
     font-weight: 200;
     position: relative;
@@ -190,3 +197,48 @@
   .text-addcart {
     margin: 0;
   }
+
+  /* button style */
+  .product-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    transition: all .3s linear;
+  }
+  
+  .quantity-button {
+    width: 30px; /* Adjust button width */
+    height: 30px; /* Adjust button height */
+    border: none;
+    cursor: pointer;
+  }
+  .icon-incr-decr {
+    width: 100%;
+    color: #fff;
+  }
+  
+  .quantity-info {
+    flex: 1; /* Distribute remaining space */
+    text-align: center;
+  }
+  
+  .quantity {
+    font-size: 16px;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+  
+  .in-cart-text {
+    font-size: 18px;
+  }
+  
+  /* Adjust styles for decrement and increment buttons */
+  .quantity-button.decrement {
+    order: -1; /* Place at the start */
+  }
+  
+  .quantity-button.increment {
+    order: 1; /* Place at the end */
+  }
+  

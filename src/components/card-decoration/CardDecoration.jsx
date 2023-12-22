@@ -1,4 +1,4 @@
-// import { decorationItems } from "../../utils/constants";
+import { Link } from "react-router-dom";
 import "./cardDecoration.css"
 import styled from "styled-components";
 
@@ -66,7 +66,9 @@ const CardDecoration = ({data, align}) => {
                         </div>
                     </div>
                     <div className="row justify-content-center align-items-center buttonDeco-wrapper w-100">
-                        <ButtonDeco theme={{btncolor: data.btnColor, txtcolor: data.txtColor}} >Learn More</ButtonDeco>
+                        <Link to={data.linkPath}>
+                            <ButtonDeco theme={{btncolor: data.btnColor, txtcolor: data.txtColor}} >Explore More</ButtonDeco>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -18,7 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  scroll-behavior: smooth; /* Optional: Adds smooth scrolling behavior */
+  margin: 0;
+  padding: 0;
 }
+
 :root {
   --primary-color: #405;
   --primary-light-color: #43ff64;

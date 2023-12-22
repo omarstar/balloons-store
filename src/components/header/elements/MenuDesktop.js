@@ -85,6 +85,9 @@ const MenuDesktop = () => {
                                         <li><a href="/collections/decorations/arches">arches</a></li>
                                         <li><a href="/collections/decorations/columns">columns</a></li>
                                         <li><a href="/collections/decorations/shapes">letters & numbers</a></li>
+                                        <li><a href="/collections/decorations/garlands">garlands</a></li>
+                                        <li><a href="/collections/decorations/sculptures">sculptures</a></li>
+                                        <li><a href="/collections/decorations/Ceiling-Walls">Ceiling & walls</a></li>
                                     </ul>
                                 </div>
 

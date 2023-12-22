@@ -3,48 +3,60 @@ import Filter from "../components/filter/Filter";
 import Products from "../components/products/Products";
 import data from "../data.json"
 // import Cart from "../components/cart/Cart";
-import { getImage, getLocalStorageValue } from "../utils/helpers";
+import { getBreadFromPath, getImage, getLocalStorageValue } from "../utils/helpers";
 import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import CartView from "../components/cart/CartView";
+import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
+import { useLocation, useParams } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { cartActions } from "../store/cart/cart-slice";
 
 const LayoutProducts = () => {
 
-    const breadcrumbs = useSelector(state => state.breadcrumb.breadcrumbs)
-    console.log('breadcrumbs', breadcrumbs)
+    const productsList = useSelector(state => state.product.products)
+    console.log('productsList', productsList)
 
-    const [products, setProducts] = useState(data.products);
-    const [size, setSize] = useState("")
-    const [sort, setSort] = useState("")
+    const {prds} = useParams();
+    console.log('category params', prds)
+
+    const location = useLocation();
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+    const crumb = getBreadFromPath(pathSegments)
+    console.log('crumb', crumb)
+
+    const dispatch = useDispatch();
+
+    const [products, setProducts] = useState(productsList);
+    // const [size, setSize] = useState("")
+    // const [sort, setSort] = useState("")
     const [cartItems, setCartItems] = useState(getLocalStorageValue("cartItems") ? JSON.parse(getLocalStorageValue("cartItems")) : [])
-    const [crumbs, setCrumbs] = useState([])
-    // const [crumbs, setCrumbs] = useState(['Home','Category','Sub Category'])
 
     useEffect(() => {
-      setCrumbs(breadcrumbs);
+    //   setCrumbs(breadcrumbs);
+      dispatch(breadcrumbsActions.updateBreadcrumbs(crumb))
     
-    }, [breadcrumbs])
+    }, [dispatch])
     
 
     // const dispatch = useDispatch();
 
-    const  filterProducts = (event)=>{
-        const {value} = event.target;
-        console.log('value', value)
-        console.log('products', products)
-        if(event.target.value === ""){
-            setSize(value);
-            setProducts(data);
-        }else{
-            setSize(value)
-            setProducts(data.products.filter(product=>{
-                console.log('indexOf', product.availableSizes.indexOf(value))
-                return product.availableSizes.indexOf(value)  >= 0
-        }))
-        }
-    }
+    // const  filterProducts = (event)=>{
+    //     const {value} = event.target;
+    //     console.log('value', value)
+    //     console.log('products', products)
+    //     if(event.target.value === ""){
+    //         setSize(value);
+    //         setProducts(data);
+    //     }else{
+    //         setSize(value)
+    //         setProducts(data.products.filter(product=>{
+    //             console.log('indexOf', product.availableSizes.indexOf(value))
+    //             return product.availableSizes.indexOf(value)  >= 0
+    //     }))
+    //     }
+    // }
 
     const handleAddtoCart = (product) => {
         const cart = cartItems.slice();
@@ -67,21 +79,21 @@ const LayoutProducts = () => {
         
     }
 
-    const sortProducts = (event) => {
-        const sortValue = event.target.value;
-        console.log('sortValue', sortValue)
-        setSort(sortValue);
-        setProducts(products.slice().sort((a,b)=>(
-            sortValue === "lowest"
-            ? a.price > b.price
-                ? 1 : -1
-            : sort === "highest"
-            ? a.price < b.price
-                ? 1 : -1
-            : a._id < b._id
-                ? 1 : -1
-        )))
-    }
+    // const sortProducts = (event) => {
+    //     const sortValue = event.target.value;
+    //     console.log('sortValue', sortValue)
+    //     setSort(sortValue);
+    //     setProducts(products.slice().sort((a,b)=>(
+    //         sortValue === "lowest"
+    //         ? a.price > b.price
+    //             ? 1 : -1
+    //         : sort === "highest"
+    //         ? a.price < b.price
+    //             ? 1 : -1
+    //         : a._id < b._id
+    //             ? 1 : -1
+    //     )))
+    // }
 
 const handleRemoveCart = (product) => {
     const cart = cartItems.slice();
@@ -95,12 +107,9 @@ const handleRemoveCart = (product) => {
     console.log('ls', getLocalStorageValue("cartItems"))
 }
 
-const selectedCrumb = (crumb) => {
-    console.log('crumb', crumb)
-}
-// {/* <div className="sidebar">
-//     <Cart cartItems={cartItems} removeCartFromCart={handleRemoveCart} />
-//                 </div> */}
+// const selectedCrumb = (crumb) => {
+//     console.log('crumb', crumb)
+// }
 
 const ImageDeco = styled.div.attrs(()=>({
     className: 'category-banner banner text-uppercase'
@@ -130,14 +139,15 @@ const ImageDeco = styled.div.attrs(()=>({
                 </div>
 
                 <div className="container">
-                    <NavBreadCrumb crumbs={crumbs} selected={selectedCrumb} />
-                    <Filter
+                    <CartView />
+                    <NavBreadCrumb />
+                    {/* <Filter
                     count={products.length}
                     sort={sort}
                     size={size}
                     filterProducts={filterProducts}
                     sortProducts={sortProducts}
-                     />
+                     /> */}
                     <Products products={products} addtoCart={handleAddtoCart} />
                 </div>
                                 

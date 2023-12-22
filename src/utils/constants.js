@@ -88,23 +88,26 @@ export const decorationItems = [
         btnColor:"#943740",
         bgColor:"#F0C7D5",
         txtColor:"#fff",
+        linkPath: "/collections/decorations/centerpieces",
         desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
 
     },
     {
-        title: "Balloon Garland",
+        title: "Balloon Garlands",
         srcUrl: Garland,
         btnColor:"#06315B",
         bgColor:"#97BAD0",
         txtColor:"#FFF",
+        linkPath: "/collections/decorations/garlands",
         desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
     },
     {
-        title: "Columns",
+        title: "Balloon Columns",
         srcUrl: Columns,
         btnColor:"#A1C7B8",
         bgColor:"#CEA4D2",
         txtColor:"#000",
+        linkPath: "/collections/decorations/columns",
         desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
     },
     {
@@ -113,6 +116,7 @@ export const decorationItems = [
         btnColor:"#EDCED4",
         bgColor:"#9EA9DF",
         txtColor:"#000",
+        linkPath: "/collections/decorations/Ceiling-Walls",
         desc: "Make a huge statement and transform any space instantly with ceiling and wall decorations, frame out your walls and drape your ceilings with our beautiful balloons to add depth that can have your party space feel like a different dimension entirely."
     },
     {
@@ -121,6 +125,7 @@ export const decorationItems = [
         btnColor:"#B3A2D3",
         bgColor:"#348CCA",
         txtColor:"#000",
+        linkPath: "/collections/decorations/arches",
         desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
     },
     {
@@ -129,6 +134,7 @@ export const decorationItems = [
         btnColor:"#92AB72",
         bgColor:"#F18E76",
         txtColor:"#000",
+        linkPath: "/collections/decorations/sculptures",
         desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
     }
 ]
@@ -145,19 +151,31 @@ export const dropdownItems = {
             title:"arches",
             path: "/collections/decorations/arches",
             cName:'dropdown-link',
-            briefText: "a wide range of styles for centerpieces",
+            briefText: "a wide range of styles for arches",
             imgSrc: catImg1
         },{
             title:"columns",
             path: "/collections/decorations/columns",
             cName:'dropdown-link',
-            briefText: "a wide range of styles for centerpieces",
+            briefText: "a wide range of styles for columns",
             imgSrc: catImg2
         },{
             title:"letters & numbers",
             path: "/collections/decorations/shapes",
             cName:'dropdown-link',
-            briefText: "a wide range of styles for centerpieces",
+            briefText: "a wide range of styles for Letters and Numbers",
+            imgSrc: catImg2
+        },{
+            title:"Garlands",
+            path: "/collections/decorations/garlands",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for Garlands",
+            imgSrc: catImg2
+        },{
+            title:"Sculptures",
+            path: "/collections/decorations/sculptures",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for Sculptures",
             imgSrc: catImg2
         }
     ],

@@ -20,7 +20,8 @@ const Products = ({products, addtoCart}) => {
         <div>
             <ul className="products">
                 {
-                    products.length === 0 ?
+                    products.length === 0 
+                    ?
                          <p>no results using this filter</p>
                     :
                     products.map(product => {
