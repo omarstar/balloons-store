@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CartView from "../components/cart/CartView";
 import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
 import { useLocation, useParams } from "react-router-dom";
+import Promobar from "../components/header/Promobar";
 // import { useDispatch } from "react-redux";
 // import { cartActions } from "../store/cart/cart-slice";
 
@@ -121,6 +122,9 @@ const ImageDeco = styled.div.attrs(()=>({
     return ( 
         <>
         <div className="content">
+            <div className="promobar-wrapper">
+                <Promobar />
+            </div>
             <div className="main">
                 <div className="category-banner-container bg-gray">
                     {/* banner */}
