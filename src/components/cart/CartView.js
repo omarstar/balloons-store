@@ -1,9 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./cartview.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { cartActions } from "../../store/cart/cart-slice";
 import { getFormatAmount } from "../../utils/helpers";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const CartView = () => {
 
@@ -12,12 +13,32 @@ const CartView = () => {
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
     const {cartTotalQuantity, cartTotalAmount, showCartView} = cart;
-
     const {getTotals, addToCart, decreaseCart, removeFromCart, setHideCartView} = cartActions;
 
     useEffect(() => {
         dispatch(getTotals());
     }, [cart, dispatch]);
+
+    // const [isOpen, setIsOpen] = useState(showCartView);
+    const menuRef = useRef(null);
+
+    useEffect(() => {
+        
+        // Function to handle click outside the menu
+        const handleClickOutside = (event) => {
+          if (menuRef.current && !menuRef.current.contains(event.target)) {
+            // setIsOpen(false);
+            dispatch(setHideCartView())
+          }
+        };
+        // Attach event listener when the component mounts
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
@@ -32,7 +53,7 @@ const CartView = () => {
     
 
     return ( 
-        <div className={`cart_drawer ${showCartView ? 'is-open' : ''}`}>
+        <div ref={menuRef   } className={`cart_drawer ${showCartView ? 'is-open' : ''}`}>
             <div class="cart-drawer_inner">
                 <div className="cart-drawer_header">
                     <div className="cart-drawer__headerInner">

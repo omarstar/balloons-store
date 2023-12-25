@@ -11,7 +11,10 @@ const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
+        handleProductSelected: (state, action) => {
 
+            state.detailProduct = {...action.payload}
+        }
     }
 })
 

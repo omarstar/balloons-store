@@ -23,17 +23,29 @@ const Product = ({product}) => {
         )
         dispatch(cartActions.setShowCartView())
     }
+    const handleAddProductOption = (prd) => {
+        if(prd.buttonOption === "add to cart"){
+            handleAddToCart(prd)
+        }else if(prd.buttonOption === "select options"){
+            handleProductDetailsSelected(prd);
+        }else if(prd.buttonOption === "get quote"){
+            dispatch(productActions.handleProductSelected(prd))
+            navigate('/balloons/contacts')
+        }
+    }
+
     const handleProductDetailsSelected = (prd) => {
         dispatch(productActions.handleProductSelected(prd))
-        navigate('/balloons/details')
+        navigate(`/balloons/details/${prd._id}`)
     }
 
     const handleDecrementCartQty = (prd) => {
         dispatch(cartActions.decreaseCart(prd));
     }
 
+    const buttonOption = product.buttonOption;
     const cartItemQuantity = useSelector(getCartItemQuantity(product._id));
-    const isProductInCart = useSelector(isInCart(product._id));
+    // const isProductInCart = useSelector(isInCart(product._id));
 
     useEffect(() => {
         window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
@@ -64,7 +76,7 @@ const Product = ({product}) => {
             </div>  
             <div className="item-btn-container item-inner balloon-item">
                 {
-                        cartItemQuantity !== 0 ? (
+                       buttonOption === "add to cart" && cartItemQuantity !== 0 ? (
                             <div class="product-container">
                                 {/* <button class="quantity-button decrement">-</button> */}
                                 <div onClick={()=>handleDecrementCartQty(product)} class="quantity-button decrement"><img class="icon-link-image icon-incr-decr" src={minusIcon} alt="Cart icon by Icons8"/></div>
@@ -76,11 +88,14 @@ const Product = ({product}) => {
                                 <div onClick={()=>handleAddToCart(product)} class="quantity-button increment"><img class="icon-link-image icon-incr-decr" src={plusIcon} alt="Cart icon by Icons8"/></div>
                             </div>
                         ) : (
-                            <button onClick={()=>handleAddToCart(product)} className="item-cart-btn d-flex justify-content-between align-items-center">
-                                <p className="text-addcart">Add To Cart</p>
+                            <button onClick={()=>handleAddProductOption(product)} className="item-cart-btn d-flex justify-content-between align-items-center">
+                                <p className="text-addcart">{buttonOption}</p>
                                 <div className="top-right-cart">
                                     {/* <i className="fa fa-cart-shopping" >🛒</i> */}
                                     <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
+                                    {buttonOption !== "add to cart" && cartItemQuantity !== 0 && (
+                                        <span className="icon-product-qty-bubble"> {cartItemQuantity} </span>
+                                    )}
                                 </div>
                             </button>
                         )

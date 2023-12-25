@@ -85,6 +85,21 @@
   border-radius: 15px;
   margin: 10px;
 }
+ .top-right-cart .icon-product-qty-bubble {
+	background: #cc1641;
+	border-radius: 50%;
+	bottom: 0;
+	color: #fff;
+	display: inline-block;
+	font-family: "Prompt", helvetica, arial sans-serif;
+	font-size: 10px;
+	height: 17px;
+	line-height: 17px;
+	position: absolute;
+	right: -5px;
+	text-align: center;
+	width: 17px
+}
 /* media query */
 @media screen and (max-width: 640px){
     .product::after {
