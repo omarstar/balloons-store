@@ -14,9 +14,11 @@ const ProductDetails = ({ product }) => {
     dispatch(cartActions.addToCart(prd))
     dispatch(cartActions.setShowCartView())
   };
+
 console.log('product detail img id', [image, _id])
+
   return (
-    <div className="product-details row">
+    <div className="product-details wrapper">
       <div className="product-image col-6">
         <img src={getImportedImage(product._id)} alt={title} />
       </div>

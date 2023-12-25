@@ -1,16 +1,8 @@
 :root {
     --surface-color: #fff;
+    /* --surface-color: rgb(160, 110, 206); */
     --curve: 40;
   }
-/*   
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #fef8f8;
-  } */
   
   .cards {
     display: grid;
@@ -42,7 +34,8 @@
     right: 0;
     z-index: 1;      
     border-radius: calc(var(--curve) * 1px);    
-    background-color: var(--surface-color);      
+    /* background-color: var(--surface-color);       */
+    border: 2px solid rgb(160, 110, 206);
     transform: translateY(100%);
     transition: .2s ease-in-out;
   }

@@ -19,6 +19,11 @@ export const getImage = (srcpath) => {
     }
 }
 
+// export const getFormatTotalAmount= (amount) => {
+//     const updatedAmount = Number(amount).toFixed(2);
+//     return `AED ${updatedAmount}`
+// }
+
 export const getFormatAmount= (amount) => {
     const updatedAmount = Number(amount).toFixed(2);
     return `AED ${updatedAmount}`
