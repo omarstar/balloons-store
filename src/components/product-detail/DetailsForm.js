@@ -15,7 +15,7 @@ console.log('formData: ', formData)
     return moreOptions.map((option, index) => {
       if (option.type === 'string' || option.type === 'number') {
         return (
-          <div key={index}>
+          <div key={index} className="">
             <label>{option.text}</label>
             <input
               type={option.type}
@@ -28,7 +28,7 @@ console.log('formData: ', formData)
         );
       } else if (option.type === 'list' && Array.isArray(option.placeholder)) {
         return (
-          <div key={index}>
+          <div key={index} className=''>
             <label>{option.text}</label>
             <select
               name={`select_${index}`}
