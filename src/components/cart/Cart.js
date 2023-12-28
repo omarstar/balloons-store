@@ -3,12 +3,13 @@ import "./cart.css"
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart/cart-slice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
     
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const {getTotals, addToCart, decreaseCart, removeFromCart, clearCart} = cartActions;
 
@@ -29,6 +30,7 @@ const Cart = () => {
         dispatch(clearCart());
         window.scrollTo(0, 0);
     };
+
 
     return ( 
         <div className="cart-container">
@@ -101,7 +103,7 @@ const Cart = () => {
                 <span className="amount">${cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button>Check out</button>
+              <button onClick={()=>(navigate('/balloons/Checkout'))}>Check out</button>
               <div className="continue-shopping">
                 <Link to="/collections/continue">
                   <svg

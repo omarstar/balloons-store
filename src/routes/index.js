@@ -1,3 +1,4 @@
+import Checkout from "../components/checkout/Checkout";
 import AnonymousLayout from "../layouts/AnonymousLayout"
 import MainLayout from "../layouts/MainLayout"
 import LayoutCart from "../pages/LayoutCart";
@@ -110,6 +111,20 @@ export const routes = [
                         hasSiderLink: true,
                         component: LayoutCart,
                         path: 'balloons/cart'
+                    }
+                ]
+            },
+            {
+                name: 'checkout',
+                title: 'Checkout',
+                hasSiderLink: true,
+                routes: [
+                    {
+                        name: 'Checkout-section',
+                        title: 'Checkout section',
+                        hasSiderLink: true,
+                        component: Checkout,
+                        path: 'balloons/Checkout'
                     }
                 ]
             },
