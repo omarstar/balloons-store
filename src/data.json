@@ -44,7 +44,7 @@
             "buttonOption": "select options",
             "moreOptions": [{
                 "type": "number",
-                "text": "add gift note",
+                "text": "add age",
                 "placeholder": "1"
             }
         ]
