@@ -23,8 +23,8 @@ function App() {
 
   store.dispatch(cartActions.getTotals());
 
-  const carti = useSelector(state=> state.cart.cartItems);
-  console.log('first', carti)
+  // const carti = useSelector(state=> state.cart.cartItems);
+  // console.log('first', carti)
 
     return (
       
