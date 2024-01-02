@@ -40,13 +40,6 @@ console.log('product detail img id', [image, _id])
         <img src={getImportedImage(_id)} alt={title} />
       </div>
       <div className="details-container">
-        {/* Details */}
-        {/* <h2>{title}</h2>
-        <p>Price: ${price}</p>
-        
-        <p className='details-description'>{description}</p>
-        
-        <p>add quantity btns</p> */}
         <div id="product-info">
           <div id="product-info-header">
               <h2>{title}</h2>
@@ -54,7 +47,7 @@ console.log('product detail img id', [image, _id])
                   <h5>Sku: </h5>
                   <p>1024</p>
               </div>
-              <h3>Dhs. {price} AED</h3>
+              <h3 className='details-description'>Dhs. {price} AED</h3>
           </div>
           <h5>Quantity: </h5>
           {/* <div id="quantity">

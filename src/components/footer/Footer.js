@@ -38,7 +38,7 @@ const Footer = () => {
 									<li><a href="category">Holidays & events</a></li>
 									<li><a href="category">Balloons Bouquet</a></li>
 									<li><a href="/create-bouquet/">Create your won Bouquet</a></li>
-									<li><a href="/party-rentals/">Party Rentals</a></li>
+									<li><a href="/party-rentals">Party Rentals</a></li>
 								</ul>
 							</section>
 						</div>

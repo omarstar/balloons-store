@@ -121,7 +121,7 @@ const MenuDesktop = () => {
                 <a href="#">Create your own Bouquet</a>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Party rentals</a>
+                <a href="/party-rentals">Party rentals</a>
             </li>
             {/* {MenuItems && MenuItems.map(menuItem => {
                 const {id, title, cName, path, hasMegaMenu = false} = menuItem;

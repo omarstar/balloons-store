@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart/cart-slice";
 import { Link, useNavigate } from "react-router-dom";
+import { getImportedImage } from "../../utils/helpers";
 
 const Cart = () => {
     
@@ -68,12 +69,12 @@ const Cart = () => {
           <div className="cart-items">
             {cart.cartItems &&
               cart.cartItems.map((cartItem) => (
-                <div className="cart-item" key={cartItem.id}>
+                <div className="cart-item" key={cartItem._id}>
                   <div className="cart-product">
-                    <img src={cartItem.image} alt={cartItem.name} />
+                    <img src={getImportedImage(cartItem._id)} alt={cartItem.name} />
                     <div>
-                      <h3>{cartItem.name}</h3>
-                      <p>{cartItem.desc}</p>
+                      <h3>{cartItem.title}</h3>
+                      <p>{cartItem.description}</p>
                       <button onClick={() => handleRemoveFromCart(cartItem)}>
                         Remove
                       </button>

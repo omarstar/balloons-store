@@ -1,4 +1,5 @@
 import Checkout from "../components/checkout/Checkout";
+import QuoteRental from "../components/contacts/QuoteRental";
 import AnonymousLayout from "../layouts/AnonymousLayout"
 import MainLayout from "../layouts/MainLayout"
 import LayoutCart from "../pages/LayoutCart";
@@ -125,6 +126,20 @@ export const routes = [
                         hasSiderLink: true,
                         component: Checkout,
                         path: 'balloons/Checkout'
+                    }
+                ]
+            },
+            {
+                name: 'rentalContact',
+                title: 'rentalContact',
+                hasSiderLink: true,
+                routes: [
+                    {
+                        name: 'rentalContact-section',
+                        title: 'rentalContact section',
+                        hasSiderLink: true,
+                        component: QuoteRental,
+                        path: '/party-rentals'
                     }
                 ]
             },
