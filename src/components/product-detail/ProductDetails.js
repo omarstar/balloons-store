@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductDetails.css'; // Import the CSS file for styling
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../store/cart/cart-slice';
 import { getImportedImage } from '../../utils/helpers';
 import { getCartItemQuantity } from '../../store/selectors';
 import DetailForm from './DetailsForm';
+import { toast } from 'react-toastify';
+import { toastOption } from '../../utils/constants';
 
 const ProductDetails = () => {
   const productsSelected = useSelector(state => state.product.detailProduct)
@@ -12,6 +14,8 @@ const ProductDetails = () => {
   const { _id, title, price, description, image, availableSizes } = productsSelected;
 
   const cartItemQuantity = useSelector(getCartItemQuantity(_id));
+
+  const [itemQuantity, setitemQuantity] = useState(cartItemQuantity);
 
   const dispatch = useDispatch();
 
@@ -22,11 +26,15 @@ const ProductDetails = () => {
     dispatch(cartActions.setShowCartView())
   };
 
-  const handleAddToCart = (product) => {
-    dispatch(cartActions.addToCart(product));
+  const handleAddQty = () => {
+    setitemQuantity(itemQuantity+1)
 };
-const handleDecreaseCart = (product) => {
-    dispatch(cartActions.decreaseCart(product));
+const handleDecreaseQty = () => {
+  if(itemQuantity > 1)
+    setitemQuantity(itemQuantity-1)
+  else {
+    toast.info(`at least one item should be selected`, toastOption)
+  }
 };
 
 console.log('product detail img id', [image, _id])
@@ -39,6 +47,7 @@ console.log('product detail img id', [image, _id])
         {/* Image goes here */}
         <img src={getImportedImage(_id)} alt={title} />
       </div>
+      
       <div className="details-container">
         <div id="product-info">
           <div id="product-info-header">
@@ -49,23 +58,21 @@ console.log('product detail img id', [image, _id])
               </div>
               <h3 className='details-description'>Dhs. {price} AED</h3>
           </div>
-          <h5>Quantity: </h5>
+          <h5 className='fs-title'>Quantity</h5>
           {/* <div id="quantity">
               <input type="button" value="-" />
               <input type="button" value="5" />
               <input type="button" value="+" />
           </div> */}
           <div class="cart-item__quantity" data-line="43503323349214">
-              <span onClick={()=>handleDecreaseCart(productsSelected)} class="cart-item__minus-quantity" data-field="quantity[]">-</span>
-              <input type="text" class="cart-item__input-quantity" value={cartItemQuantity} min="1" pattern="[0-9]*" name="qauntity[]"/>
-                  <span onClick={()=>handleAddToCart(productsSelected)} class="cart-item__add-quantity" data-field="quantity[]">+</span>
+              <span onClick={handleDecreaseQty} class="cart-item__minus-quantity" data-field="quantity[]">-</span>
+              <input type="text" class="cart-item__input-quantity" value={itemQuantity <= 1 ? 1 : itemQuantity} min="1" pattern="[0-9]*" name="qauntity[]"/>
+                  <span onClick={handleAddQty} class="cart-item__add-quantity" data-field="quantity[]">+</span>
           </div>
-          <p>{description}</p>
-          <p className='details-description'>{availableSizes[0]}</p>
         </div>
 
 
-        <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn d-flex justify-content-between align-items-center">
+        <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn deco-button d-flex justify-content-between align-items-center">
             <p className="text-addcart">Add To Cart</p>
             <div className="top-right-cart">
                 <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
@@ -82,7 +89,34 @@ console.log('product detail img id', [image, _id])
             </div>
           )
         }
+        
       </div>
+      
+      {/* description box */}
+      <div id="des-full" className="description-container">
+        <div className="desc_header">
+          <h2 class="desc__title heading h3">Description</h2>
+        </div>
+        <div className="desc_section">
+          <div className='desc-content rte'>
+            {description}
+            <p className='details-description'>{availableSizes[0]}</p>
+            <p>Microfoil Balloon Count: 1 Supersize 36" plus 4 x 18" Foil balloons with weight Height/Size: 1.5 Mtr Float Time: 2-5 days Cold air, hot air, high humidity, changing barometric pressure, high altitudes, and moving air from fans and vents will reduce balloon float times.</p>
+          </div>
+          <div className='delivery-info rte'>
+
+          </div>
+          <div className='care-info rte'>
+
+          </div>
+        </div>
+          
+        <div class="item-description_box">
+          <p></p>
+          
+        </div>
+      </div>
+
     </div>
     </>
     // <div className="product-details wrapper">

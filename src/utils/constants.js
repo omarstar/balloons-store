@@ -15,6 +15,10 @@ import Sculptures from "../assets/images/decorations/scapt.webp"
 import catImg1 from "../assets/images/balloons/bbc.png"
 import catImg2 from "../assets/images/balloons/gwc.png"
 
+import * as Yup from "yup";
+
+import {v4 as uuidv4} from 'uuid'
+
 export const MenuItems = [
     {
         id: 10,
@@ -380,4 +384,96 @@ export const staticInfo = {
     care: "As per the image, the balloons will be delivered as blow-up.; To avoid the damages, kindly take care of your balloons from sharpened edges, or corners.; Keep separate the deflated balloons from the children and discard the broken balloons.; Enjoy the event with our quality balloons."
 }
 
+// fomik schema
+export const QuoteSchema = Yup.object().shape({
+    email: Yup.string()
+        .email("Invalid email address format")
+        .required("Email is required"),
+    name: Yup.string()
+        .min(3, "Your name must be 3 characters at minimum")
+        .required("Name is required"),
+    phone: Yup.string()
+        .min(3, "Your name must be 3 characters at minimum")
+        .required("Name is required"),
+});
+
+export const CheckoutSchema = "";
+
+export const locations = [
+    {
+    _id: `location-${uuidv4}`,
+    area:"Jumeirah",
+    deliveryCharge: 200,
+    conditions: ""
+    },
+    {
+    _id: `location-${uuidv4}`,
+    area: "Marina",
+    deliveryCharge: 200,
+    conditions: ""
+    },
+    {
+    _id: `location-${uuidv4}`,
+    area: "Bur Dubai",
+    deliveryCharge: 200,
+    conditions: ""
+    },
+    {
+    _id: `location-${uuidv4}`,
+    area: "Business bay",
+    deliveryCharge: 200,
+    conditions: ""
+    },
+    {
+    _id: `location-${uuidv4}`,
+    area: "Deira",
+    deliveryCharge: 200,
+    conditions: ""
+    },
+    {
+    _id: `location-${uuidv4}`,
+    area: "Dubai Hills",
+    deliveryCharge: 200,
+    conditions: ""
+    }
+]
 //just notes
+const checkoutPayload = {
+cartItems: [{
+    "_id":99,
+    "image":"",
+    "title":"12 Assorted color Balloon Bouquet with weight",
+    "description":"default desc xs m 855",
+    "availableSizes": ["XS","M"],
+    "price": 0,
+    "inCart": false,
+    "quantity": 0,
+    "buttonOption": "",
+    "moreOptions": [{
+        note: "",
+        digit: 1,
+        thisone: ""
+    }],
+    "cartQuantity": 0
+}],
+cartTotalQuantity: 0,
+cartTotalAmount: 0,
+personalinfo: {
+    name: "",
+    email: "",
+    phone: "",
+},
+eventData: {
+    date: "",
+    decortime: "",
+    starttime: "",
+    endtime: "",
+    locationEvent: "",
+    messagenote: ""
+},
+addressDetails: {
+    locationEvent: "",
+    address: "",
+    isDelivery: false
+}
+}

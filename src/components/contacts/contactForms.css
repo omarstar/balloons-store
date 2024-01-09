@@ -1,0 +1,30 @@
+.validation {
+    color: red;
+}
+.date-picker__calendar-icon i{
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+.react-datepicker__input-container .react-datepicker__calendar-icon{
+    display: flex !important;
+    justify-content: space-evenly !important;
+}
+
+.contact.address-part i {
+    margin-right: 20px;
+}
+.contact-call {
+    margin: 1.8rem;
+}
+.address-part_title {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+.sendMessage-title{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.custom-pd-top {
+    padding-top: 20px !important;
+}

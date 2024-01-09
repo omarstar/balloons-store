@@ -23,7 +23,7 @@ html, body {
       text-align: center;
       min-height: 100vh;
       background:#A8D8DF;
-      padding: 2rem;
+      padding: 1.5rem;
 }
 
 .form-holder .form-content {
@@ -211,12 +211,12 @@ form.contact-form {
     color: #000;
     text-align: center;
     font-family: Italianno;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 
-    height: 4rem;
+    /* height: 4rem; */
 }
 
 .contactus-desc p{
@@ -229,12 +229,13 @@ form.contact-form {
 }
 
 .contact.address-part {
-	background: #fff none repeat scroll 0 0;
-	border-radius: 3px;
+	background: #405 none repeat scroll 0 0;
+	border-radius: 20px;
 	box-shadow: 0 0 5px #dedfe3;
 	padding: 50px;
 	min-height: 450px;
     font-size: 1.2rem;
+    color: #fff;
  }
  .contact.address-part h3 {
     font-size: 1.3rem;

@@ -62,3 +62,21 @@ export const getBreadFromPath = (path) => {
   return []
 
 }
+
+export const validatePhoneNumber = (input) => {
+    let result = ''
+    if(input.length === 0) {
+        result = "emptyField"
+    } else if(input.length < 10){
+        result = "wrongFormat";
+    } else if(!input.startsWith("05")){
+        result = "invalidMobile";
+    } else {
+        result = "valid"
+
+    }
+    console.log('invalMob ', input )
+    console.log('result', result)
+    return result;
+
+}

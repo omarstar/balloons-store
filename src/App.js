@@ -11,20 +11,12 @@ import Footer from "./components/footer/Footer";
 
 import { ToastContainer } from 'react-toastify'
 
-import { useSelector } from "react-redux";
 import store from "./store";
 import { cartActions } from "./store/cart/cart-slice";
 
 function App() {
 
-          
-  // const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-  // console.log('isLoggedIn', isLoggedIn)
-
   store.dispatch(cartActions.getTotals());
-
-  // const carti = useSelector(state=> state.cart.cartItems);
-  // console.log('first', carti)
 
     return (
       

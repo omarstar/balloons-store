@@ -7,7 +7,7 @@ const CatCard = ({category, ckey}) => {
     return ( 
         
         <li key={ckey}>
-    <Link to={path} className="card">
+    <Link to={path} className="card card__category">
       <img src={imgSrc} className="card__image" alt="" />
       <div className="card__overlay">        
         <div className="card__header">

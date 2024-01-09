@@ -106,7 +106,8 @@ const Cart = () => {
               <p>Taxes and shipping calculated at checkout</p>
               <button onClick={()=>(navigate('/balloons/Checkout'))}>Check out</button>
               <div className="continue-shopping">
-                <Link to="/collections/continue">
+                {/* the detail number will be saved in state for ref to return back to it */}
+                <Link to="/balloons/details/1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

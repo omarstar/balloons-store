@@ -16,7 +16,7 @@ const HeaderTop = () => {
                 <a className="logo" href="/home"><img className="image" src={logoHeader} alt="Funky Balloons"/></a>
             </div>
             {/* middle part */}
-            <div className="header-center hidden-sm">
+            <div className="header-center hidden-sm hidden-xs">
             {/* header center only large:
                 main menu
                 search form

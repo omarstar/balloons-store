@@ -204,6 +204,13 @@
     cursor: pointer;
     transition: all .3s linear;
   }
+  .deco-button {
+        border: none;
+        width: 235px;
+        position: absolute;
+        bottom: 1.2rem;
+        right: 30px
+  }
   
   .item-cart-btn:hover {
     color: #fff;

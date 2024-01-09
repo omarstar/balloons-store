@@ -517,6 +517,13 @@
 	transform: rotate(-45deg)
 }
 
+button, input[type="submit"], a {
+	transition: width 250ms ease, background-color 250ms ease, border-color 250ms ease, color 250ms ease, padding 250ms ease, margin 250ms ease;
+  }
+button {
+	overflow: visible;
+}
+
 #header-padding {
 	height: 81px
 }
@@ -586,8 +593,8 @@
 	}
 
 	#header .icons {
-		-ms-flex-flow: initial;
-		flex-flow: initial;
+		/* -ms-flex-flow: initial;
+		flex-flow: initial; */
 		-ms-flex-pack: justify;
 		justify-content: space-between;
 		padding: 0 30px 0 0
@@ -647,11 +654,20 @@
 	#header .navigation-main .sub-menu {
 		left: 10px
 	}
+	.hidden-lg {
+		display: none !important;
+	}
 }
 /* mobile */
-@media screen and (max-width: 782px) {
+/* @media screen and (max-width: 782px) {
   
-}
+} */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.hidden-md {
+	  display: none !important;
+	}
+  }
 
 /* ecommerce template style */
 .menu .megamenu {

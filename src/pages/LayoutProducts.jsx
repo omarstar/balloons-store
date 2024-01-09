@@ -129,14 +129,14 @@ const ImageDeco = styled.div.attrs(()=>({
                 <div className="category-banner-container bg-gray">
                     {/* banner */}
                     <ImageDeco imgpath={getImage("../assets/images/banners/NationalDay-Banner.webp")}>
-                        <div className="container position-relative">
+                        <div className="position-relative">
                             <div className="row">
                                 <div className="pl-lg-5 pb-5 pb-md-0 col-md-5 col-xl-4 col-lg-4 offset-1">
-                                    
+                                    lets say something interesting here
                                 </div>
-                                <div className="pl-lg-3 col-md-4 offset-md-0 offset-1 pt-3">
-
-                                </div>
+                                {/* <div className="pl-lg-3 col-md-4 offset-md-0 offset-1 pt-3">
+                                    with offers and discounts!
+                                </div> */}
                             </div>
                         </div>
                     </ImageDeco>
