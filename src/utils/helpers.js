@@ -80,3 +80,15 @@ export const validatePhoneNumber = (input) => {
     return result;
 
 }
+//not used
+export const formatDateToYMD = (date) => {
+    // const year = date.getFullYear();
+    // const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+    // const day = String(date.getDate()).padStart(2, '0');
+  
+    // return `${year}-${month}-${day}`;
+    const serializedDate = date.toISOString();
+    console.log('serializedDate.split()', serializedDate.split())
+    return serializedDate.split('T')[0];
+  };
+

@@ -7,3 +7,7 @@ export const getCartItemQuantity = (productId) => (state) => {
   export const isInCart = (productId) => (state) => {
     return state.cart.cartItems.some(item => item._id === productId);
   };
+// TIME SLOTS
+export const getAvailableTimeSlots = () => (state) => {
+  return state.checkoutorder.availableTimeSlots;
+}

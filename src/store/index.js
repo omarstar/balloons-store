@@ -6,6 +6,7 @@ import qouteRequestsSlice from "./contact/qoute-slice";
 import breadcrumbsSlice from "./breadcrumb/breadcrumbsSlice";
 import storage from 'redux-persist/lib/storage'
 import { persistStore, persistReducer } from "redux-persist";
+import checkOrderSlice from "./contact/checkout-slice";
 
 const persistConfig = {
     key: 'root',
@@ -16,7 +17,8 @@ const combinedReducer = combineReducers({
     cart: cartSlice.reducer,
     product: productSlice.reducer,
     breadcrumbs: breadcrumbsSlice.reducer,
-    quoterequest: qouteRequestsSlice.reducer
+    quoterequest: qouteRequestsSlice.reducer,
+    checkoutorder: checkOrderSlice.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, combinedReducer)

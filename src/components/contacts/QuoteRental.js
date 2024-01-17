@@ -16,8 +16,8 @@ const QuoteRental = () => {
     const dispatch = useDispatch();
     const contactPersonal = useSelector((state) => state.quoterequest.contactinfo);
     const contactEvent = useSelector((state) => state.quoterequest.eventData);
-    console.log('contactPersonal', contactPersonal)
-    console.log('contactEvent', contactEvent)
+    console.log('contactPersonal', contactPersonal??{})
+    console.log('contactEvent', contactEvent??{})
 
     const [validationMessage, setValidationMessage] = useState(["",""])
     const [selectedDate, setSelectedDate] = useState(new Date())

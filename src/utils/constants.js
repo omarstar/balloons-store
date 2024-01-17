@@ -437,6 +437,22 @@ export const locations = [
     conditions: ""
     }
 ]
+// not used yet
+export const timeSlots = [
+    {
+    ts_id: 1,
+    shift: "morning",
+    value: "9am - 1pm",
+    deliveryCharge: 70
+    },
+    {
+        ts_id: 2,
+        shift: "evening",
+        value: "2pm - 9pm",
+        deliveryCharge: 85
+    }
+]
+
 //just notes
 const checkoutPayload = {
 cartItems: [{

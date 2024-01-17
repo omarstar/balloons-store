@@ -57,6 +57,9 @@ select {
 .h-max {
   height: 100vh;
 }
+.fs-xs {
+  font-size: 0.8rem;
+}
 a {
   text-decoration: none;
   color: inherit;
