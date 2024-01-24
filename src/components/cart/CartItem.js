@@ -7,7 +7,7 @@ const CartItem = ({product}) => {
     return ( 
         <div key={product._id} className="row mb-1 p-3 text-capitalize text-center cart_item-wrapper">
             <div className="col-10 mx-auto col-lg-2 cart-image">
-                <img src={getImportedImage(image)} style={imgDesign} alt={title} className="img-fluid" />
+                <img src={getImportedImage('collections/'+image)} style={imgDesign} alt={title} className="img-fluid" />
             </div>
             <div className="col-10 mx-auto col-lg-4 cart-name">
                 <div className="row">

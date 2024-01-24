@@ -11,23 +11,45 @@ import CartView from "../components/cart/CartView";
 import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
 import { useLocation, useParams } from "react-router-dom";
 import Promobar from "../components/header/Promobar";
+import { productActions } from "../store/product/product-slice";
 // import { useDispatch } from "react-redux";
 // import { cartActions } from "../store/cart/cart-slice";
 
 const LayoutProducts = () => {
 
-    const productsList = useSelector(state => state.product.products)
-    console.log('productsList', productsList)
+    const dispatch = useDispatch();
+    // var productsList = useSelector(state => state.product.products)
+    var productsList = []
+    // console.log('productsList init', productsList)
 
     const {prds} = useParams();
     console.log('category params', prds)
+
+    //products list updated in state
+    if(prds === "setups"){
+        console.log('products list updated to setups')
+        // dispatch(productActions.recreateProductsList(data.setups))
+        productsList = data.setups;
+
+    }else {
+        console.log('products list updated to products')
+        // dispatch(productActions.recreateProductsList(data.products))
+        productsList = data.products;
+        
+    }
+
+    // productsList = useSelector(state => state.product.products)
+    // console.log('productsList', productsList)
+
 
     const location = useLocation();
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
     const crumb = getBreadFromPath(pathSegments)
     console.log('crumb', crumb)
 
-    const dispatch = useDispatch();
+   
+
+    
 
     const [products, setProducts] = useState(productsList);
     // const [size, setSize] = useState("")

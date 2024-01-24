@@ -30,7 +30,7 @@ const Product = ({product}) => {
             handleProductDetailsSelected(prd);
         }else if(prd.buttonOption === "get quote"){
             dispatch(productActions.handleProductSelected(prd))
-            navigate('/balloons/contacts')
+            navigate('/balloons/contacts#contactus')
         }
     }
 
@@ -62,7 +62,7 @@ const Product = ({product}) => {
                     
                 </div> */}
                 <div className="main-item">
-                    <img src={getImportedImage(product._id)} alt=""/>
+                    <img src={getImportedImage('collections/'+product._id)} alt=""/>
                 </div>
                 <h3 className="item-heading">
                     {product.title} 

@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
 import data from "../../data.json"
-
-const clonedProducts = [...data.products]
+// 
+// const clonedProducts = [...data.products]
 const initialState = {
-    products: clonedProducts,
+    products: [],
     detailProduct: data.productDetails,
 }
 
@@ -14,6 +14,9 @@ const productSlice = createSlice({
         handleProductSelected: (state, action) => {
 
             state.detailProduct = {...action.payload}
+        },
+        recreateProductsList: (state, action)=> {
+            state.products = [...action.payload]
         }
     }
 })

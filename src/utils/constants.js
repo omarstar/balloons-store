@@ -181,6 +181,12 @@ export const dropdownItems = {
             cName:'dropdown-link',
             briefText: "a wide range of styles for Sculptures",
             imgSrc: catImg2
+        },{
+            title:"setups",
+            path: "/collections/decorations/setups",
+            cName:'dropdown-link',
+            briefText: "a wide range of styles for full setups",
+            imgSrc: catImg2
         }
     ],
     "OCCASIONS": [
@@ -379,7 +385,8 @@ export const toastOption = {
 }
 
 export const staticInfo = {
-    supervision: "ADULT SUPERVISION REQUIRED: Children under 8 years can choke or suffocate on uninflated or broken balloons. Keep uninflated balloons from children and discard broken balloons at once.",
+    ordernote: "Please choose the required number while placing the order. Cold air, hot air, high humidity, changing barometric pressure, high altitudes, and moving air from fans and vents will reduce balloon float times. The float times posted on our site are the maximum to be expected. Changing conditions mean that on some occasions balloons may float for only one day and on other occasions the same balloons may float for many days. We guarantee that your balloons will be delivered in perfect condition, but float times will vary. There are no guarantees for float time if balloons are displayed outdoors.",
+    supervision: "Children under 8 years can choke or suffocate on uninflated or broken balloons. Keep uninflated balloons from children and discard broken balloons at once.",
     delivery: "The image of the products is showed only for characteristic purpose; We make sure to deliver 100% as per the image shown. The delivered product may vary in design or shape according to the accessibility.; After the products are prepared for delivery, we cannot redirect to any change of delivery address.; If the addressee is not available, the products will be delivered at the delivery place.; Our majority of orders are delivered on time and the right place.",
     care: "As per the image, the balloons will be delivered as blow-up.; To avoid the damages, kindly take care of your balloons from sharpened edges, or corners.; Keep separate the deflated balloons from the children and discard the broken balloons.; Enjoy the event with our quality balloons."
 }
