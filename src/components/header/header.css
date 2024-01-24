@@ -714,6 +714,12 @@ button {
 .menu .megamenu .submenu a {
   padding: 7px 8px 8px 0;
 }
+.menu .megamenu .submenu a {
+	font-family: 'Poppins', sans-serif;
+	text-shadow: none;
+	font-weight: 500;
+	letter-spacing: normal;
+}
 .menu .megamenu .submenu li:hover a {
   text-decoration: underline;
   background: transparent;
@@ -735,7 +741,7 @@ button {
   left: 0;
   z-index: 101;
   background-color: #fff;
-  box-shadow: 0 29px 29px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 29px 29px rgba(0, 0, 0, 0.1); */
 }
 .menu ul ul {
   top: -5px;

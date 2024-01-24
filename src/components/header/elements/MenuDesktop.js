@@ -31,7 +31,7 @@ const MenuDesktop = () => {
                             <div className="row">
 
                                 <div className="col-lg-4">
-                                    <Link to="/category/holidays" className="nolink">Holidays</Link>
+                                    {/* <Link to="/category/holidays&Occasions" className="nolink">Holidays & Occasions</Link> */}
                                     <ul className="submenu">
                                         <li><a href="/collections/holidays/haloween" >HALOWEEN</a></li>
                                         <li><a href="/collections/holidays/national-flag-day" >NATIONAL & FLAG DAY</a></li>
@@ -41,30 +41,32 @@ const MenuDesktop = () => {
                                         <li><a href="/collections/holidays/fathers-day" >father's day</a></li>
                                         <li><a href="/collections/holidays/mothers-day" >mother's day</a></li>
                                         <li><a href="/collections/holidays/easter" >easter</a></li>
+                                        
                                     </ul>
                                 </div>
 
                                 <div className="col-lg-4">
-                                    <Link to="/category/occasions" className="nolink">Occasions</Link>
+                                    {/* <Link to="/category/occasions" className="nolink">Occasions</Link> */}
+                                    {/* <div className="nolink"></div> */}
                                     <ul className="submenu">
-                                        <li><a href="/collections/occasions/birthday">BIRTHDAY</a></li>
-                                        <li><a href="/collections/occasions/newborn">BABE</a></li>
-                                        <li><a href="/collections/occasions/wedding-anniversary">WEDDINGS</a></li>
-                                        <li><a href="/collections/occasions/graduation">GRADUATION</a></li>
-                                        <li><a href="/collections/occasions/congratulations">CONGRATULATIONS</a></li>
-                                        <li><a href="/collections/occasions/valentine">valentine</a></li>
-                                        <li><a href="/collections/occasions/wedding-anniversary">anniversary</a></li>
-                                        <li><a href="#">CREATE YOUR OWN</a></li>
+                                    <li><a href="/collections/occasions/birthday">BIRTHDAY</a></li>
+                                    <li><a href="/collections/occasions/newborn">BABE</a></li>
+                                    <li><a href="/collections/occasions/wedding-anniversary">WEDDINGS</a></li>
+                                    <li><a href="/collections/occasions/graduation">GRADUATION</a></li>
+                                    <li><a href="/collections/occasions/congratulations">CONGRATULATIONS</a></li>
+                                    <li><a href="/collections/occasions/valentine">valentine</a></li>
+                                    <li><a href="/collections/occasions/wedding-anniversary">anniversary</a></li>
+                                    <li><a href="#">CREATE YOUR OWN</a></li>
                                     </ul>
                                 </div>
 
-                                <div className="col-lg-4 p-0">
+                                {/* <div className="col-lg-4 p-0">
                                     <div className="menu-banner menu-banner-2">
                                         <figure>
                                             <img src={imgBouque} alt="Menu banner" className="product-promo" width="380" height="790" />
                                         </figure>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     )
@@ -79,7 +81,7 @@ const MenuDesktop = () => {
                             <div className="row">
 
                                 <div className="col-lg-12">
-                                    <p className="nolink">Indoor</p>
+                                    {/* <p className="nolink">Indoor</p> */}
                                     <ul className="submenu">
                                         <li><a href="/collections/decorations/centerpieces">centerpieces</a></li>
                                         <li><a href="/collections/decorations/arches">arches</a></li>
@@ -88,6 +90,7 @@ const MenuDesktop = () => {
                                         <li><a href="/collections/decorations/garlands">garlands</a></li>
                                         <li><a href="/collections/decorations/sculptures">sculptures</a></li>
                                         <li><a href="/collections/decorations/Ceiling-Walls">Ceiling & walls</a></li>
+                                        <li><a href="/collections/decorations/setups">full setups</a></li>
                                     </ul>
                                 </div>
 
