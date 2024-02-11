@@ -2,7 +2,7 @@ import './carousel.css'
 import { useState } from 'react';
 import {BsArrowRightCircleFill, BsArrowLeftCircleFill} from 'react-icons/bs'
 
-const Carousel = ({slidesData}) => {
+const Carousel = ({slidesData, folderName}) => {
     const [showSlide, setShowSlide] = useState(0)
     const nextSlide = () => {
         if(showSlide === slidesData.length-1)
@@ -16,13 +16,14 @@ const Carousel = ({slidesData}) => {
         else
             setShowSlide(showSlide - 1)
     }
-
+    
+// .webp
     return ( 
         <div className="carousel">
             <BsArrowLeftCircleFill className='arrow arrow-left' onClick={prevSlide}/>
             {slidesData.map((carouselItem, ci) => {
                 return (
-                    <img src={require(`../../assets/images/cover/${carouselItem.src}.webp`)} alt={carouselItem.alt} key={ci} className={showSlide === ci ? "slide" : "slide slide-hidden"} />
+                    <img src={require(`../../assets/images/${folderName}/${carouselItem.src}`)} alt={carouselItem.alt} key={ci} className={showSlide === ci ? "slide" : "slide slide-hidden"} />
                 )
             })}
             <BsArrowRightCircleFill className='arrow arrow-right' onClick={nextSlide} />

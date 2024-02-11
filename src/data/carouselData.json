@@ -1,28 +1,66 @@
 {
     "slides": [
         {
-            "src": "balloonsCover",
+            "src": "balloonsCover.webp",
             "alt": "slide-img1"
         },
         {
-            "src": "HalloweenCover",
+            "src": "HalloweenCover.webp",
             "alt": "slide-img2"
         },
         {
-            "src": "loveCover",
+            "src": "loveCover.webp",
             "alt": "slide-img3"
         },
         {
-            "src": "signatureCover",
+            "src": "signatureCover.webp",
             "alt": "slide-img4"
         },
         {
-            "src": "ThemeCover",
+            "src": "ThemeCover.webp",
             "alt": "slide-img5"
         },
         {
-            "src": "xmasCover",
+            "src": "xmasCover.webp",
             "alt": "slide-img6"
+        }
+    ],
+    "rentals": [
+        {
+            "src": "R_BeautyBar.jpg",
+            "alt": "slide-img1"
+        },
+        {
+            "src": "R_bounceH1.jpg",
+            "alt": "slide-img2"
+        },
+        {
+            "src": "R_bounceH2.jpg",
+            "alt": "slide-img3"
+        },
+        {
+            "src": "R_bounceH3.jpg",
+            "alt": "slide-img4"
+        },
+        {
+            "src": "R_bounceH4.jpg",
+            "alt": "slide-img5"
+        },
+        {
+            "src": "R_bounceH5.jpg",
+            "alt": "slide-img6"
+        },
+        {
+            "src": "R_bounceH6.jpg",
+            "alt": "slide-img7"
+        },
+        {
+            "src": "R_cottoncandyM.jpg",
+            "alt": "slide-img8"
+        },
+        {
+            "src": "R_PopcormM.jpg",
+            "alt": "slide-img9"
         }
     ]
 }

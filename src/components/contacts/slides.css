@@ -1,0 +1,25 @@
+.carousel-container {
+    width: 100%;
+    display: flex;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    font-size: 24px;
+    color: #000; /* Customize the arrow color */
+  }
+  
+  .slick-prev {
+    left: 0;
+  }
+  
+  .slick-next {
+    right: 0;
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  /* Customize other styles as needed */
+  

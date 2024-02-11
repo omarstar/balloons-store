@@ -11,7 +11,7 @@ const LayoutHome = () => {
             <main>
                 <div className="content flex-column">
                     <div className="slider-wrapper">
-                        <Carousel slidesData={carouselData.slides} />
+                        <Carousel slidesData={carouselData.slides} folderName={'cover'} />
                     </div>
                     <div className="w-100 bg-info text-white welcome-wrapper">
                         <div className="welcome-box">
