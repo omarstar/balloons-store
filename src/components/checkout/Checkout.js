@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./checkout.css"
 import { useEffect, useState } from "react";
-// import { useNavigate } from "react-router";
 import { cartActions } from "../../store/cart/cart-slice";
 import ReactDatePicker from "react-datepicker";
 import styled from "styled-components";
 import { checkOrderActions } from "../../store/contact/checkout-slice";
-import { timeSlots } from "../../utils/constants";
+import { locations, timeSlots } from "../../utils/constants";
 import TimeSlotsDropdown from "../elements/TimeSlotsDropdown";
 import { formatDateToYMD } from "../../utils/helpers";
+import { isSelectAgreement } from "../../store/selectors";
+import $ from 'jquery';
 
 const Checkout = () => {
 
@@ -19,10 +20,15 @@ const Checkout = () => {
 
     const dispatch = useDispatch();
     // const navigate = useNavigate();
+    const agreeToTerms = useSelector(isSelectAgreement);
 
     const [selectedDate, setSelectedDate] = useState(new Date())
     const [selectedTime, setSelectedTime] = useState("")
     const [validationMessage, setValidationMessage] = useState(["",""])
+
+    const handleCheckboxChange = () => {
+        dispatch(checkOrderActions.toggleAgreement());
+      };
 
     const handleDateChange = (dateSelected) => {
         // const datePicked = formatDateToYMD(dateSelected)
@@ -32,7 +38,43 @@ const Checkout = () => {
 
         setSelectedDate(dateSelected)
         dispatch(checkOrderActions.updateDeliveryData({ field: 'deliveryDate', value: formatedDate}))
-        dispatch(checkOrderActions.updateAvailableTimeSlots(formatedDate))
+        // dispatch(checkOrderActions.updateAvailableTimeSlots(formatedDate))
+        dispatch(checkOrderActions.updateAvailableTimeSlots(dateSelected))
+    }
+
+    const handleChechout = () => {
+        const form = $('#checkoutForm').serializeArray();
+        var data = [];
+        form.forEach(f=>{
+            data[f.name] = f.value;
+        });
+        console.log('data',data);
+
+        var payLoad = {
+            "cartItems": cart.cartItems,
+            "cartTotalQuantity": 0,
+            "cartTotalAmount": 0,
+            "personalinfo": {
+                "name": "Tayyab",
+                "email": "tayyabalizaheer@gmail.com",
+                "phone": "0561902113"
+            },
+            "eventData": {
+                "date": "",
+                "decortime": "",
+                "starttime": "",
+                "endtime": "",
+                "locationEvent": "",
+                "messagenote": ""
+            },
+            "addressDetails": {
+                "locationEvent": "",
+                "address": "",
+                "isDelivery": false
+            }
+        
+            
+        };
     }
 
     const handleInputChange = (e, fieldName) => {
@@ -56,6 +98,11 @@ const Checkout = () => {
         dispatch(checkOrderActions.updatePersonalData({ field: name, value }));
 
       };
+
+      const handleLocationOnSelectChange = (e) => {
+        const { name, value } = e.target;
+        dispatch(checkOrderActions.updateDeliveryData({ field: name, value }));
+      };
         
     const CustomDatePicker = styled(ReactDatePicker)`
     .react-datepicker__calendar-icon {
@@ -71,7 +118,7 @@ const Checkout = () => {
     
 
     return ( 
-        <>
+        <form action="" id="checkoutForm">
         <div className="container d-lg-flex">
             <div className="d-flex flex-column">
             <div className="box-2">
@@ -80,14 +127,13 @@ const Checkout = () => {
                         <p className="fw-bold">Contact</p>
                         {/* <p className="dis mb-3">All fields are mandatory</p> */}
                     </div>
-                    <form action="">
-                        <div className="mb-3">
-                            <p className="dis fw-bold mb-2">Email address</p>
-                            <input className="form-control" type="email" name="email" value={personalContact.email} placeholder="Please enter a valid email address"/>
-                            { validationMessage[0] === "email" && (
-                                <div className="validation">{ validationMessage[1] }</div>
-                            )}
-                        </div>
+                    <div className="mb-3">
+                        <p className="dis fw-bold mb-2">Email address</p>
+                        <input className="form-control" type="email" name="email" value={personalContact.email} placeholder="Please enter a valid email address"/>
+                        { validationMessage[0] === "email" && (
+                            <div className="validation">{ validationMessage[1] }</div>
+                        )}
+                    </div>
                         <div className="mb-3">
                             <p className="dis fw-bold mb-2">Phone number</p>
                             <input className="form-control" type="text" name="phone" pattern="\d*" value={personalContact.phone} placeholder="Please enter your mobile number"/>
@@ -102,7 +148,6 @@ const Checkout = () => {
                                 <div className="validation">{ validationMessage[1] }</div>
                             )}
                         </div>                
-                    </form>
                 </div>
             </div>
             <div className="box-2">
@@ -114,7 +159,6 @@ const Checkout = () => {
                         <p className="fw-bold">Event Details</p>
                         <p className="dis mb-3">All fields are mandatory</p>
                     </div>
-                    <form action="">
                         <div className="mb-3">
                             <p className="dis fw-bold mb-2">When would you like to get the order</p>
                             <CustomDatePicker
@@ -128,17 +172,41 @@ const Checkout = () => {
                                 />
                         </div>
                         <div className="mb-3">
+                            <input name="time" type="time" class="form-control"/>
+                        </div>
+                        <div className="mb-3">
                             <TimeSlotsDropdown />
                         </div>
                         <div className="mb-3">
-                            <p className="dis fw-bold mb-2">First name</p>
-                            <input className="form-control" type="text" name="" value="" placeholder="First name"/>
+                            <label>Select Delivery Region</label>
+                            <select
+                                name='location-delivery'
+                                className="w-100"
+                                value=''
+                                onChange={(e)=>handleLocationOnSelectChange(e)}
+                                required
+                                >
+                                <option value="">Select  your area</option>
+                                {locations.map((location, index)=> (
+                                    <option key={index} value={location.area}>{location.area}</option>
+                                ))}
+                            </select>
                         </div>
                         <div className="mb-3">
-                            <p className="dis fw-bold mb-2">Last name</p>
-                            <input className="form-control" type="text" name="" value="" placeholder="Last name"/>
+                            <p className="dis fw-bold mb-2">Address</p>
+                            <textarea className="form-control" type="text" name="address" value="" placeholder="Address"></textarea>
                         </div>
-                    </form>
+                        <div className="my-3">
+                            <label>
+                                <input
+                                type="checkbox"
+                                name="terms"
+                                checked={agreeToTerms}
+                                onChange={handleCheckboxChange}
+                                />
+                                <span>I agree to the terms and refund policy</span>
+                            </label>
+                        </div>
                 </div>
             </div>
             {/* payment */}
@@ -208,14 +276,14 @@ const Checkout = () => {
                 </div>
             </div> */}
         </div>
-            <div className="box-2 bg-light user">
+            <div className="box-2 bg-light user w-100">
             {/* <div className="d-flex align-items-center mb-3">
                 <img src="https://images.pexels.com/photos/4925916/pexels-photo-4925916.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                     className="pic rounded-circle" alt=""/>
                 <p className="ps-2 name">Oliur</p>
             </div> */}
             <div className="box-inner-2 pb-3 mb-3 ">
-                <div className="d-flex justify-content-between mb-3 userdetails">
+                {/* <div className="d-flex justify-content-between mb-3 userdetails">
                     <p className="fw-bold">Lightroom Presets</p>
                     <p className="fw-lighter"><span className="fas fa-dollar-sign"></span>33.00+</p>
                 </div>
@@ -269,36 +337,46 @@ const Checkout = () => {
                             </div>
                         </div>
                     </label>
-                </div>
-                {/* total */}
-                <div className=" my-3">
+                </div> */}
+                
+                {/* <div className=" my-3">
                     <p className="dis fw-bold mb-2">VAT Number</p>
                     <div className="inputWithcheck">
                         <input className="form-control" type="text" value="GB012345B9"/>
                         <span className="fas fa-check"></span>
                     </div>
-                </div>
+                </div> */}
+                {cart.cartItems.map((e, index) => (
+                    <div key={'cartitem'+index}>
+                        <div className="d-flex justify-content-between mb-3 userdetails">
+                            <p className="fw-bold">{e.cartQuantity}x {e.title}</p>
+                            
+                            <p className="fw-lighter"><span className="fas fa-dollar-sign"></span>{e.price}</p>
+                        </div>
+                        
+                        <p className="dis info my-3">{e.description}
+                        </p>
+                    </div>
+                ))
+                    
+                }
                 <div className="d-flex flex-column dis">
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <p>Subtotal</p>
-                        <p><span className="fas fa-dollar-sign"></span>33.00</p>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between mb-2">
-                        <p>VAT<span>(20%)</span></p>
-                        <p><span className="fas fa-dollar-sign"></span>2.80</p>
+                        <p><span className="fas fa-dollar-sign"></span>{cart.cartTotalAmount}</p>
                     </div>
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <p className="fw-bold">Total</p>
-                        <p className="fw-bold"><span className="fas fa-dollar-sign"></span>35.80</p>
+                        <p className="fw-bold"><span className="fas fa-dollar-sign"></span>{cart.cartTotalAmount}</p>
                     </div>
-                    <div className="btn btn-primary mt-2">Pay<span className="fas fa-dollar-sign px-1"></span>35.80
+                    <div onClick={handleChechout} className="btn btn-primary mt-2">Complete Order<span className="fas fa-dollar-sign px-1"></span>{cart.cartTotalAmount}
                     </div>
                 </div>
                 {/* end */}
             </div>
         </div>
         </div>
-        </>
+        </form>
      );
 }
  

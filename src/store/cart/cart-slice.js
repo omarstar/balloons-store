@@ -17,8 +17,22 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState: initialState,
     reducers: {
-        addToCartQty: ()=>{
-            
+        addToCartQty: (state, action)=>{
+            const {prd, itemQuantity} = action.payload
+            const existingItem = state.cartItems.findIndex(item=> item._id === prd._id)
+
+            if(existingItem >= 0){
+                state.cartItems[existingItem].cartQuantity += itemQuantity;
+                toast.info(`increased ${state.cartItems[existingItem].title} cart quantity by ${state.cartItems[existingItem].cartQuantity}`, toastOption)
+                //update the total price
+            } else {
+                const newItem = {...prd, cartQuantity: itemQuantity}
+                //add the itemPrice
+                state.cartItems.push(newItem)
+                toast.success(`added ${newItem.title} to cart`, toastOption)
+            }
+
+            localStorage.setItem("cartItems",JSON.stringify(state.cartItems));
         },
         addToCart: (state, action)=>{
 

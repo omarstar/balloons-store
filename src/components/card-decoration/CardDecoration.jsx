@@ -18,7 +18,8 @@ const CardDecoration = ({data, align}) => {
         // margin-bottom: 10vh;
         position: absolute;
         bottom: 1.2rem;
-        right: 30px
+        right: 10rem;
+        // right: 30px
     `
 
     // const themecolors = {

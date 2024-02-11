@@ -11,3 +11,5 @@ export const getCartItemQuantity = (productId) => (state) => {
 export const getAvailableTimeSlots = () => (state) => {
   return state.checkoutorder.availableTimeSlots;
 }
+
+export const isSelectAgreement = () => (state) => state.checkout.agreeToTerms;

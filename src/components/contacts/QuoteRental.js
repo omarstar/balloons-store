@@ -6,7 +6,8 @@ import 'react-datepicker/dist/react-datepicker.module.css'
 import { useState } from "react";
 import ReactDatePicker from "react-datepicker";
 import styled from "styled-components";
-import { locations } from "../../utils/constants";
+import { locations, toastOption } from "../../utils/constants";
+import { toast } from "react-toastify";
 // validate the input form
 // dispatch the form data to Quote store
 // call api to send email
@@ -87,7 +88,7 @@ const QuoteRental = () => {
         <section className="">
                 <div className="row">
                     <div className="form-holder">
-                        <div className="contactus-title ff-itali"><h3></h3></div>
+                        {/* <div className="contactus-title ff-itali"><h3></h3></div> */}
                         <div className="contactus-desc"><p>Tell us your details and we'll get right back to you.</p></div>
                         <div className="contactus-form-wrapper d-flex justify-content-center">
                         <div className="row form-row">
@@ -176,7 +177,7 @@ const QuoteRental = () => {
                                                         required
                                                     />
                                                 </div>
-                                                <div className="col-12 col-md-6 form-group custom-pd-top">
+                                                <div className="col-12 form-group custom-pd-top">
                                                     <label>Event Location</label>
                                                     <select
                                                         name={'locationEvent'}
@@ -198,7 +199,7 @@ const QuoteRental = () => {
                                                 <div className="col-12">
                                                     <ul className="actions form-buttons">
                                                         <li>
-                                                            <input type="submit" id="submit-btn" className="primary button line-btn" value="Send Message" />
+                                                            <input type="submit" id="submit-btn" className="primary button line-btn" value="Send Message" onClick={()=>{return toast.success(`your Qoute is sent successfully`, toastOption)}} />
                                                         </li>
                                                     </ul>
                                                 </div>

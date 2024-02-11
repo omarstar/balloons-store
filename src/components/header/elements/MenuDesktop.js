@@ -30,7 +30,7 @@ const MenuDesktop = () => {
                         <div className="megamenu megamenu-fixed-width megamenu-3cols shiny-menu">
                             <div className="row">
 
-                                <div className="col-lg-4">
+                                <div className="col-lg-6">
                                     {/* <Link to="/category/holidays&Occasions" className="nolink">Holidays & Occasions</Link> */}
                                     <ul className="submenu">
                                         <li><a href="/collections/holidays/haloween" >HALOWEEN</a></li>
@@ -45,7 +45,7 @@ const MenuDesktop = () => {
                                     </ul>
                                 </div>
 
-                                <div className="col-lg-4">
+                                <div className="col-lg-6">
                                     {/* <Link to="/category/occasions" className="nolink">Occasions</Link> */}
                                     {/* <div className="nolink"></div> */}
                                     <ul className="submenu">

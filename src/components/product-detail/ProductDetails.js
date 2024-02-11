@@ -25,7 +25,8 @@ const ProductDetails = () => {
   const handlDetailsToCart = (prd) => {
     console.log('Product added to cart:', title);
     //with more details to have new object saved in cart
-    dispatch(cartActions.addToCart(prd))
+    // dispatch(cartActions.addToCart(prd))
+    dispatch(cartActions.addToCartQty({prd,itemQuantity}))
     dispatch(cartActions.setShowCartView())
   };
 
@@ -33,8 +34,9 @@ const ProductDetails = () => {
     setitemQuantity(itemQuantity+1)
 };
 const handleDecreaseQty = () => {
-  if(itemQuantity > 1)
+  if(itemQuantity > 1) {
     setitemQuantity(itemQuantity-1)
+  }
   else {
     toast.info(`at least one item should be selected`, toastOption)
   }
@@ -81,7 +83,9 @@ console.log('product detail img id', [image, _id])
                   -
                 </button>
                 <input type="text" class="cart-item__input-quantity no-border-input" value={itemQuantity <= 1 ? 1 : itemQuantity} min="1" pattern="[0-9]*" name="qauntity[]"/>
-                <button className='p-less' onClick={handleAddQty}>+</button>
+                <button className='p-less' onClick={handleAddQty}>
+                  +
+                </button>
               </div>
             </div>
           </div>

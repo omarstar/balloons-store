@@ -4,6 +4,7 @@ import AnonymousLayout from "../layouts/AnonymousLayout"
 import MainLayout from "../layouts/MainLayout"
 import LayoutCart from "../pages/LayoutCart";
 import LayoutCategories from "../pages/LayoutCategories";
+import LayoutContact from "../pages/LayoutContact";
 import LayoutHome from "../pages/LayoutHome"
 import LayoutProducts from "../pages/LayoutProducts"
 import NotFound from "../pages/NotFound";
@@ -33,6 +34,12 @@ export const routes = [
                 title: 'Home page',
                 component: LayoutHome,
                 path: '/home'
+            },
+            {
+                name: 'contacts',
+                title: 'Contact section',
+                component: LayoutContact,
+                path: 'balloons/contacts'
             },
             {
                 name: 'category',
