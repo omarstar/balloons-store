@@ -49,6 +49,7 @@ const QuoteRental = () => {
             isValid = false;
             setValidationMessage([fieldName, "Please enter a valid phone number"])
         }
+        console.log('isValid in handleInputChange', isValid);
         
         if(isValid){
             dispatch(quoteRequestActions.updateContactData({ field: name, value }));

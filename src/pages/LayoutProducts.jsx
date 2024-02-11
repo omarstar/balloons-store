@@ -31,6 +31,10 @@ const LayoutProducts = () => {
         // dispatch(productActions.recreateProductsList(data.setups))
         productsList = data.setups;
 
+    }else if(prds ===  'garlands' || prds === 'columns' || prds === 'centerpieces' || prds === 'Ceiling-Walls' || prds === 'arches' || prds === 'sculptures'){
+        console.log('products list updated to garlands decoration');
+        productsList = data.decorations;
+
     }else {
         console.log('products list updated to products')
         // dispatch(productActions.recreateProductsList(data.products))

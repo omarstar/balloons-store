@@ -122,6 +122,174 @@
             ]
         }
     ],
+    "decorations": [
+        {
+            "_id":201,
+            "image":"arches",
+            "title":"arches gold black",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":207,
+            "image":"cat-baby",
+            "title":"boy girl",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":203,
+            "image":"cat-black",
+            "title":"welcome back gold",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":204,
+            "image":"cat-gold",
+            "title":"birthday gold",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":208,
+            "image":"cat-love",
+            "title":"love you theme",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":210,
+            "image":"celing walls",
+            "title":"table blue",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":211,
+            "image":"centerpiece",
+            "title":"purple",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":212,
+            "image":"column",
+            "title":"clmn blue",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":213,
+            "image":"columns",
+            "title":"clmn red",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":214,
+            "image":"garland",
+            "title":"white gar",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        },
+        {
+            "_id":215,
+            "image":"scapt",
+            "title":"table scapt",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        }
+    ],
+    
     "notes": "update the availableSizes / baloon bunch with desc",
     "products": [
         {
