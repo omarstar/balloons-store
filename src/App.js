@@ -4,15 +4,15 @@ import React from "react";
 import './components/header/header.css'
 import "react-toastify/dist/ReactToastify.css"
 
-import { Routes } from "./routes";
+// import { Routes } from "./routes";
+import store from "./store";
 import HeaderTop from "./components/header/HeaderTop";
 import HeaderBottom from "./components/header/HeaderBottom";
 import Footer from "./components/footer/Footer";
 
 import { ToastContainer } from 'react-toastify'
-
-import store from "./store";
 import { cartActions } from "./store/cart/cart-slice";
+import { RoutesElement } from "./routes";
 
 function App() {
 
@@ -30,7 +30,8 @@ function App() {
           </header>
         </div>
         <div style={{margin: "15px 0"}}>
-          <Routes isAuthorized={true} />
+          {/* <Routes isAuthorized={true} /> */}
+          <RoutesElement />
         </div>
         <ToastContainer />
         <footer className="ff-pop footer-wrapper"><Footer /></footer>

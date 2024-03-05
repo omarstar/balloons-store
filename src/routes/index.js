@@ -1,3 +1,4 @@
+import React from 'react'
 import Checkout from "../components/checkout/Checkout";
 import QuoteRental from "../components/contacts/QuoteRental";
 import AnonymousLayout from "../layouts/AnonymousLayout"
@@ -9,7 +10,8 @@ import LayoutHome from "../pages/LayoutHome"
 import LayoutProducts from "../pages/LayoutProducts"
 import NotFound from "../pages/NotFound";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
-import { renderRoutes } from "./generate-routes";
+// import { renderRoutes } from "./generate-routes";
+import { Routes, Route} from "react-router-dom";
 /* isPublic used if page is public or require login */
 /* hasSiderLink to check to render on menu or not */
 export const routes = [
@@ -162,4 +164,25 @@ export const routes = [
     }
 ]
 
-export const Routes = renderRoutes(routes);
+export const RoutesElement = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<LayoutHome />} />
+            <Route path="balloons/contacts" element={<LayoutContact />} />
+            <Route path="/category/:cat" element={<LayoutCategories />} />
+            <Route path="/category" element={<LayoutCategories />} />
+            <Route path="/collections/decorations/:prds" element={<LayoutProducts />} />
+            <Route path="/collections/occasions/:prds" element={<LayoutProducts />} />
+            <Route path="/collections/holidays/:prds" element={<LayoutProducts />} />
+            <Route path="/collections" element={<LayoutProducts />} />
+            <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
+            <Route path="/balloons/cart" element={<LayoutCart />} />
+            <Route path="/balloons/Checkout" element={<Checkout />} />
+            <Route path="/party-rentals" element={<QuoteRental />} />
+            <Route path="/*" element={<NotFound />} />
+            
+        </Routes>
+    )
+}
+
+// export const Routes = renderRoutes(routes);
