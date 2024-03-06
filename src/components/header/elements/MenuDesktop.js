@@ -1,6 +1,6 @@
 // import { MenuItems, dropdownItems } from "../../../utils/constants";
 
-import imgBouque from "../../../assets/images/test1.png"
+// import imgBouque from "../../../assets/images/test1.png"
 // import imgDecorations from "../../../assets/images/event-test.png"
 import { useState } from "react";
 // import { useDispatch } from "react-redux";
@@ -33,14 +33,14 @@ const MenuDesktop = () => {
                                 <div className="col-lg-6">
                                     {/* <Link to="/category/holidays&Occasions" className="nolink">Holidays & Occasions</Link> */}
                                     <ul className="submenu">
-                                        <li><a href="/collections/holidays/haloween" >HALOWEEN</a></li>
-                                        <li><a href="/collections/holidays/national-flag-day" >NATIONAL & FLAG DAY</a></li>
-                                        <li><a href="/collections/holidays/xmas" >CHRISTMAS</a></li>
-                                        <li><a href="/collections/holidays/new-years-eve" >NEW YEAR EVE</a></li>
-                                        <li><a href="/collections/holidays/valentine" >VALENTINE DAY</a></li>
-                                        <li><a href="/collections/holidays/fathers-day" >father's day</a></li>
-                                        <li><a href="/collections/holidays/mothers-day" >mother's day</a></li>
-                                        <li><a href="/collections/holidays/easter" >easter</a></li>
+                                        <li><Link to="/collections/holidays/haloween" >HALOWEEN</Link></li>
+                                        <li><Link to="/collections/holidays/national-flag-day" >NATIONAL & FLAG DAY</Link></li>
+                                        <li><Link to="/collections/holidays/xmas" >CHRISTMAS</Link></li>
+                                        <li><Link to="/collections/holidays/new-years-eve" >NEW YEAR EVE</Link></li>
+                                        <li><Link to="/collections/holidays/valentine" >VALENTINE DAY</Link></li>
+                                        <li><Link to="/collections/holidays/fathers-day" >father's day</Link></li>
+                                        <li><Link to="/collections/holidays/mothers-day" >mother's day</Link></li>
+                                        <li><Link to="/collections/holidays/easter" >easter</Link></li>
                                         
                                     </ul>
                                 </div>
@@ -49,14 +49,14 @@ const MenuDesktop = () => {
                                     {/* <Link to="/category/occasions" className="nolink">Occasions</Link> */}
                                     {/* <div className="nolink"></div> */}
                                     <ul className="submenu">
-                                    <li><a href="/collections/occasions/birthday">BIRTHDAY</a></li>
-                                    <li><a href="/collections/occasions/newborn">BABE</a></li>
-                                    <li><a href="/collections/occasions/wedding-anniversary">WEDDINGS</a></li>
-                                    <li><a href="/collections/occasions/graduation">GRADUATION</a></li>
-                                    <li><a href="/collections/occasions/congratulations">CONGRATULATIONS</a></li>
-                                    <li><a href="/collections/occasions/valentine">valentine</a></li>
-                                    <li><a href="/collections/occasions/wedding-anniversary">anniversary</a></li>
-                                    <li><a href="#">CREATE YOUR OWN</a></li>
+                                    <li><Link to="/collections/occasions/birthday">BIRTHDAY</Link></li>
+                                    <li><Link to="/collections/occasions/newborn">BABE</Link></li>
+                                    <li><Link to="/collections/occasions/wedding-anniversary">WEDDINGS</Link></li>
+                                    <li><Link to="/collections/occasions/graduation">GRADUATION</Link></li>
+                                    <li><Link to="/collections/occasions/congratulations">CONGRATULATIONS</Link></li>
+                                    <li><Link to="/collections/occasions/valentine">valentine</Link></li>
+                                    <li><Link to="/collections/occasions/wedding-anniversary">anniversary</Link></li>
+                                    <li><Link to="#">CREATE YOUR OWN</Link></li>
                                     </ul>
                                 </div>
 
@@ -83,14 +83,14 @@ const MenuDesktop = () => {
                                 <div className="col-lg-12">
                                     {/* <p className="nolink">Indoor</p> */}
                                     <ul className="submenu">
-                                        <li><a href="/collections/decorations/centerpieces">centerpieces</a></li>
-                                        <li><a href="/collections/decorations/arches">arches</a></li>
-                                        <li><a href="/collections/decorations/columns">columns</a></li>
-                                        <li><a href="/collections/decorations/shapes">letters & numbers</a></li>
-                                        <li><a href="/collections/decorations/garlands">garlands</a></li>
-                                        <li><a href="/collections/decorations/sculptures">sculptures</a></li>
-                                        <li><a href="/collections/decorations/Ceiling-Walls">Ceiling & walls</a></li>
-                                        <li><a href="/collections/decorations/setups">full setups</a></li>
+                                        <li><Link to="/collections/decorations/centerpieces">centerpieces</Link></li>
+                                        <li><Link to="/collections/decorations/arches">arches</Link></li>
+                                        <li><Link to="/collections/decorations/columns">columns</Link></li>
+                                        <li><Link to="/collections/decorations/shapes">letters & numbers</Link></li>
+                                        <li><Link to="/collections/decorations/garlands">garlands</Link></li>
+                                        <li><Link to="/collections/decorations/sculptures">sculptures</Link></li>
+                                        <li><Link to="/collections/decorations/Ceiling-Walls">Ceiling & walls</Link></li>
+                                        <li><Link to="/collections/decorations/setups">full setups</Link></li>
                                     </ul>
                                 </div>
 
@@ -118,13 +118,13 @@ const MenuDesktop = () => {
                 </ul> */}
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Bulk Balloons</a>
+                <Link to="/party-rentals">Bulk Balloons</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="#">Create your own Bouquet</a>
+                <Link to="/party-rentals">Create your own Bouquet</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <a href="/party-rentals">Party rentals</a>
+                <Link to="/party-rentals">Party rentals</Link>
             </li>
             {/* {MenuItems && MenuItems.map(menuItem => {
                 const {id, title, cName, path, hasMegaMenu = false} = menuItem;

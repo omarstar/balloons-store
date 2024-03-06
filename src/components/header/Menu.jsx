@@ -1,11 +1,12 @@
 // import './header.css'
+import { Link } from "react-router-dom";
 import logoHeader from "../../assets/images/icons/balloon-delivery.png"
 
 const Menu = () => {
     return ( 
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light nav-box">
-            <a className="navbar-brand" href="/home"><img src={logoHeader} alt="header logo"/></a>
+            <Link className="navbar-brand" to="/"><img src={logoHeader} alt="header logo"/></Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -13,28 +14,28 @@ const Menu = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                 <li className="nav-item active">
-                    <a className="nav-link" href="/home">Home</a>
+                    <Link className="nav-link" to="/">Home</Link>
                 </li>
                 
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     BALLOONS
-                    </a>
+                    </Link>
                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="/balloons">BALLOON ARCHES</a>
-                    <a className="dropdown-item" href="#">BALLOON GRALAND</a>
-                    <a className="dropdown-item" href="#">BALLOON WALLS & CEILINGS</a>
-                    <a className="dropdown-item" href="#">BALLOON COLUMNS</a>
-                    <a className="dropdown-item" href="#">BALLOON SCULPTURES</a>
+                    <Link className="dropdown-item" to="/balloons">BALLOON ARCHES</Link>
+                    <Link className="dropdown-item" to="#">BALLOON GRALAND</Link>
+                    <Link className="dropdown-item" to="#">BALLOON WALLS & CEILINGS</Link>
+                    <Link className="dropdown-item" to="#">BALLOON COLUMNS</Link>
+                    <Link className="dropdown-item" to="#">BALLOON SCULPTURES</Link>
                     <div className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">OTHERS</a>
+                    <Link className="dropdown-item" to="#">OTHERS</Link>
                     </div>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#aboutus">ABOUT US</a>
+                    <Link className="nav-link" to="#aboutus">ABOUT US</Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#contactus">CONTACT US</a>
+                    <Link className="nav-link" to="#contactus">CONTACT US</Link>
                 </li>
                 </ul>
             </div>

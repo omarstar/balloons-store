@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { menuSmallItems } from "../../../utils/constants";
 
 const MenuSmall = () => {
@@ -8,7 +9,7 @@ const MenuSmall = () => {
                     const {id, cName, title, path} = menuItem;
                    return (
                     <li id={cName + "-" + id} className={cName} key={id}>
-                        <a href={path} aria-current="page">{title}</a>
+                        <Link to={path} aria-current="page">{title}</Link>
                     </li>
                    )
                 })
