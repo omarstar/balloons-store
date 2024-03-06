@@ -63,25 +63,25 @@ export const menuSmallItems = [
     {
         id: 91,
         title:"Home",
-        path: "/home",
+        path: "/",
         cName:'menu-item'
     },
     {
         id: 92,
         title:"About Us",
-        path: "/home#aboutus",
+        path: "/#aboutus",
         cName:'menu-item'
     },
     {
         id: 93,
         title:"Customer Service",
-        path: "/home#customerservice",
+        path: "/#customerservice",
         cName:'menu-item'
     },
     // {
     //     id: 94,
     //     title:"Contact Us",
-    //     path: "/home#contactus",
+    //     path: "/#contactus",
     //     cName:'menu-item'
     // },
 ]

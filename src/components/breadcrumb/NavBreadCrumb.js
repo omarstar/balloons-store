@@ -27,7 +27,7 @@ const NavBreadCrumb = () => {
 
         console.log('crumb selected', [crumb, i])
         if(i === 0){
-            navigate('/home')
+            navigate('/')
         }
         else if(i === 1){
             navigate(`/category/${crumb.toLowerCase()}`)
@@ -55,13 +55,13 @@ const NavBreadCrumb = () => {
                                         crumb
                                     )}
                                 </div>
-                                {/* <a href={`/category/${crumbs[1]}`} className={`btn btn-link ${disabled} text-decoration-none`} onClick={() => selected(crumb)}>
+                                {/* <Link href={`/category/${crumbs[1]}`} className={`btn btn-link ${disabled} text-decoration-none`} onClick={() => selected(crumb)}>
                                     {homeIcon ? (
                                         <i className="icon-home" >🏠</i>
                                     ) : (
                                         crumb
                                     )}
-                                </a> */}
+                                </Link> */}
                             </li>
                         )
                     })

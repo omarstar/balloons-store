@@ -51,7 +51,7 @@ const LayoutCategories = () => {
                 </div>
             </div>
         ) : (
-            <Link to="/home">back home</Link>
+            <Link to="/">back home</Link>
         )}
         </>
      );

@@ -35,7 +35,7 @@ export const routes = [
                 name: 'home',
                 title: 'Home page',
                 component: LayoutHome,
-                path: '/home'
+                path: '/'
             },
             {
                 name: 'contacts',
