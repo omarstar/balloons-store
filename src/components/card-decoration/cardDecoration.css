@@ -32,3 +32,8 @@
     height: 95%;
     border-radius: 0 0 10px 10px;
 }
+
+.buttonDeco-wrapper {
+    text-align: center;
+    margin-top: 5rem;
+}

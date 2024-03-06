@@ -1,6 +1,14 @@
 {
     "slides": [
         {
+            "src": "loveCover.webp",
+            "alt": "slide-img3"
+        },
+        {
+            "src": "merry-christmas-cover.webp",
+            "alt": "slide-img6"
+        },
+        {
             "src": "balloonsCover.webp",
             "alt": "slide-img1"
         },
@@ -9,27 +17,15 @@
             "alt": "slide-img2"
         },
         {
-            "src": "loveCover.webp",
-            "alt": "slide-img3"
-        },
-        {
             "src": "signatureCover.webp",
             "alt": "slide-img4"
         },
         {
             "src": "ThemeCover.webp",
             "alt": "slide-img5"
-        },
-        {
-            "src": "xmasCover.webp",
-            "alt": "slide-img6"
         }
     ],
     "rentals": [
-        {
-            "src": "R_BeautyBar.jpg",
-            "alt": "slide-img1"
-        },
         {
             "src": "R_bounceH1.jpg",
             "alt": "slide-img2"
@@ -37,6 +33,10 @@
         {
             "src": "R_bounceH2.jpg",
             "alt": "slide-img3"
+        },
+        {
+            "src": "R_BeautyBar.jpg",
+            "alt": "slide-img1"
         },
         {
             "src": "R_bounceH3.jpg",

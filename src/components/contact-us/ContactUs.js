@@ -86,17 +86,26 @@ const ContactUs = () => {
                                 </div>
                                 <div className="col-12 col-lg-5">
                                     <dl className="contact address-part">
-                                        <h3 className="mt-0">Our Address</h3>
+                                        <div className="d-flex justify-content-center" style={{"margin": "auto 20px"}}>
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <h3 className="mt-0">Our Address</h3>
+                                        </div>
                                         <address>
                                                 JAFZA 14 | Office 434 | PO Box 262995<br />
                                                 Jebel Ali | Dubai<br />
                                                 United Arab Emirates
                                         </address>
-                                        <h3>Call Us</h3>
-                                        <a href="tel:+97148876763">+971 4 887 6763</a><br/>
+                                        <div className="d-flex justify-content-center">
+                                            <i className="fa-solid fa-phone" style={{"margin": "auto 20px"}}></i>
+                                            <h3>Call Us</h3>
+                                        </div>
+                                            <a href="tel:+97148876763">+971 4 887 6763</a><br/>
                                             <a href="tel:+97143686083">+971 4 368 6083</a>
-                                        <h3>Email Us</h3>
-                                        <a href="mailto:">funkymonkeyuae</a>
+                                        <div className="d-flex justify-content-center">
+                                            <i class="fa fa-envelope" style={{"margin": "auto 20px"}} aria-hidden="true"></i>
+                                            <h3>Email Us</h3>
+                                        </div>
+                                            <a href="mailto:">funkymonkeyuae</a>
                                     </dl>
                                 </div>
                             </div>

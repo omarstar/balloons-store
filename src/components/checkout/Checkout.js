@@ -119,7 +119,7 @@ const Checkout = () => {
 
     return ( 
         <form action="" id="checkoutForm">
-        <div className="container d-lg-flex">
+        <div className="container-checkout d-lg-flex">
             <div className="d-flex flex-column">
             <div className="box-2">
                 <div className="box-inner-2">

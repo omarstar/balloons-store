@@ -16,9 +16,9 @@ const CardDecoration = ({data, align}) => {
         width: 235px;
         // height: 91px;
         // margin-bottom: 10vh;
-        position: absolute;
-        bottom: 1.2rem;
-        right: 10rem;
+        // position: absolute;
+        // bottom: 1.2rem;
+        // right: 10rem;
         // right: 30px
     `
 

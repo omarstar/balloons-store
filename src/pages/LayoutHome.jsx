@@ -15,7 +15,7 @@ const LayoutHome = () => {
                     </div>
                     <div className="w-100 bg-info text-white welcome-wrapper">
                         <div className="welcome-box">
-                            <h3 className="ff-itali display-4">Thank you for visiting!</h3>
+                            <h3 className="ff-itali display-5">Thank you for visiting!</h3>
                             <p className="welcome-text">We look forward to sprinkling some balloon magic on your next event!</p>
                         </div>
                     </div>
