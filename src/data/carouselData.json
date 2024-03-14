@@ -1,66 +1,50 @@
 {
     "slides": [
         {
-            "src": "loveCover.webp",
-            "alt": "slide-img3"
-        },
-        {
-            "src": "merry-christmas-cover.webp",
-            "alt": "slide-img6"
-        },
-        {
-            "src": "balloonsCover.webp",
-            "alt": "slide-img1"
-        },
-        {
-            "src": "HalloweenCover.webp",
-            "alt": "slide-img2"
-        },
-        {
             "src": "signatureCover.webp",
             "alt": "slide-img4"
         },
         {
-            "src": "ThemeCover.webp",
-            "alt": "slide-img5"
+            "src": "cv-thm1-wide.jpg",
+            "alt": "slide-img3"
+        },
+        {
+            "src": "cv-thm3-cartoon.jpg",
+            "alt": "slide-img6"
+        },
+        {
+            "src": "cv-thm2-birthday.jpg",
+            "alt": "slide-img1"
+        },
+        {
+            "src": "cv-thm4-object.jpg",
+            "alt": "slide-img2"
         }
     ],
     "rentals": [
         {
-            "src": "R_bounceH1.jpg",
+            "src": "1-Bouncy-Rental-Slide.jpg",
             "alt": "slide-img2"
         },
         {
-            "src": "R_bounceH2.jpg",
+            "src": "2-Popcorn-Station-Rental-Slide.jpg",
             "alt": "slide-img3"
         },
         {
-            "src": "R_BeautyBar.jpg",
+            "src": "3-Ball-Pit-Rental-Slide.jpg",
             "alt": "slide-img1"
         },
         {
-            "src": "R_bounceH3.jpg",
+            "src": "4-Cotton-Candy-Station-Rental.jpg",
             "alt": "slide-img4"
         },
         {
-            "src": "R_bounceH4.jpg",
+            "src": "5-Beauty-Bar-Rental.jpg",
             "alt": "slide-img5"
         },
         {
-            "src": "R_bounceH5.jpg",
+            "src": "6-Bubble-Machine-Rental.jpg",
             "alt": "slide-img6"
-        },
-        {
-            "src": "R_bounceH6.jpg",
-            "alt": "slide-img7"
-        },
-        {
-            "src": "R_cottoncandyM.jpg",
-            "alt": "slide-img8"
-        },
-        {
-            "src": "R_PopcormM.jpg",
-            "alt": "slide-img9"
         }
     ]
 }

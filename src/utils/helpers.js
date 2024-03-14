@@ -1,3 +1,5 @@
+import { scroller } from "react-scroll";
+
 export default function formatCurrency(num) {
     return Number(num.toFixed(1)).toLocaleString() + " ";
 }
@@ -93,3 +95,29 @@ export const formatDateToYMD = (date) => {
     return serializedDate.split('T')[0];
   };
 
+export const scrollToSection = (sectionId) => {
+    scroller.scrollTo(sectionId, {
+      duration: 800,
+      smooth: 'easeInOutQuad',
+      offset: -135,
+    });
+  };
+
+export const scrollToSectionId = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                duration: 800,
+                smooth: 'easeInOutQuad',
+                offset: -135
+            });
+        }
+    };
+
+export const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
