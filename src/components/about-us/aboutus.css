@@ -2,6 +2,7 @@
     font-weight: 600;
     font-size: 1.2rem;
     margin-top: 1.6rem;
+    margin-bottom: 0.4rem;
 }
 .aboutus-desc p{
     font-size: 1.1rem;
@@ -19,7 +20,7 @@
 .aboutus-title h3 {
     font-family: Italianno;
     color: #000;
-    text-align: center;
+    text-align: left;
     
     font-size: 4rem;
     font-style: normal;

@@ -2,7 +2,7 @@ footer {
     margin: 2.5em 0 0 0;
 }
 #footer-wrapper {
-    background-color: #405;
+    background-color: var(--classic-blue);
     /* background: linear-gradient(to bottom right, var(--primary-color), 15%, transparent), radial-gradient(circle at 100% 0%, rgba(255,255,255,.2) 10%, transparent 20%) center center / 15px 15px, linear-gradient(to bottom right, var(--logo-blue), var(--logo-blue)); */
     
 }
@@ -57,7 +57,7 @@ footer {
     }
 
     #footer dl.contact dt, #footer dl.contact dd {
-        color: #ddd;
+        color: #fdfff5;
     }
 
 
@@ -68,7 +68,8 @@ footer {
     text-align: center;
     margin-top: 2em;
     padding: 3em 0 4em 0;
-    color: #ddd;
+    color: #fdfff5;
+    font: 700 13px "Poppins-Light"
     /* color: inherit; */
 }
 
@@ -77,12 +78,12 @@ footer {
     }
 
     #footer-wrapper {
-        padding: 4.5em 0 4.5em 0;
+        padding: 4.5em 0 0.5em 0;
     }
 
 @media screen and (max-width: 736px){
     #footer-wrapper {
-        padding: 3em 20px 3em 20px;
+        padding: 3em 20px 0.5em 20px;
     }
 
         #footer-wrapper section, #footer-wrapper article {

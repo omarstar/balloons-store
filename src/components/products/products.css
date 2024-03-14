@@ -119,7 +119,7 @@
   }
   .item-btn-container {
     /* background-color: rgb(200, 142, 254); */
-    background-color: var(--pink-color);
+    background-color: var(--classic-gold);
     color: #fff;
     width: 18rem;
     margin: 0 1rem;
@@ -195,7 +195,8 @@
     /* border: 1px; */
     font-weight: bold;
     padding: .5rem 1rem;
-    background-color: rgb(200, 142, 254);
+    background-color: var(--classic-blue);
+    /* background-color: rgb(200, 142, 254); */
     color: #fff;
     /* border-radius: .4rem; */
     font-size: 1.2rem;
@@ -231,7 +232,8 @@
   
   .item-cart-btn:hover {
     color: #fff;
-    background-color: rgb(160, 110, 206);
+    /* background-color: rgb(160, 110, 206); */
+    background-color: rgb(186, 147, 72);
   }
   /* custom styles */
   .text-addcart {

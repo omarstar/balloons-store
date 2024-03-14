@@ -10,7 +10,7 @@
     align-items: center;
 }
 .deco-desc {
-    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins-Regular", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
     flex-shrink: 0;
@@ -31,6 +31,7 @@
     width: auto;
     height: 95%;
     border-radius: 0 0 10px 10px;
+    aspect-ratio: 1;
 }
 
 .buttonDeco-wrapper {

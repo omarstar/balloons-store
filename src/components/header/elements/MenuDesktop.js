@@ -118,7 +118,7 @@ const MenuDesktop = () => {
                 </ul> */}
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <Link to="/party-rentals">Bulk Balloons</Link>
+                <Link to="/collections/decorations/nadia-picks">Nadia Picks</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Create your own Bouquet</Link>

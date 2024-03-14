@@ -14,7 +14,7 @@ const LayoutCategories = () => {
     const checkParams = validateCategoryParams(cat);
 
     const catName = cat.toUpperCase();
-    const catNote = "shoose the collection you desire, then pick from te list the colors and shapes you are looking for."
+    const catNote = "choose the collection you desire, then pick from the list the colors and shapes you are looking for."
 
     const dispatch = useDispatch();
 

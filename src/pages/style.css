@@ -7,8 +7,9 @@
 }
 /* home layout */
 .welcome-wrapper {
-    margin: 10px 0;
-  box-shadow: 0 -1px 6px green;
+    margin: 15px 0 5px;
+    box-shadow: 0 -1px 5px var(--classic-gold);
+  background-color: var(--classic-blue) !important;
 }
 .welcome-box {
     display: flex;

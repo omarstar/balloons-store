@@ -18,12 +18,16 @@ html, body {
 .form-holder {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
       text-align: center;
       min-height: 100vh;
-      background:#A8D8DF;
+      /* background:#A8D8DF; */
       padding: 1.5rem;
+        background-repeat: no-repeat !important;
+        /* background-image: url(https://lirp.cdn-website.com/c056d3a8/dms3rep/multi/opt/Contact-BG-1920w.jpg) !important; */
+        background-image: url(../../assets/images/Information\ Background\ Photo.png) !important;
+        background-size: cover !important;
 }
 
 .form-holder .form-content {
@@ -229,13 +233,13 @@ form.contact-form {
 }
 
 .contact.address-part {
-	background: #405 none repeat scroll 0 0;
-	border-radius: 20px;
-	box-shadow: 0 0 5px #dedfe3;
-	padding: 50px;
-	min-height: 450px;
+	/* background: rgba(23,162,184,0.05) none repeat scroll 0 0;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #dedfe3; */
+    padding: 50px;
+    min-height: 30rem;
     font-size: 1.2rem;
-    color: #fff;
+    color: #000;
  }
  .contact.address-part h3 {
     font-size: 1.3rem;
@@ -275,5 +279,5 @@ ul.actions li {
 .form-row {
     justify-content: space-evenly;
     align-items: baseline;
-    width: 90%;
+    width: 100%;
 }

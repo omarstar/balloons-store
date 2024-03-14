@@ -164,8 +164,8 @@
 
 #header .navigation-small {
 	border-bottom: 1px solid #ccc;
-	height: 35px;
-	padding: 0;
+	height: 45px;
+  	padding: 10px;
 	width: 100%
 }
 
@@ -319,11 +319,11 @@
 #header .navigation-main {
 	/* border-top: 1px solid #f4f4f4; */
 	/* background: rgba(165,136,194,.58) !important; */
-	background: var(--pink-color) !important;
+	/* background: var(--pink-color) !important; */
 	height: 55px;
 	padding: 0;
 	width: 100%;
-	box-shadow: 0 -2px 4px rgba(68, 0, 85, 0.4);
+	/* box-shadow: 0px 2px 2px rgb(186, 147, 72); */
 
 }
 
@@ -346,11 +346,12 @@
 }
 
 #header .navigation-main .menu>.menu-item>a {
-	color: #fff;
+	color: #000;
 	display: block;
-	font-family: "Prompt", helvetica, arial sans-serif;
+	/* font-family: "Poppins-Medium", helvetica, arial sans-serif;
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 700; */
+	font: 600 14px "Poppins-Regular";
 	height: 55px;
 	line-height: 55px;
 	letter-spacing: .05em;
@@ -364,7 +365,7 @@
 }
 
 #header .navigation-main .menu>.menu-item>a::before {
-	background: #cc1641;
+	/* background: #cc1641; */
 	bottom: -5px;
 	content: '';
 	display: block;
@@ -575,7 +576,7 @@ button {
 }
 @media only screen and (min-width: 992px) {
   #header .header-top {
-		height: 125px
+		height: 150px
 	}
 
 	#header .header-bottom {
@@ -715,7 +716,7 @@ button {
   padding: 7px 8px 8px 0;
 }
 .menu .megamenu .submenu a {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins-Regular', sans-serif;
 	text-shadow: none;
 	font-weight: 500;
 	letter-spacing: normal;

@@ -206,14 +206,16 @@ input[type="radio"] {
 }
 
 .box-2 .box-inner-2 .btn.btn-primary:hover {
-    background-color: #7a34ca;
+    background-color: var(--classic-blue);
 }
 
 .box-2 .box-inner-2 .btn.btn-primary .fas {
     font-size: 13px !important;
     color: whitesmoke;
 }
-
+.carousel, .slides {
+    height: 41rem !important;
+}
 .carousel-indicators [data-bs-target] {
     width: 10px;
     height: 10px;
@@ -226,8 +228,10 @@ input[type="radio"] {
 }
 
 .carousel-item img {
-    object-fit: cover;
+    object-fit: cover !important;
     height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .carousel-control-prev {
