@@ -30,7 +30,8 @@ const Product = ({product}) => {
             handleProductDetailsSelected(prd);
         }else if(prd.buttonOption === "get quote"){
             dispatch(productActions.handleProductSelected(prd))
-            navigate('/balloons/contacts#contactus')
+            navigate('/balloons/contacts')
+            // navigate('/balloons/contacts#contactus')
         }
     }
 
