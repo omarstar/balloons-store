@@ -1,10 +1,20 @@
-import { decorationItems } from "../../utils/constants";
+// import { decorationItems } from "../../utils/constants";
 import CardDecoration from "./CardDecoration";
 
-const DecorationList = () => {
+const DecorationList = ({decorationItems}) => {
+
+    
     return ( 
         <>
-            <div className="card-deco-wrapper f-right">
+            {decorationItems && decorationItems.map( (item , i) =>{
+                return(
+                    <div className={"card-deco-wrapper " + (i%2 === 1 ? "f-right": "")}>
+                        <CardDecoration data={item} align={(i%2 === 1 ) ? "right" : ""} />
+                    </div>
+                );
+            })}
+
+            {/* <div className="card-deco-wrapper f-right">
             <CardDecoration data={decorationItems[0]} align={"right"} />
             </div>
             <div className="card-deco-wrapper">
@@ -21,7 +31,7 @@ const DecorationList = () => {
             </div>
             <div className="card-deco-wrapper">
             <CardDecoration data={decorationItems[5]}/>
-            </div>
+            </div> */}
         </>
      );
 }

@@ -1,18 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./contactus.css"
 import { useDispatch } from "react-redux";
 import { quoteRequestActions } from "../../store/contact/qoute-slice";
+import { sendEmailContact } from "../../utils/api";
 const ContactUs = () => {
 
     const dispatch = useDispatch();
     const [validationMessage, setValidationMessage] = useState(["",""])
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        phone: "",
+        message: ""
+    })
 
     const handleInputChange = (e, fieldName) => {
         const { name, value } = e.target;
+        console.log('whta input field', [name, value, fieldName])
         let isValid = true;
         if (fieldName === 'name' && value.length < 3) {
             isValid = false;
-            setValidationMessage([fieldName, "Your Name is Required"]);
+            setValidationMessage([fieldName, "Your Name should at least be three characters"]);
         } else if (fieldName === 'email' && !/\S+@\S+\.\S+/.test(value)) {
             isValid = false;
             setValidationMessage([fieldName, "valid email si required"]);
@@ -24,18 +33,62 @@ const ContactUs = () => {
         
         if(isValid){
             dispatch(quoteRequestActions.updateContactData({ field: name, value }));
+            setFormData({...formData, [fieldName]: value})
             setValidationMessage(["",""])
         }
 
       };
 
 
-    const handleContactSubmit = (e) => {
+    const handleContactSubmit = async (e) => {
         e.preventDefault();
+        console.log('contact submit clicked')
         //validate
+        if (!formData.name || !formData.email || !formData.subject || !formData.phone || !formData.message) {
+            setValidationMessage(['error', 'Please fill in all fields']);
+            return;
+          }
+          
         //send data to email
-        setValidationMessage("")
+        try {
+            console.log('formData form values', formData)
+            const emailTo = "obarakat12@gmail.com"
+            const htmlTemplateText = `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Subject: ${formData.subject}
+            Phone: ${formData.phone}
+            Message: ${formData.message}
+          `
+
+        //   const encodedHtmlContent = encodeURIComponent(htmlTemplateText);
+        //     console.log('encodedHtmlContent', encodedHtmlContent)
+
+        //     const decodedHtmlContent = decodeURIComponent(encodedHtmlContent);
+        //     console.log('decodedHtmlContent', decodedHtmlContent)
+            
+        const response = await sendEmailContact(htmlTemplateText, emailTo)
+        console.log('response sending email in contact', response)
+        
+        //we may use taost and reset this validation msg
+        setValidationMessage("success", "Message sent successfully")
+        //clear formData
+        setFormData({
+            name:'',
+            email:'',
+            subject:'',
+            phone:'',
+            message:''
+        })
+        } catch (error) {
+            console.error('Error sending message', error);
+            setValidationMessage(['error', 'Error sending message']);
+        }
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return ( 
         <>
@@ -50,31 +103,37 @@ const ContactUs = () => {
                                     <div className="contact form-part">
                                         <form method="POST" action="sendmail.php" className="contact-form">
                                             <div className="row gtr-uniform">
-                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="name" id="name" onChange={(e)=>handleInputChange(e, 'name')} placeholder="Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="name" id="name" onBlur={(e)=>handleInputChange(e, 'name')} placeholder="Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars"/>
                                                     { validationMessage[0] === "name" && (
                                                     <div className="validation">{ validationMessage[1] }</div>
                                                     )}  
                                                 </div>
-                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="email" name="email" id="email" onChange={(e)=>handleInputChange(e, 'email')} placeholder="Email" data-rule="email" data-msg="Please enter a valid email"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="email" name="email" id="email" onBlur={(e)=>handleInputChange(e, 'email')} placeholder="Email" data-rule="email" data-msg="Please enter a valid email"/>
                                                     { validationMessage[0] === "email" && (
                                                     <div className="validation">{ validationMessage[1] }</div>
                                                     )}  
                                                 </div>
-                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="subject" id="subject" onChange={(e)=>handleInputChange(e, 'subject')} placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="subject" id="subject" onBlur={(e)=>handleInputChange(e, 'subject')} placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject"/>
                                                     { validationMessage[0] === "subject" && (
                                                     <div className="validation">{ validationMessage[1] }</div>
                                                     )}  
                                                 </div>
-                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputMode="numeric" id="phone" onChange={(e)=>handleInputChange(e, 'phone')} placeholder="Contact number" />
+                                                <div className="col-12 col-md-6  form-group"><input className="form-control input-shadow" type="text" name="phone" pattern="[0-9]*" inputMode="numeric" id="phone" onBlur={(e)=>handleInputChange(e, 'phone')} placeholder="Contact number" />
                                                     { validationMessage[0] === "phone" && (
                                                     <div className="validation">{ validationMessage[1] }</div>
                                                     )}  
                                                 </div>
-                                                <div className="col-12  form-group"><textarea className="form-control input-shadow" name="message" id="message" onChange={(e)=>handleInputChange(e, 'message')}  placeholder="Your Messages" data-rule="required" data-msg="Message" rows="6"></textarea>
+                                                <div className="col-12  form-group"><textarea className="form-control input-shadow" name="message" id="message" onBlur={(e)=>handleInputChange(e, 'message')}  placeholder="Your Messages" data-rule="required" data-msg="Message" rows="6"></textarea>
                                                     { validationMessage[0] === "message" && (
                                                     <div className="validation">{ validationMessage[1] }</div>
                                                     )}  
                                                 </div>
+                                                {validationMessage[0] === "error" && (
+                                                    <div className="validation">{validationMessage[1]}</div>
+                                                )}
+                                                {validationMessage[0] === "success" && (
+                                                    <div className="success">{validationMessage[1]}</div>
+                                                )}
                                                 <div className="col-12">
                                                     <ul className="actions form-buttons">
                                                         <li><input type="submit" id="submit-btn" onClick={handleContactSubmit} className="primary button line-btn" value="Send Message" /></li>
@@ -91,16 +150,16 @@ const ContactUs = () => {
                                             <h3 className="mt-0">Our Address</h3>
                                         </div>
                                         <address>
-                                                JAFZA 14 | Office 434 | PO Box 262995<br />
-                                                Jebel Ali | Dubai<br />
+                                                Al Wasl Center | 1st Floor<br />
+                                                Sheikh Zayed Road | Dubai<br />
                                                 United Arab Emirates
                                         </address>
                                         <div className="d-flex justify-content-center">
                                             <i className="fa-solid fa-phone" style={{"margin": "auto 20px"}}></i>
                                             <h3>Call Us</h3>
                                         </div>
-                                            <a href="tel:+97148876763">+971 4 887 6763</a><br/>
-                                            <a href="tel:+97143686083">+971 4 368 6083</a>
+                                            {/* <a href="tel:+97148876763">+971 4 887 6763</a><br/> */}
+                                            <a href="tel:+971551739652">+971 55 173 9652</a>
                                         <div className="d-flex justify-content-center">
                                             <i class="fa fa-envelope" style={{"margin": "auto 20px"}} aria-hidden="true"></i>
                                             <h3>Email Us</h3>
