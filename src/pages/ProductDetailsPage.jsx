@@ -2,7 +2,7 @@
 // import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import ProductDetails from "../components/product-detail/ProductDetails";
-import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
+// import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
 
 const ProductDetailsPage = () => {
 
@@ -13,7 +13,7 @@ const ProductDetailsPage = () => {
     return ( 
         <section className="container">
             <div className="row d-flex">
-            <NavBreadCrumb />
+            {/* <NavBreadCrumb /> */}
             </div>
             <ProductDetails />
         </section>

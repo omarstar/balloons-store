@@ -1,17 +1,3 @@
-// import img1 from '../assets/images/decorations/cat-gold.png'
-// import img2 from '../assets/images/decorations/cat-back.png'
-// import img3 from "../assets/images/decorations/cat-baby.png"
-// import img4 from "../assets/images/decorations/cat-love.png"
-
-// import Centerpieces from "../assets/images/decorations/centerpiece.webp"
-import Centerpieces from "../assets/images/decorations/Garland+replacement+photo-1920w.webp"
-import Columns from "../assets/images/decorations/column.webp"
-import Garland from "../assets/images/decorations/garland.webp"
-import Ceiling from "../assets/images/decorations/celing walls.jpg"
-// import Arches from "../assets/images/decorations/arches.jpeg"
-import Arches from "../assets/images/decorations/centerpiece.webp"
-import Sculptures from "../assets/images/decorations/scapt.webp"
-
 import catImg1 from "../assets/images/balloons/bbc.png"
 import catImg2 from "../assets/images/balloons/gwc.png"
 
@@ -19,6 +5,12 @@ import * as Yup from "yup";
 
 import {v4 as uuidv4} from 'uuid'
 import { homePageLibrary, imagesLibrary } from "./images"
+
+//the list of menu items for bouquets category //missing
+export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
+//the list of menu items for the decorations category
+export const decorationList = ['centerpieces','arches','columns','shapes','garlands','sculptures','Ceiling-Walls','setups']
+
 
 export const MenuItems = [
     {
@@ -148,7 +140,7 @@ export const decorationItems = [
         bgColor:"#dadac2",
         // bgColor:"#F0C7D5",
         txtColor:"#fff",
-        linkPath: "/collections/decorations/centerpieces",
+        linkPath: "/collections/centerpieces",
         desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
 
     },
@@ -158,7 +150,7 @@ export const decorationItems = [
         btnColor:"#be7475",
         bgColor:"#e5dfd1",
         txtColor:"#FFF",
-        linkPath: "/collections/decorations/garlands",
+        linkPath: "/collections/garlands",
         desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
     },
     {
@@ -167,7 +159,7 @@ export const decorationItems = [
         btnColor:"#af6f6d",
         bgColor:"#f1e2df",
         txtColor:"#fff",
-        linkPath: "/collections/decorations/columns",
+        linkPath: "/collections/columns",
         desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
     },
     {
@@ -177,7 +169,7 @@ export const decorationItems = [
         bgColor:"#aaceda",
         // bgColor:"#64d5fd",
         txtColor:"#000",
-        linkPath: "/collections/decorations/arches",
+        linkPath: "/collections/arches",
         desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
     },
     {
@@ -186,7 +178,7 @@ export const decorationItems = [
         btnColor:"#7e416f",
         bgColor:"rgb(251, 222, 226, 0.3)",
         txtColor:"#fff",
-        linkPath: "/collections/decorations/sculptures",
+        linkPath: "/collections/sculptures",
         desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
     }
 ]
@@ -195,43 +187,43 @@ export const dropdownItems = {
     "DECORATIONS": [
         {
             title:"centerpieces",
-            path: "/collections/decorations/centerpieces",
+            path: "/collections/centerpieces",
             cName:'dropdown-link',
             briefText: "a wide range of styles for centerpieces",
             imgSrc: catImg1
         },{
             title:"arches",
-            path: "/collections/decorations/arches",
+            path: "/collections/arches",
             cName:'dropdown-link',
             briefText: "a wide range of styles for arches",
             imgSrc: catImg1
         },{
             title:"columns",
-            path: "/collections/decorations/columns",
+            path: "/collections/columns",
             cName:'dropdown-link',
             briefText: "a wide range of styles for columns",
             imgSrc: catImg2
         },{
             title:"letters & numbers",
-            path: "/collections/decorations/shapes",
+            path: "/collections/shapes",
             cName:'dropdown-link',
             briefText: "a wide range of styles for Letters and Numbers",
             imgSrc: catImg2
         },{
             title:"Garlands",
-            path: "/collections/decorations/garlands",
+            path: "/collections/garlands",
             cName:'dropdown-link',
             briefText: "a wide range of styles for Garlands",
             imgSrc: catImg2
         },{
             title:"Sculptures",
-            path: "/collections/decorations/sculptures",
+            path: "/collections/sculptures",
             cName:'dropdown-link',
             briefText: "a wide range of styles for Sculptures",
             imgSrc: catImg2
         },{
             title:"setups",
-            path: "/collections/decorations/setups",
+            path: "/collections/setups",
             cName:'dropdown-link',
             briefText: "a wide range of styles for full setups",
             imgSrc: catImg2

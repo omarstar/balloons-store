@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import data from "../../data.json"
-// 
-// const clonedProducts = [...data.products]
+
 const initialState = {
     products: [],
     detailProduct: data.productDetails,

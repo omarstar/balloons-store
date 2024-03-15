@@ -23,7 +23,8 @@ const MenuDesktop = () => {
     return ( 
         <ul id="menu-header-menu" className="menu">
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page" onMouseEnter={() => handleMouseEnter("Bouquets")} onMouseLeave={handleMouseLeave}>
-                <Link to="/category/bouquets">Bouquets</Link>
+                {/* <Link to="/category/bouquets">Bouquets</Link> */}
+                <Link to="/redirect/collections/bouquets">Bouquets</Link>
                 {
                     hoveredItem === "Bouquets" && (
 
@@ -31,31 +32,28 @@ const MenuDesktop = () => {
                             <div className="row">
 
                                 <div className="col-lg-6">
-                                    {/* <Link to="/category/holidays&Occasions" className="nolink">Holidays & Occasions</Link> */}
                                     <ul className="submenu">
-                                        <li><Link to="/collections/holidays/haloween" >HALOWEEN</Link></li>
-                                        <li><Link to="/collections/holidays/national-flag-day" >NATIONAL & FLAG DAY</Link></li>
-                                        <li><Link to="/collections/holidays/xmas" >CHRISTMAS</Link></li>
-                                        <li><Link to="/collections/holidays/new-years-eve" >NEW YEAR EVE</Link></li>
-                                        <li><Link to="/collections/holidays/valentine" >VALENTINE DAY</Link></li>
-                                        <li><Link to="/collections/holidays/fathers-day" >father's day</Link></li>
-                                        <li><Link to="/collections/holidays/mothers-day" >mother's day</Link></li>
-                                        <li><Link to="/collections/holidays/easter" >easter</Link></li>
+                                        {/* <li><Link to="/redirect/collections/haloween" >HALOWEEN</Link></li>
+                                        <li><Link to="/redirect/collections/national-flag-day" >NATIONAL & FLAG DAY</Link></li>
+                                        <li><Link to="/redirect/collections/xmas" >CHRISTMAS</Link></li> */}
+                                        <li><Link to="/redirect/collections/new-years-eve" >NEW YEAR EVE</Link></li>
+                                        <li><Link to="/redirect/collections/valentine" >VALENTINE DAY</Link></li>
+                                        {/* <li><Link to="/redirect/collections/fathers-day" >father's day</Link></li>
+                                        <li><Link to="/redirect/collections/mothers-day" >mother's day</Link></li>
+                                        <li><Link to="/redirect/collections/easter" >easter</Link></li> */}
                                         
                                     </ul>
                                 </div>
 
                                 <div className="col-lg-6">
-                                    {/* <Link to="/category/occasions" className="nolink">Occasions</Link> */}
-                                    {/* <div className="nolink"></div> */}
                                     <ul className="submenu">
-                                    <li><Link to="/collections/occasions/birthday">BIRTHDAY</Link></li>
-                                    <li><Link to="/collections/occasions/newborn">BABE</Link></li>
-                                    <li><Link to="/collections/occasions/wedding-anniversary">WEDDINGS</Link></li>
-                                    <li><Link to="/collections/occasions/graduation">GRADUATION</Link></li>
-                                    <li><Link to="/collections/occasions/congratulations">CONGRATULATIONS</Link></li>
-                                    <li><Link to="/collections/occasions/valentine">valentine</Link></li>
-                                    <li><Link to="/collections/occasions/wedding-anniversary">anniversary</Link></li>
+                                    <li><Link to="/redirect/collections/birthday">BIRTHDAY</Link></li>
+                                    {/* <li><Link to="/redirect/collections/newborn">BABE</Link></li>
+                                    <li><Link to="/redirect/collections/wedding-anniversary">WEDDINGS</Link></li>
+                                    <li><Link to="/redirect/collections/graduation">GRADUATION</Link></li>
+                                    <li><Link to="/redirect/collections/congratulations">CONGRATULATIONS</Link></li>
+                                    <li><Link to="/redirect/collections/valentine">valentine</Link></li>
+                                    <li><Link to="/redirect/collections/wedding-anniversary">anniversary</Link></li> */}
                                     <li><Link to="#">CREATE YOUR OWN</Link></li>
                                     </ul>
                                 </div>
@@ -73,7 +71,8 @@ const MenuDesktop = () => {
                 }
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page" onMouseEnter={() => handleMouseEnter("Decorations")} onMouseLeave={handleMouseLeave}>
-                <Link to="/category/decorations">Decorations</Link>
+                {/* <Link to="/category/decorations">Decorations</Link> */}
+                <Link to="/redirect/collections/decorations">Decorations</Link>
                 {
                     hoveredItem === "Decorations" && (
 
@@ -83,14 +82,14 @@ const MenuDesktop = () => {
                                 <div className="col-lg-12">
                                     {/* <p className="nolink">Indoor</p> */}
                                     <ul className="submenu">
-                                        <li><Link to="/collections/decorations/centerpieces">centerpieces</Link></li>
-                                        <li><Link to="/collections/decorations/arches">arches</Link></li>
-                                        <li><Link to="/collections/decorations/columns">columns</Link></li>
-                                        <li><Link to="/collections/decorations/shapes">letters & numbers</Link></li>
-                                        <li><Link to="/collections/decorations/garlands">garlands</Link></li>
-                                        <li><Link to="/collections/decorations/sculptures">sculptures</Link></li>
-                                        <li><Link to="/collections/decorations/Ceiling-Walls">Ceiling & walls</Link></li>
-                                        <li><Link to="/collections/decorations/setups">full setups</Link></li>
+                                        <li><Link to="/redirect/collections/centerpieces">centerpieces</Link></li>
+                                        <li><Link to="/redirect/collections/arches">arches</Link></li>
+                                        <li><Link to="/redirect/collections/columns">columns</Link></li>
+                                        <li><Link to="/redirect/collections/shapes">letters & numbers</Link></li>
+                                        <li><Link to="/redirect/collections/garlands">garlands</Link></li>
+                                        <li><Link to="/redirect/collections/sculptures">sculptures</Link></li>
+                                        <li><Link to="/redirect/collections/Ceiling-Walls">Ceiling & walls</Link></li>
+                                        <li><Link to="/redirect/collections/setups">full setups</Link></li>
                                     </ul>
                                 </div>
 
@@ -118,7 +117,7 @@ const MenuDesktop = () => {
                 </ul> */}
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <Link to="/collections/decorations/nadia-picks">Nadia Picks</Link>
+                <Link to="/redirect/collections/nadia-picks">Nadia Picks</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Create your own Bouquet</Link>

@@ -30,10 +30,27 @@
         }
 
     ],
-    "setups": [
+    "singleItems": [
         {
             "_id":101,
             "image":"bbc",
+            "title":"number custom day",
+            "description":"a new setup",
+            "availableSizes": ["XS","M"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "get quote",
+            "moreOptions": [
+            ]
+        }
+    ],
+    "setups": [
+        {
+            "_id":101,
+            "image":"bbc using id incollections folder",
             "title":"number custom day",
             "description":"a new setup",
             "availableSizes": ["XS","M"],
@@ -289,6 +306,21 @@
             ]
         }
     ],
+    "nadiapicks": [{
+        "_id":101,
+        "image":"bbc using id incollections folder",
+        "title":"nadia pick #1",
+        "description":"a new nadia pick design spedcially for you",
+        "availableSizes": ["XS","M"],
+        "price":99.95,
+        "path": "/collections/custom-name?variant=123",
+        "inCart": false,
+        "quantity": 0,
+        "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+        "buttonOption": "get quote",
+        "moreOptions": [
+        ]
+    }],
     
     "notes": "update the availableSizes / baloon bunch with desc",
     "products": [

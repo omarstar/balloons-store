@@ -71,7 +71,7 @@ const Product = ({product}) => {
                 <p className="item-description">
                     {product.description}
                 </p>
-                <p className="item-price">{formatCurrency(product.price)} <sup>$</sup></p>
+                <p className="item-price">{formatCurrency(product.price)} <sup>AED</sup></p>
                 
                 
             </div>  

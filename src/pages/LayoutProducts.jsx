@@ -1,175 +1,77 @@
 import { useEffect, useState } from "react";
-import Filter from "../components/filter/Filter";
-import Products from "../components/products/Products";
 import data from "../data.json"
-// import Cart from "../components/cart/Cart";
-import { getBreadFromPath, getImage, getLocalStorageValue } from "../utils/helpers";
-import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
-import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import CartView from "../components/cart/CartView";
+import { getBreadFromPath, getLocalStorageValue } from "../utils/helpers";
+import { useDispatch } from "react-redux";
 import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
-import { useLocation, useParams } from "react-router-dom";
-import Promobar from "../components/header/Promobar";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { productActions } from "../store/product/product-slice";
-// import { useDispatch } from "react-redux";
-// import { cartActions } from "../store/cart/cart-slice";
+import { bouquetsList } from "../utils/constants";
 
 const LayoutProducts = () => {
 
     const dispatch = useDispatch();
-    // var productsList = useSelector(state => state.product.products)
-    var productsList = []
-    // console.log('productsList init', productsList)
+    const navigate = useNavigate();
 
     const {prds} = useParams();
-    console.log('category params', prds)
+    console.log('collection params', prds)
 
-    //products list updated in state
-    if(prds === "setups"){
-        console.log('products list updated to setups')
-        // dispatch(productActions.recreateProductsList(data.setups))
-        productsList = data.setups;
+    // const location = useLocation();
+    // const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+    // const crumb = getBreadFromPath(pathSegments)
+    // console.log('crumb', crumb)
 
-    }else if(prds ===  'garlands' || prds === 'columns' || prds === 'centerpieces' || prds === 'Ceiling-Walls' || prds === 'arches' || prds === 'sculptures'){
-        console.log('products list updated to garlands decoration');
-        productsList = data.decorations;
-
-    }else {
-        console.log('products list updated to products')
-        // dispatch(productActions.recreateProductsList(data.products))
-        productsList = data.products;
-        
-    }
-
-    // productsList = useSelector(state => state.product.products)
-    // console.log('productsList', productsList)
-
-
-    const location = useLocation();
-    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-    const crumb = getBreadFromPath(pathSegments)
-    console.log('crumb', crumb)
-
-   
-
+    // useEffect(() => {
+    //   dispatch(breadcrumbsActions.updateBreadcrumbs(crumb))
     
+    // }, [dispatch])
 
-    const [products, setProducts] = useState(productsList);
-    // const [size, setSize] = useState("")
-    // const [sort, setSort] = useState("")
-    const [cartItems, setCartItems] = useState(getLocalStorageValue("cartItems") ? JSON.parse(getLocalStorageValue("cartItems")) : [])
+    // const selectedCrumb = (crumb) => {
+    //     console.log('crumb', crumb)
+    // }
+
+    const callDisplayProducts = () => {
+
+        //filter the data later
+        try {
+            if(prds === "setups"){
+                console.log('products list updated to setups')
+                dispatch(productActions.recreateProductsList(data.setups))
+                navigate('/collections/decorations')
+            }else if(prds ===  'garlands' || prds === 'columns' || prds === 'centerpieces' || prds === 'Ceiling-Walls' || prds === 'arches' || prds === 'sculptures'){
+                console.log('products list updated to decoration');
+                dispatch(productActions.recreateProductsList(data.decorations))
+                navigate('/collections/decorations')
+            }else if(prds ===  'nadia-picks'){
+                console.log('products list updated to nadia picks');
+                dispatch(productActions.recreateProductsList(data.nadiapicks))
+                navigate('/collections/nadia-picks')
+            }else if(prds ===  'decorations'){
+                console.log('products list updated to all decorations list');
+                dispatch(productActions.recreateProductsList([...data.decorations, ...data.setups]))
+                navigate('/collections/decorations')
+            }else if(prds === 'bouquets'){
+                console.log('products list updated to bouquests')
+                dispatch(productActions.recreateProductsList(data.products))
+                navigate('/collections/boquests')
+            }else{
+                if(bouquetsList.includes(prds)) {
+                    console.log('products list updated to bouquests')
+                    dispatch(productActions.recreateProductsList(data.products))
+
+                    return navigate('/collections/boquests')
+                }
+                else navigate('/')
+            }
+
+        } catch (error) {
+            navigate('/')
+        }
+    }
 
     useEffect(() => {
-    //   setCrumbs(breadcrumbs);
-      dispatch(breadcrumbsActions.updateBreadcrumbs(crumb))
-    
-    }, [dispatch])
-    
+      callDisplayProducts();
+    }, [])
 
-    // const dispatch = useDispatch();
-
-    // const  filterProducts = (event)=>{
-    //     const {value} = event.target;
-    //     console.log('value', value)
-    //     console.log('products', products)
-    //     if(event.target.value === ""){
-    //         setSize(value);
-    //         setProducts(data);
-    //     }else{
-    //         setSize(value)
-    //         setProducts(data.products.filter(product=>{
-    //             console.log('indexOf', product.availableSizes.indexOf(value))
-    //             return product.availableSizes.indexOf(value)  >= 0
-    //     }))
-    //     }
-    // }
-
-    const handleAddtoCart = (product) => {
-        const cart = cartItems.slice();
-        let alreadyInCart = false;
-        cart.forEach(item => {
-            if(item._id === product._id){
-                item.count ++;
-                alreadyInCart = true;
-            }
-        });
-        if(!alreadyInCart){
-            cart.push({...product, count: 1})
-        }
-        setCartItems(cart);
-        console.log('cart after update', cart)
-        console.log('cart items after update', cartItems)
-        localStorage.setItem("cartItems", JSON.stringify(cart));
-        console.log('ls', getLocalStorageValue("cartItems"))
-        
-        
-    }
-
-    // const sortProducts = (event) => {
-    //     const sortValue = event.target.value;
-    //     console.log('sortValue', sortValue)
-    //     setSort(sortValue);
-    //     setProducts(products.slice().sort((a,b)=>(
-    //         sortValue === "lowest"
-    //         ? a.price > b.price
-    //             ? 1 : -1
-    //         : sort === "highest"
-    //         ? a.price < b.price
-    //             ? 1 : -1
-    //         : a._id < b._id
-    //             ? 1 : -1
-    //     )))
-    // }
-
-const handleRemoveCart = (product) => {
-    const cart = cartItems.slice();
-    const updatedCart = cart.filter(item=> {
-        return item._id !== product._id
-    })
-    setCartItems(updatedCart)
-    console.log('cart items after remove', cartItems)
-    console.log('cart updated items after remove', updatedCart)
-    localStorage.setItem("cartItems", JSON.stringify(updatedCart))
-    console.log('ls', getLocalStorageValue("cartItems"))
-}
-
-// const selectedCrumb = (crumb) => {
-//     console.log('crumb', crumb)
-// }
-
-const ImageDeco = styled.div.attrs(()=>({
-    className: 'category-banner banner text-uppercase'
-}))`
-        width: 100%;
-        height: 300px;
-        background: url(${props => props.imgpath}), lightgray no-repeat 60% / cover ;
-        `
-    return ( 
-        <>
-        <div className="content">
-            <div className="promobar-wrapper">
-                <Promobar />
-            </div>
-            <div className="main">
-                
-                <div className="container">
-                    <CartView />
-                    <NavBreadCrumb />
-                    {/* <Filter
-                    count={products.length}
-                    sort={sort}
-                    size={size}
-                    filterProducts={filterProducts}
-                    sortProducts={sortProducts}
-                     /> */}
-                    <Products products={products} addtoCart={handleAddtoCart} />
-                </div>
-                                
-            </div>
-        </div>
-        </>
-     );
 }
  
 export default LayoutProducts;

@@ -12,6 +12,7 @@ import NotFound from "../pages/NotFound";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 // import { renderRoutes } from "./generate-routes";
 import { Routes, Route} from "react-router-dom";
+import Products from '../components/products/Products';
 /* isPublic used if page is public or require login */
 /* hasSiderLink to check to render on menu or not */
 export const routes = [
@@ -171,10 +172,10 @@ export const RoutesElement = () => {
             <Route path="balloons/contacts" element={<LayoutContact />} />
             <Route path="/category/:cat" element={<LayoutCategories />} />
             <Route path="/category" element={<LayoutCategories />} />
-            <Route path="/collections/decorations/:prds" element={<LayoutProducts />} />
-            <Route path="/collections/occasions/:prds" element={<LayoutProducts />} />
-            <Route path="/collections/holidays/:prds" element={<LayoutProducts />} />
-            <Route path="/collections" element={<LayoutProducts />} />
+            <Route path="/redirect/collections/:prds" element={<LayoutProducts />} />
+            <Route path="/collections/decorations" element={<Products />} />
+            <Route path="/collections/boquests" element={<Products />} />
+            <Route path="/collections/nadia-picks" element={<Products />} />
             <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
             <Route path="/balloons/cart" element={<LayoutCart />} />
             <Route path="/balloons/Checkout" element={<Checkout />} />
