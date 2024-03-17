@@ -4,6 +4,7 @@ import data from "../../data.json"
 const initialState = {
     products: [],
     detailProduct: data.productDetails,
+    lastCategoryLanded: ""
 }
 
 const productSlice = createSlice({
@@ -16,6 +17,9 @@ const productSlice = createSlice({
         },
         recreateProductsList: (state, action)=> {
             state.products = [...action.payload]
+        },
+        updateLastCategoryLanded: (state, action) => {
+            state.lastCategoryLanded = action.payload
         }
     }
 })

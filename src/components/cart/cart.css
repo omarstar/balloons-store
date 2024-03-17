@@ -82,6 +82,7 @@
  /* Cart */
 .cart-container {
    padding: 2rem 4rem;
+   box-shadow: 0 -1px 1px var(--classic-gold);
  }
  .cart-container h2 {
    font-weight: 400;

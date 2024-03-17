@@ -18,7 +18,9 @@ import hmColumns from "../assets/images/decorations/hm-columns.jpg"
 import hmGarlands from "../assets/images/decorations/hm-garlands.jpg"
 import hmSculptures from "../assets/images/decorations/hm-sculptures.jpg"
 // products
-
+// cat imgs // not used
+// import catImg1 from "../assets/images/balloons/bbc.png"
+// import catImg2 from "../assets/images/balloons/gwc.png"
 
 
 
@@ -42,3 +44,7 @@ export const homePageLibrary = {
     hmGarlands,
     hmSculptures
 }
+
+// export const otherLibrary = {
+//     catImg1, catImg2
+// }

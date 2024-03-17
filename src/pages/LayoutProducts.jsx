@@ -33,6 +33,8 @@ const LayoutProducts = () => {
 
         //filter the data later
         try {
+            dispatch(productActions.updateLastCategoryLanded("prds"));
+            
             if(prds === "setups"){
                 console.log('products list updated to setups')
                 dispatch(productActions.recreateProductsList(data.setups))

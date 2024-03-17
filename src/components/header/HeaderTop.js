@@ -1,6 +1,4 @@
 import { useSelector } from "react-redux";
-// import logoHeader from "../../assets/images/icons/balloon-delivery.png"
-// import logoHeader from "../../assets/images/icons/balloon logo decor.jpg"
 import logoHeader from "../../assets/images/icons/balloon logo decor bynadia.jpg"
 import MenuSmall from "./elements/MenuSmall";
 import cartAIcon from "../../assets/images/icons/icons8-cart.gif"

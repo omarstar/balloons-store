@@ -9,6 +9,9 @@ import { getImportedImage } from "../../utils/helpers";
 const Cart = () => {
     
     const cart = useSelector((state) => state.cart);
+    const categoryPrds = useSelector((state) => state.product.lastCategoryLanded)
+    console.log('categoryPrds saved in cat landed', categoryPrds)
+    
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -27,11 +30,15 @@ const Cart = () => {
     const handleRemoveFromCart = (product) => {
         dispatch(removeFromCart(product));
     };
+
     const handleClearCart = () => {
         dispatch(clearCart());
         window.scrollTo(0, 0);
     };
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     return ( 
         <div className="cart-container">
@@ -107,7 +114,7 @@ const Cart = () => {
               <button onClick={()=>(navigate('/balloons/Checkout'))}>Check out</button>
               <div className="continue-shopping">
                 {/* the detail number will be saved in state for ref to return back to it */}
-                <Link to="/balloons/details/1">
+                <Link to={"/redirect/collections/" + categoryPrds}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

@@ -1,60 +1,60 @@
-import { useEffect } from "react";
-import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
-import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
-import { useDispatch } from "react-redux";
-import CatCard from "../components/categoryCard/CatCard";
-import { dropdownItems } from "../utils/constants";
-import { Link, useParams } from "react-router-dom";
-import { validateCategoryParams } from "../utils/helpers";
+// import { useEffect } from "react";
+// import NavBreadCrumb from "../components/breadcrumb/NavBreadCrumb";
+// import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
+// import { useDispatch } from "react-redux";
+// import CatCard from "../components/categoryCard/CatCard";
+// import { dropdownItems } from "../utils/constants";
+// import { Link, useParams } from "react-router-dom";
+// import { validateCategoryParams } from "../utils/helpers";
 
-const LayoutCategories = () => {
+// const LayoutCategories = () => {
 
-    const {cat} = useParams();
-    console.log('category params', cat)
-    const checkParams = validateCategoryParams(cat);
+//     const {cat} = useParams();
+//     console.log('category params', cat)
+//     const checkParams = validateCategoryParams(cat);
 
-    const catName = cat.toUpperCase();
-    const catNote = "choose the collection you desire, then pick from the list the colors and shapes you are looking for."
+//     const catName = cat.toUpperCase();
+//     const catNote = "choose the collection you desire, then pick from the list the colors and shapes you are looking for."
 
-    const dispatch = useDispatch();
+//     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(breadcrumbsActions.updateBreadcrumbs(['Home', catName]))
-    })
+//     useEffect(() => {
+//         dispatch(breadcrumbsActions.updateBreadcrumbs(['Home', catName]))
+//     })
     
-    return ( 
-        <>
-        {checkParams ? (
+//     return ( 
+//         <>
+//         {checkParams ? (
 
-            <div className="container">
-                <div className="cat-page-inner">
-                    <div className="row bread-title px-4">
-                        <div className="col-12">
-                            <NavBreadCrumb />
-                            <p className="cat-name">{catName}</p>
-                        </div>
-                    </div>
-                    <div className="row cat-note px-4">
-                        <p>{catNote}</p>
-                    </div>
-                    <div className="row cat-list-box">
-                        <div className="container">
-                            <ul className="cards">
-                                {
-                                    dropdownItems[catName].map((catItem,i) => (
-                                        <CatCard category={catItem} ckey={i}/>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        ) : (
-            <Link to="/">back home</Link>
-        )}
-        </>
-     );
-}
+//             <div className="container">
+//                 <div className="cat-page-inner">
+//                     <div className="row bread-title px-4">
+//                         <div className="col-12">
+//                             <NavBreadCrumb />
+//                             <p className="cat-name">{catName}</p>
+//                         </div>
+//                     </div>
+//                     <div className="row cat-note px-4">
+//                         <p>{catNote}</p>
+//                     </div>
+//                     <div className="row cat-list-box">
+//                         <div className="container">
+//                             <ul className="cards">
+//                                 {
+//                                     dropdownItems[catName].map((catItem,i) => (
+//                                         <CatCard category={catItem} ckey={i}/>
+//                                     ))
+//                                 }
+//                             </ul>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         ) : (
+//             <Link to="/">back home</Link>
+//         )}
+//         </>
+//      );
+// }
  
-export default LayoutCategories;
+// export default LayoutCategories;

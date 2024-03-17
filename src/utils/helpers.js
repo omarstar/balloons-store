@@ -8,15 +8,6 @@ export const getImportedImage = (id) => {
     try {
         console.log('imageid to import', id)
         return  require(`../assets/images/balloons/${id}.jpg`)
-        // return  require(`../assets/images/balloons/collections/${id}.jpg`)
-    } catch (error) {
-        return null
-    }
-}
-
-export const getImage = (srcpath) => {
-    try {
-        return  require("../assets/images/banners/NationalDay-Banner.webp")
     } catch (error) {
         return null
     }
