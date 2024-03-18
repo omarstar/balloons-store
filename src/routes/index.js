@@ -15,6 +15,8 @@ import { Routes, Route} from "react-router-dom";
 import Products from '../components/products/Products';
 import carouselData from "../data/carouselData.json"
 import { decoItemsCollection } from '../utils/constants';
+import ProductsWide from '../components/products/ProductsWide';
+import DecorationDetails from '../components/product-detail/DecorationDetails';
 /* isPublic used if page is public or require login */
 /* hasSiderLink to check to render on menu or not */
 export const routes = [
@@ -175,10 +177,11 @@ export const RoutesElement = () => {
             <Route path="/category/:cat" element={<LayoutCategories />} />
             <Route path="/category" element={<LayoutCategories />} />
             <Route path="/redirect/collections/:prds" element={<LayoutProducts />} />
-            <Route path="/collections/decorations" element={<Products />} />
             <Route path="/collections/boquests" element={<Products />} />
-            <Route path="/collections/nadia-picks" element={<Products />} />
             <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
+            <Route path="/collections/setups" element={<ProductsWide />} />
+            <Route path="/collections/nadia-picks" element={<ProductsWide />} />
+            <Route path="/decorations/details" element={<DecorationDetails />} />
             <Route path="/balloons/cart" element={<LayoutCart />} />
             <Route path="/balloons/Checkout" element={<Checkout />} />
             <Route path="/decorations" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.MenuDecorationItems} />} />

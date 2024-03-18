@@ -82,13 +82,13 @@ const MenuDesktop = () => {
                                 <div className="col-lg-12">
                                     {/* <p className="nolink">Indoor</p> */}
                                     <ul className="submenu">
+                                        <li><Link to="/redirect/collections/nadiapicks">nadia's picks</Link></li>
                                         <li><Link to="/redirect/collections/centerpieces">centerpieces</Link></li>
                                         <li><Link to="/redirect/collections/arches">arches</Link></li>
                                         <li><Link to="/redirect/collections/columns">columns</Link></li>
-                                        <li><Link to="/redirect/collections/shapes">letters & numbers</Link></li>
                                         <li><Link to="/redirect/collections/garlands">garlands</Link></li>
                                         <li><Link to="/redirect/collections/sculptures">sculptures</Link></li>
-                                        <li><Link to="/redirect/collections/Ceiling-Walls">Ceiling & walls</Link></li>
+                                        <li><Link to="/redirect/collections/ceilings">Ceiling & walls</Link></li>
                                         <li><Link to="/redirect/collections/setups">full setups</Link></li>
                                     </ul>
                                 </div>
@@ -116,9 +116,9 @@ const MenuDesktop = () => {
                     })}
                 </ul> */}
             </li>
-            <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
+            {/* <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/redirect/collections/nadia-picks">Nadia Picks</Link>
-            </li>
+            </li> */}
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Create your own Bouquet</Link>
             </li>

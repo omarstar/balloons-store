@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 // import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { productActions } from "../store/product/product-slice";
-import { bouquetsList } from "../utils/constants";
+import { bouquetsList, decoItemsDetails, decorationList } from "../utils/constants";
 
 const LayoutProducts = () => {
 
@@ -33,37 +33,73 @@ const LayoutProducts = () => {
 
         //filter the data later
         try {
-            dispatch(productActions.updateLastCategoryLanded("prds"));
+            dispatch(productActions.updateLastCategoryLanded(prds));
             
-            if(prds === "setups"){
-                console.log('products list updated to setups')
-                dispatch(productActions.recreateProductsList(data.setups))
-                navigate('/collections/decorations')
-            }else if(prds ===  'garlands' || prds === 'columns' || prds === 'centerpieces' || prds === 'Ceiling-Walls' || prds === 'arches' || prds === 'sculptures'){
-                console.log('products list updated to decoration');
-                dispatch(productActions.recreateProductsList(data.decorations))
-                navigate('/collections/decorations')
-            }else if(prds ===  'nadia-picks'){
-                console.log('products list updated to nadia picks');
-                dispatch(productActions.recreateProductsList(data.nadiapicks))
-                navigate('/collections/nadia-picks')
-            }else if(prds ===  'decorations'){
-                console.log('products list updated to all decorations list');
-                dispatch(productActions.recreateProductsList([...data.decorations, ...data.setups]))
-                navigate('/collections/decorations')
-            }else if(prds === 'bouquets'){
-                console.log('products list updated to bouquests')
-                dispatch(productActions.recreateProductsList(data.products))
-                navigate('/collections/boquests')
+            if(decorationList.includes(prds)){
+                // *** decoration or rental to get quote directly
+                if(prds === "nadiapicks" ){
+                    //goto list with wide clmns
+                    dispatch(productActions.recreateProductsList(data.nadiapicks))
+                    navigate('/collections/nadia-picks')
+
+                }else if(prds === "setups"){
+                    dispatch(productActions.recreateProductsList(data.setups))
+                    navigate('/collections/setups')
+                }
+                else{
+                    // go to details for deco
+                    let decoItem = decoItemsDetails.filter(item => (
+                        item.decoId === prds
+                    ))
+                    dispatch(productActions.updateDecoSelected(prds))
+    
+                    dispatch(productActions.updateDecoDetails(decoItem?.[0] ?? {}))
+
+                    // dispatch(productActions.recreateProductsList(decoItem?.[0] ?? {}))
+
+                    navigate('/balloons/contacts')
+                    // navigate('/decorations/details')
+                }
+
+            
             }else{
-                if(bouquetsList.includes(prds)) {
+                // to show products for cart and checkout delivery
+                if(prds === 'bouquets' || bouquetsList.includes(prds)) {
                     console.log('products list updated to bouquests')
                     dispatch(productActions.recreateProductsList(data.products))
-
                     return navigate('/collections/boquests')
                 }
                 else navigate('/')
             }
+            // if(prds === "setups"){
+            //     console.log('products list updated to setups')
+            //     dispatch(productActions.recreateProductsList(data.setups))
+            //     navigate('/collections/decorations')
+            // }else if(prds ===  'garlands' || prds === 'columns' || prds === 'centerpieces' || prds === 'Ceiling-Walls' || prds === 'arches' || prds === 'sculptures'){
+            //     console.log('products list updated to decoration');
+            //     dispatch(productActions.recreateProductsList(data.decorations))
+            //     navigate('/collections/decorations')
+            // }else if(prds ===  'nadia-picks'){
+            //     console.log('products list updated to nadia picks');
+            //     dispatch(productActions.recreateProductsList(data.nadiapicks))
+            //     navigate('/collections/nadia-picks')
+            // }else if(prds ===  'decorations'){
+            //     console.log('products list updated to all decorations list');
+            //     dispatch(productActions.recreateProductsList([...data.decorations, ...data.setups]))
+            //     navigate('/collections/decorations')
+            // }else if(prds === 'bouquets'){
+            //     console.log('products list updated to bouquests')
+            //     dispatch(productActions.recreateProductsList(data.products))
+            //     navigate('/collections/boquests')
+            // }else{
+            //     if(bouquetsList.includes(prds)) {
+            //         console.log('products list updated to bouquests')
+            //         dispatch(productActions.recreateProductsList(data.products))
+
+            //         return navigate('/collections/boquests')
+            //     }
+            //     else navigate('/')
+            // }
 
         } catch (error) {
             navigate('/')

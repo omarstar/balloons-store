@@ -284,3 +284,17 @@
     order: 1; /* Place at the end */
   }
   
+  .deco-container {
+    background-color: #fff;
+    margin: 1rem 1rem 0.4rem;
+    padding: 1rem;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+  }
+  .deco-btn-container {
+    /* background-color: rgb(200, 142, 254); */
+    background-color: var(--classic-gold);
+    color: #fff;
+    margin: 0 1rem;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+  }

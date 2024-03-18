@@ -51,6 +51,7 @@
     "setups": [
         {
             "_id":101,
+            "srcUrl":"101.jpg",
             "image":"bbc using id incollections folder",
             "title":"number custom day",
             "description":"a new setup",
@@ -66,6 +67,7 @@
         },
         {
             "_id":107,
+            "srcUrl":"107.jpg",
             "image":"bbc",
             "title":"number custom day",
             "description":"a new setup",
@@ -81,6 +83,7 @@
         },
         {
             "_id":103,
+            "srcUrl":"103.jpg",
             "image":"bbc",
             "title":"number custom day",
             "description":"a new setup",
@@ -96,6 +99,7 @@
         },
         {
             "_id":104,
+            "srcUrl":"104.jpg",
             "image":"bbc",
             "title":"number custom day",
             "description":"a new setup",
@@ -111,6 +115,7 @@
         },
         {
             "_id":108,
+            "srcUrl":"108.jpg",
             "image":"bbc",
             "title":"number custom day",
             "description":"a new setup",
@@ -126,6 +131,7 @@
         },
         {
             "_id":110,
+            "srcUrl":"110.jpg",
             "image":"bbc",
             "title":"number custom day",
             "description":"a new setup",
@@ -309,6 +315,7 @@
     ],
     "nadiapicks": [{
         "_id":101,
+        "srcUrl":"101.jpg",
         "image":"bbc using id incollections folder",
         "title":"nadia pick #1",
         "description":"a new nadia pick design spedcially for you",

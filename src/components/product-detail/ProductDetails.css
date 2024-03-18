@@ -51,7 +51,7 @@
     flex-wrap: wrap;
   }
   
-  .image-container {
+  .image-container, .decoimage-container {
     flex: 1;
     justify-content: center;
     margin: auto;
@@ -61,6 +61,18 @@
     height: auto;
     display: block;
     width: 80%;
+    aspect-ratio: 3/4;
+  }
+  
+  .decoimage-container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .decoimage-container img{
+    height: 75vh;
+    display: block;
+    width: 85%;
     aspect-ratio: 3/4;
   }
   

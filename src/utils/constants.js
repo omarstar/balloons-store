@@ -8,7 +8,8 @@ import { decorationPageLibrary, homePageLibrary, imagesLibrary, otherLibrary } f
 //the list of menu items for bouquets category //missing
 export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
 //the list of menu items for the decorations category
-export const decorationList = ['centerpieces','arches','columns','shapes','garlands','sculptures','Ceiling-Walls','setups']
+export const decorationList = ['centerpieces','arches','columns','garlands','sculptures','ceilings','setups','nadiapicks']
+export const rentalList = ['jbounce','popcorn','cottoncandy','beautybar','bubble']
 
 
 export const MenuItems = [
@@ -77,7 +78,23 @@ export const menuSmallItems = [
         cName:'menu-item'
     },
 ]
-
+// considered as DB
+// decoration details table
+export const decoItemsDetails = [
+    {
+        decoId: "centerpieces",
+        imgSlides: ["","","","",""],
+        desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come!",
+        title: "Balloon Centerpieces",
+    },
+    {
+        decoId: "setups",
+        imgSlides: ["101.jpg","103.jpg","104.jpg","106.jpg","107.jpg","108.jpg","110.jpg"],
+        desc: "Decorate your table with gorgeous balloon setups!",
+        title: "Balloon Full Setups",
+    }
+]
+// decoration category list
 export const decoItemsCollection = {
     "HomeDecorationItems":[
         {
@@ -87,7 +104,8 @@ export const decoItemsCollection = {
             bgColor:"#dadac2",
             // bgColor:"#F0C7D5",
             txtColor:"#fff",
-            linkPath: "/collections/centerpieces",
+            linkPath: "/redirect/collections/centerpieces",
+            decoKeyId: "centerpieces",
             desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
     
         },
@@ -97,7 +115,8 @@ export const decoItemsCollection = {
             btnColor:"#be7475",
             bgColor:"#e5dfd1",
             txtColor:"#FFF",
-            linkPath: "/collections/garlands",
+            linkPath: "/redirect/collections/garlands",
+            decoKeyId: "garlands",
             desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
         },
         {
@@ -106,7 +125,8 @@ export const decoItemsCollection = {
             btnColor:"#af6f6d",
             bgColor:"#f1e2df",
             txtColor:"#fff",
-            linkPath: "/collections/columns",
+            linkPath: "/redirect/collections/columns",
+            decoKeyId: "columns",
             desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
         },
         {
@@ -115,7 +135,8 @@ export const decoItemsCollection = {
             btnColor:"#7e416f",
             bgColor:"rgb(251, 222, 226, 0.3)",
             txtColor:"#fff",
-            linkPath: "/collections/sculptures",
+            linkPath: "/redirect/collections/sculptures",
+            decoKeyId: "sculptures",
             desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
         },
         {
@@ -125,7 +146,8 @@ export const decoItemsCollection = {
             bgColor:"#aaceda",
             // bgColor:"#64d5fd",
             txtColor:"#000",
-            linkPath: "/collections/arches",
+            linkPath: "/redirect/collections/arches",
+            decoKeyId: "arches",
             desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
         },
         
@@ -138,7 +160,8 @@ export const decoItemsCollection = {
             bgColor:"#dadac2",
             // bgColor:"#F0C7D5",
             txtColor:"#fff",
-            linkPath: "/collections/centerpieces",
+            linkPath: "/redirect/collections/centerpieces",
+            decoKeyId: "centerpieces",
             desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
     
         },
@@ -149,7 +172,8 @@ export const decoItemsCollection = {
             bgColor:"#aaceda",
             // bgColor:"#64d5fd",
             txtColor:"#000",
-            linkPath: "/collections/arches",
+            linkPath: "/redirect/collections/arches",
+            decoKeyId: "arches",
             desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
         },
         {
@@ -158,16 +182,8 @@ export const decoItemsCollection = {
             btnColor:"#af6f6d",
             bgColor:"#f1e2df",
             txtColor:"#fff",
-            linkPath: "/collections/columns",
-            desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
-        },
-        {
-            title: "Balloon Letters & Numbers",
-            srcUrl: decorationPageLibrary.decoLetters,
-            btnColor:"#af6f6d",
-            bgColor:"#f1e2df",
-            txtColor:"#fff",
-            linkPath: "/collections/letters",
+            linkPath: "/redirect/collections/columns",
+            decoKeyId: "columns",
             desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
         },
         {
@@ -176,7 +192,8 @@ export const decoItemsCollection = {
             btnColor:"#be7475",
             bgColor:"#e5dfd1",
             txtColor:"#FFF",
-            linkPath: "/collections/garlands",
+            linkPath: "/redirect/collections/garlands",
+            decoKeyId: "garlands",
             desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
         },
         
@@ -186,7 +203,8 @@ export const decoItemsCollection = {
             btnColor:"#7e416f",
             bgColor:"rgb(251, 222, 226, 0.3)",
             txtColor:"#fff",
-            linkPath: "/collections/sculptures",
+            linkPath: "/redirect/collections/sculptures",
+            decoKeyId: "sculptures",
             desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
         },
         {
@@ -195,7 +213,8 @@ export const decoItemsCollection = {
             btnColor:"#7e416f",
             bgColor:"rgb(251, 222, 226, 0.3)",
             txtColor:"#fff",
-            linkPath: "/collections/ceilings",
+            linkPath: "/redirect/collections/ceilings",
+            decoKeyId: "ceilings",
             desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
         },
         {
@@ -204,7 +223,8 @@ export const decoItemsCollection = {
             btnColor:"#7e416f",
             bgColor:"rgb(251, 222, 226, 0.3)",
             txtColor:"#fff",
-            linkPath: "/collections/setups",
+            linkPath: "/redirect/collections/setups",
+            decoKeyId: "setups",
             desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
         },
         
@@ -218,6 +238,7 @@ export const decoItemsCollection = {
             bgColor:"rgb(195, 227, 101, 0.3)",
             txtColor:"#fff",
             linkPath: "/balloons/contacts",
+            decoKeyId: "jbounce",
             desc: "Bouncy rental desc"
     
         },
@@ -228,6 +249,7 @@ export const decoItemsCollection = {
             bgColor:"rgb(248, 230, 105, 0.4)",
             txtColor:"#fff",
             linkPath: "/balloons/contacts",
+            decoKeyId: "popcorn",
             desc: "Popcorn station rental desc"
     
         },
@@ -238,6 +260,7 @@ export const decoItemsCollection = {
             bgColor:"rgb(204, 211, 157, 0.4)",
             txtColor:"#000",
             linkPath: "/balloons/contacts",
+            decoKeyId: "cottoncandy",
             desc: "Cotton candy rental desc"
     
         },
@@ -248,6 +271,7 @@ export const decoItemsCollection = {
             bgColor:"rgb(254, 179, 175, 0.3)",
             txtColor:"#fff",
             linkPath: "/balloons/contacts",
+            decoKeyId: "beautybar",
             desc: "Beauty Bar rental desc"
     
         },
@@ -258,6 +282,7 @@ export const decoItemsCollection = {
             bgColor:"rgb(144, 143, 151, 0.4)",
             txtColor:"#000",
             linkPath: "/balloons/contacts",
+            decoKeyId: "bubble",
             desc: "Bubble Machine rental desc"
     
         },
@@ -387,12 +412,6 @@ export const HomeDecorationItems = [
 //             path: "/collections/columns",
 //             cName:'dropdown-link',
 //             briefText: "a wide range of styles for columns",
-//             imgSrc: otherLibrary.catImg1
-//         },{
-//             title:"letters & numbers",
-//             path: "/collections/shapes",
-//             cName:'dropdown-link',
-//             briefText: "a wide range of styles for Letters and Numbers",
 //             imgSrc: otherLibrary.catImg1
 //         },{
 //             title:"Garlands",
