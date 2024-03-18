@@ -13,6 +13,8 @@ import ProductDetailsPage from "../pages/ProductDetailsPage";
 // import { renderRoutes } from "./generate-routes";
 import { Routes, Route} from "react-router-dom";
 import Products from '../components/products/Products';
+import carouselData from "../data/carouselData.json"
+import { decoItemsCollection } from '../utils/constants';
 /* isPublic used if page is public or require login */
 /* hasSiderLink to check to render on menu or not */
 export const routes = [
@@ -179,9 +181,9 @@ export const RoutesElement = () => {
             <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
             <Route path="/balloons/cart" element={<LayoutCart />} />
             <Route path="/balloons/Checkout" element={<Checkout />} />
-            <Route path="/party-rentals" element={<QuoteRental />} />
+            <Route path="/decorations" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.MenuDecorationItems} />} />
+            <Route path="/party-rentals" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.rentalItems} />} />
             <Route path="/*" element={<NotFound />} />
-            
         </Routes>
     )
 }

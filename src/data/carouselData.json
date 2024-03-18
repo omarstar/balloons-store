@@ -1,5 +1,5 @@
 {
-    "slides": [
+    "HomeSlides": [
         {
             "src": "signatureCover.webp",
             "alt": "slide-img4"
@@ -15,15 +15,11 @@
         {
             "src": "cv-thm2-birthday.jpg",
             "alt": "slide-img1"
-        },
-        {
-            "src": "cv-thm4-object.jpg",
-            "alt": "slide-img2"
         }
     ],
     "rentals": [
         {
-            "src": "mobile_slide.jpeg",
+            "src": "1-Bouncy-Rental-Slide.jpg",
             "alt": "slide-img2"
         },
         {

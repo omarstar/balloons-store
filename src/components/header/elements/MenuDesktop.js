@@ -71,8 +71,8 @@ const MenuDesktop = () => {
                 }
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page" onMouseEnter={() => handleMouseEnter("Decorations")} onMouseLeave={handleMouseLeave}>
-                {/* <Link to="/category/decorations">Decorations</Link> */}
-                <Link to="/redirect/collections/decorations">Decorations</Link>
+                {/* <Link to="/redirect/collections/decorations">Decorations</Link> */}
+                <Link to="/decorations">Decorations</Link>
                 {
                     hoveredItem === "Decorations" && (
 

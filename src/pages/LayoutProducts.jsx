@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import data from "../data.json"
-import { getBreadFromPath, getLocalStorageValue } from "../utils/helpers";
+// import { getBreadFromPath, getLocalStorageValue } from "../utils/helpers";
 import { useDispatch } from "react-redux";
-import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
+// import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { productActions } from "../store/product/product-slice";
 import { bouquetsList } from "../utils/constants";

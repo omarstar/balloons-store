@@ -17,12 +17,31 @@ import hmCenterpieces from "../assets/images/decorations/hm-centerpieces.jpg"
 import hmColumns from "../assets/images/decorations/hm-columns.jpg"
 import hmGarlands from "../assets/images/decorations/hm-garlands.jpg"
 import hmSculptures from "../assets/images/decorations/hm-sculptures.jpg"
+// decoration section deco
+import decoCenterpieces from "../assets/images/decorations/deco-centerpiece.jpg"
+import decoArches from "../assets/images/decorations/deco-arches.jpg"
+import decoColumns from "../assets/images/decorations/deco-columns.jpg"
+import decoLetters from "../assets/images/decorations/deco-letters.jpg"
+import decoGarlands from "../assets/images/decorations/deco-garland.jpg"
+import decoSculptures from "../assets/images/decorations/deco-sculptures.jpg"
+import decoCeilings from "../assets/images/decorations/deco-ceilling.jpg"
+import decoFullSetup from "../assets/images/decorations/deco-setup.jpg"
+
 // products
 // cat imgs // not used
 // import catImg1 from "../assets/images/balloons/bbc.png"
 // import catImg2 from "../assets/images/balloons/gwc.png"
 
-
+export const decorationPageLibrary = {
+    decoCenterpieces,
+    decoArches,
+    decoColumns,
+    decoLetters,
+    decoGarlands,
+    decoSculptures,
+    decoCeilings,
+    decoFullSetup
+}
 
 export const imagesLibrary = {
     rBouncy,
@@ -44,6 +63,8 @@ export const homePageLibrary = {
     hmGarlands,
     hmSculptures
 }
+
+
 
 // export const otherLibrary = {
 //     catImg1, catImg2

@@ -3,7 +3,7 @@
 import * as Yup from "yup";
 
 import {v4 as uuidv4} from 'uuid'
-import { homePageLibrary, imagesLibrary, otherLibrary } from "./images"
+import { decorationPageLibrary, homePageLibrary, imagesLibrary, otherLibrary } from "./images"
 
 //the list of menu items for bouquets category //missing
 export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
@@ -78,6 +78,192 @@ export const menuSmallItems = [
     },
 ]
 
+export const decoItemsCollection = {
+    "HomeDecorationItems":[
+        {
+            title: "Balloon Centerpieces",
+            srcUrl: homePageLibrary.hmCenterpieces,
+            btnColor:"#aaa683",
+            bgColor:"#dadac2",
+            // bgColor:"#F0C7D5",
+            txtColor:"#fff",
+            linkPath: "/collections/centerpieces",
+            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
+    
+        },
+        {
+            title: "Balloon Garlands",
+            srcUrl: homePageLibrary.hmGarlands,
+            btnColor:"#be7475",
+            bgColor:"#e5dfd1",
+            txtColor:"#FFF",
+            linkPath: "/collections/garlands",
+            desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
+        },
+        {
+            title: "Balloon Columns",
+            srcUrl: homePageLibrary.hmColumns,
+            btnColor:"#af6f6d",
+            bgColor:"#f1e2df",
+            txtColor:"#fff",
+            linkPath: "/collections/columns",
+            desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
+        },
+        {
+            title: "Balloon Sculptures",
+            srcUrl: homePageLibrary.hmSculptures,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/collections/sculptures",
+            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+        },
+        {
+            title: "Balloon Arches",
+            srcUrl: homePageLibrary.hmArches,
+            btnColor:"#c7b591",
+            bgColor:"#aaceda",
+            // bgColor:"#64d5fd",
+            txtColor:"#000",
+            linkPath: "/collections/arches",
+            desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
+        },
+        
+    ],
+    "MenuDecorationItems":[
+        {
+            title: "Balloon Centerpieces",
+            srcUrl: decorationPageLibrary.decoCenterpieces,
+            btnColor:"#aaa683",
+            bgColor:"#dadac2",
+            // bgColor:"#F0C7D5",
+            txtColor:"#fff",
+            linkPath: "/collections/centerpieces",
+            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
+    
+        },
+        {
+            title: "Balloon Arches",
+            srcUrl: decorationPageLibrary.decoArches,
+            btnColor:"#c7b591",
+            bgColor:"#aaceda",
+            // bgColor:"#64d5fd",
+            txtColor:"#000",
+            linkPath: "/collections/arches",
+            desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
+        },
+        {
+            title: "Balloon Columns",
+            srcUrl: decorationPageLibrary.decoColumns,
+            btnColor:"#af6f6d",
+            bgColor:"#f1e2df",
+            txtColor:"#fff",
+            linkPath: "/collections/columns",
+            desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
+        },
+        {
+            title: "Balloon Letters & Numbers",
+            srcUrl: decorationPageLibrary.decoLetters,
+            btnColor:"#af6f6d",
+            bgColor:"#f1e2df",
+            txtColor:"#fff",
+            linkPath: "/collections/letters",
+            desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
+        },
+        {
+            title: "Balloon Garlands",
+            srcUrl: decorationPageLibrary.decoGarlands,
+            btnColor:"#be7475",
+            bgColor:"#e5dfd1",
+            txtColor:"#FFF",
+            linkPath: "/collections/garlands",
+            desc: "With Balloon Garlands the possibilities are endless. Be it to embellish an empty wall, a table, an entrance, a staircase and even your ceilings. Finding ways to effectively create a new space for any type of festivities is something a touch of balloon garlands can accomplish."
+        },
+        
+        {
+            title: "Balloon Sculptures",
+            srcUrl: decorationPageLibrary.decoSculptures,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/collections/sculptures",
+            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+        },
+        {
+            title: "Balloon Ceiling & Walls",
+            srcUrl: decorationPageLibrary.decoCeilings,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/collections/ceilings",
+            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+        },
+        {
+            title: "Balloon Full Setups",
+            srcUrl: decorationPageLibrary.decoFullSetup,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/collections/setups",
+            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+        },
+        
+        
+    ],
+    "rentalItems":[
+        {
+            title: "Inflatable Jumping Bouncy",
+            srcUrl: imagesLibrary.ribouncy,
+            btnColor:"#0078bd",
+            bgColor:"rgb(195, 227, 101, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/balloons/contacts",
+            desc: "Bouncy rental desc"
+    
+        },
+        {
+            title: "Popcorn Station Machine",
+            srcUrl: imagesLibrary.ricorn,
+            btnColor:"#fe0b2b",
+            bgColor:"rgb(248, 230, 105, 0.4)",
+            txtColor:"#fff",
+            linkPath: "/balloons/contacts",
+            desc: "Popcorn station rental desc"
+    
+        },
+        {
+            title: "Cotton Candy Station Machine",
+            srcUrl: imagesLibrary.ricandy,
+            btnColor:"#ec9da8",
+            bgColor:"rgb(204, 211, 157, 0.4)",
+            txtColor:"#000",
+            linkPath: "/balloons/contacts",
+            desc: "Cotton candy rental desc"
+    
+        },
+        {
+            title: "Beauty Bar",
+            srcUrl: imagesLibrary.ribeauty,
+            btnColor:"#752f2d",
+            bgColor:"rgb(254, 179, 175, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/balloons/contacts",
+            desc: "Beauty Bar rental desc"
+    
+        },
+        {
+            title: "Bubble Machine",
+            srcUrl: imagesLibrary.ribubble,
+            btnColor:"#f7f7f7",
+            bgColor:"rgb(144, 143, 151, 0.4)",
+            txtColor:"#000",
+            linkPath: "/balloons/contacts",
+            desc: "Bubble Machine rental desc"
+    
+        },
+    ]
+}
+// no longer used here as seperate since added in above object
 export const rentalItems = [
     {
         title: "Inflatable Jumping Bouncy",
@@ -130,8 +316,7 @@ export const rentalItems = [
 
     },
 ]
-
-export const decorationItems = [
+export const HomeDecorationItems = [
     {
         title: "Balloon Centerpieces",
         srcUrl: homePageLibrary.hmCenterpieces,
@@ -162,6 +347,15 @@ export const decorationItems = [
         desc: "Clustered on a free-standing pillar, balloon columns and can be simple, colorful stands or creative eye-catching combination pieces to both adorn and elevate your party space."
     },
     {
+        title: "Balloon Sculptures",
+        srcUrl: homePageLibrary.hmSculptures,
+        btnColor:"#7e416f",
+        bgColor:"rgb(251, 222, 226, 0.3)",
+        txtColor:"#fff",
+        linkPath: "/collections/sculptures",
+        desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+    },
+    {
         title: "Balloon Arches",
         srcUrl: homePageLibrary.hmArches,
         btnColor:"#c7b591",
@@ -171,15 +365,7 @@ export const decorationItems = [
         linkPath: "/collections/arches",
         desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
     },
-    {
-        title: "Balloon Sculptures",
-        srcUrl: homePageLibrary.hmSculptures,
-        btnColor:"#7e416f",
-        bgColor:"rgb(251, 222, 226, 0.3)",
-        txtColor:"#fff",
-        linkPath: "/collections/sculptures",
-        desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
-    }
+    
 ]
 
 // export const dropdownItems = {

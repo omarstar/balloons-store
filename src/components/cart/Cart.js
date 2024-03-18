@@ -10,7 +10,7 @@ const Cart = () => {
     
     const cart = useSelector((state) => state.cart);
     const categoryPrds = useSelector((state) => state.product.lastCategoryLanded)
-    console.log('categoryPrds saved in cat landed', categoryPrds)
+    console.log('useselector categoryPrds of prds:', categoryPrds)
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
