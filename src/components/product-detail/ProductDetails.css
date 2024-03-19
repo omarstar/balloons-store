@@ -75,6 +75,16 @@
     width: 85%;
     aspect-ratio: 3/4;
   }
+
+  .deco-row {
+    padding: 0 0 1.6rem;
+  }
+  .decotitle {
+    font-family: "Poppins-Regular";
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+  }
   
   .details-container {
     flex: 1; /* Take 50% width on larger screens */

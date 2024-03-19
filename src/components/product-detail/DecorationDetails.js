@@ -18,7 +18,7 @@ const DecorationDetails = () => {
 
 const productsSelected = useSelector(state => state.product.detailProduct)
   console.log('productsSelected ', productsSelected)
-  const { _id, title, price, description, image, availableSizes, floatTime } = productsSelected;
+  const { _id, title, srcUrl,folderName, description, floatTime } = productsSelected;
 
 
   const dispatch = useDispatch();
@@ -38,7 +38,8 @@ useEffect(() => {
     <section className="container">
         <div className="product-detail-container">
             <div className="decoimage-container">
-                <img src={getImportedImage('collections/'+_id)} alt={title} />
+                {/* <img src={getImportedImage('collections/'+_id)} alt={title} /> */}
+                <img src={require(`../../assets/images/balloons/${folderName}/${srcUrl}`)} alt=""/>
             </div>
             {/* <div className="slider-wrapper">
                 <Carousel slidesData={imgSlides} folderName={ "balloons/" + decoId } />
@@ -107,8 +108,8 @@ useEffect(() => {
             
             {/* description box */}
             <div id="des-full" className="description-container">
-                <div className='row'>
-                    <div className="col-6">{title}</div>
+                <div className='row deco-row'>
+                    <div className="col-6 decotitle">{title}</div>
                     <div className="col-6">
                         <button onClick={()=>handleQetQuote(productsSelected)} className="item-cart-btn col-8 d-flex justify-content-between align-items-center">
                             <p className="text-addcart">Get Quote</p>
@@ -120,7 +121,8 @@ useEffect(() => {
                 </div>
                 <div className="desc_section">
                 <div className='desc-content rte'>
-                    {description}
+                    <p>{description}</p>
+                    <br/>
                     <p>Microfoil Balloon Count: 1 Supersize 36" plus 4 x 18" Foil balloons with weight Height/Size: 1.5 Mtr</p>
                     <p><strong>Float Time: </strong> {floatTime}</p>
                     <p><strong>Order note: </strong>{staticInfo.ordernote}</p>

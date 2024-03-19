@@ -350,8 +350,8 @@ const Checkout = () => {
                     <div key={'cartitem'+index}>
                         <div className="d-flex justify-content-between mb-3 userdetails">
                             <p className="fw-bold">{e.cartQuantity}x {e.title}</p>
-                            
-                            <p className="fw-lighter"><span className="fas fa-dollar-sign"></span>{e.price}</p>
+                            {/* <span className="fas fa-dollar-sign"> </span> */}
+                            <p className="fw-lighter">AED {e.price}</p>
                         </div>
                         
                         <p className="dis info my-3">{e.description}
@@ -363,11 +363,11 @@ const Checkout = () => {
                 <div className="d-flex flex-column dis">
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <p>Subtotal</p>
-                        <p><span className="fas fa-dollar-sign"></span>{cart.cartTotalAmount}</p>
+                        <p>AED {cart.cartTotalAmount}</p>
                     </div>
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <p className="fw-bold">Total</p>
-                        <p className="fw-bold"><span className="fas fa-dollar-sign"></span>{cart.cartTotalAmount}</p>
+                        <p className="fw-bold">AED {cart.cartTotalAmount}</p>
                     </div>
                     <div onClick={handleChechout} className="btn btn-primary mt-2">Complete Order<span className="fas fa-dollar-sign px-1"></span>{cart.cartTotalAmount}
                     </div>

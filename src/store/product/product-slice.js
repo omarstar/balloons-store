@@ -5,9 +5,6 @@ const initialState = {
     products: [],
     detailProduct: data.productDetails,
     lastCategoryLanded: "",
-    decoItemDetails: {},
-    decoItemSelected: ""
-
 }
 
 const productSlice = createSlice({
@@ -22,12 +19,6 @@ const productSlice = createSlice({
         },
         updateLastCategoryLanded: (state, action) => {
             state.lastCategoryLanded = action.payload
-        },
-        updateDecoDetails: (state, action) => {
-            state.decoItemDetails = action.payload
-        },
-        updateDecoSelected: (state, action) => {
-            state.decoItemSelected = action.payload
         }
     }
 })

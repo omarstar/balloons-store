@@ -74,14 +74,13 @@ console.log('showCartView', showCartView)
                                 {/* link to product detail */}
                                 <div className="cart-item__image">
                                     <a href="/products/giant-gold-latex-color-latex-balloon-helium-inflated-1?variant=43503323349214">
-                                        <img class="cart-item__image" src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.name} />
-                                        {/* <img class="cart-item__image" src="https://cdn.shopify.com/s/files/1/0508/6576/6572/products/GLH002.jpg?v=1665303387" alt={cartItem.name} /> */}
+                                        <img class="cart-item__image" src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.title} />
                                     </a>
                                 </div>
                                 <div class="cart-item__content">
                                 {/* link to product detail */}
                                     <div class="cart-item__title">
-                                        <a href="/products/giant-gold-latex-color-latex-balloon-helium-inflated-1?variant=43503323349214">{cartItem.name} </a>
+                                        <a href="/products/giant-gold-latex-color-latex-balloon-helium-inflated-1?variant=43503323349214">{cartItem.title} </a>
                                     </div>
                                     <div class="innerwrap">
                                         <div class="cart-item_priceRemove">

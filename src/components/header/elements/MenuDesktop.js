@@ -1,7 +1,4 @@
-// import { MenuItems, dropdownItems } from "../../../utils/constants";
 
-// import imgBouque from "../../../assets/images/test1.png"
-// import imgDecorations from "../../../assets/images/event-test.png"
 import { useState } from "react";
 // import { useDispatch } from "react-redux";
 // import { breadcrumbsActions } from "../../../store/breadcrumb/breadcrumbsSlice";
@@ -57,14 +54,6 @@ const MenuDesktop = () => {
                                     <li><Link to="#">CREATE YOUR OWN</Link></li>
                                     </ul>
                                 </div>
-
-                                {/* <div className="col-lg-4 p-0">
-                                    <div className="menu-banner menu-banner-2">
-                                        <figure>
-                                            <img src={imgBouque} alt="Menu banner" className="product-promo" width="380" height="790" />
-                                        </figure>
-                                    </div>
-                                </div> */}
                             </div>
                         </div>
                     )
@@ -92,50 +81,20 @@ const MenuDesktop = () => {
                                         <li><Link to="/redirect/collections/setups">full setups</Link></li>
                                     </ul>
                                 </div>
-
-
-                                {/* <div className="col-lg-4 p-0">
-                                    <div className="menu-banner menu-banner-2">
-                                        <figure>
-                                            <img src={imgDecorations} alt="Menu banner" className="product-promo" width="380" height="790" />
-                                        </figure>
-                                    </div>
-                                </div> */}
                             </div>
                         </div>
                     )
                 }
-                {/* <ul>
-                    {hoveredItem === "Decorations" && dropdownItems && dropdownItems['Decorations'].map(subMenuItem=>{
-                        const {title, path, cName} = subMenuItem;
-                        return(
-                            <li id="menu-item" className={cName + " menu-item menu-item-type-post_type menu-item-object-page"}>
-                                <a href={path} aria-current="page">{title}</a>
-                            </li>
-                        )
-                    })}
-                </ul> */}
             </li>
-            {/* <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <Link to="/redirect/collections/nadia-picks">Nadia Picks</Link>
-            </li> */}
+            <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
+                <Link to="/redirect/collections/jbounce">Inflatables</Link>
+            </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Create your own Bouquet</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Party rentals</Link>
             </li>
-            {/* {MenuItems && MenuItems.map(menuItem => {
-                const {id, title, cName, path, hasMegaMenu = false} = menuItem;
-                return (
-                    <li id={"menu-item-"+id} onMouseEnter={() => handleMouseEnter(id)} onMouseLeave={handleMouseLeave} className={cName + " menu-item-object-page menu-item-643 "}>
-                        <a href={path} aria-current="page">{title}</a>
-                        {hasMegaMenu && dropdownItems['title'](subMenuItem=>{
-
-                        })}
-                    </li>
-                )
-            })} */}
         </ul>
      );
 }

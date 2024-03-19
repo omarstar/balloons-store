@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 // import { breadcrumbsActions } from "../store/breadcrumb/breadcrumbsSlice";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { productActions } from "../store/product/product-slice";
-import { bouquetsList, decoItemsDetails, decorationList } from "../utils/constants";
+import { bouquetsList, decorationList, rentalList } from "../utils/constants";
 
 const LayoutProducts = () => {
 
@@ -35,40 +35,68 @@ const LayoutProducts = () => {
         try {
             dispatch(productActions.updateLastCategoryLanded(prds));
             
-            if(decorationList.includes(prds)){
+            if(decorationList.includes(prds) || rentalList.includes(prds)){
                 // *** decoration or rental to get quote directly
-                if(prds === "nadiapicks" ){
-                    //goto list with wide clmns
-                    dispatch(productActions.recreateProductsList(data.nadiapicks))
-                    navigate('/collections/nadia-picks')
 
-                }else if(prds === "setups"){
-                    dispatch(productActions.recreateProductsList(data.setups))
-                    navigate('/collections/setups')
+                // go to details for deco
+                let decoItem = data.decorations.filter(item => (
+                    item.cat === prds
+                ))
+                console.log('decoItem', decoItem)
+                if(decoItem.length === 0){
+                    console.log('nothing found')
+                }else if(decoItem.length === 1){
+                    dispatch(productActions.handleProductSelected(decoItem[0]))
+                    navigate(`/decorations/details`)
+                }else{
+                    dispatch(productActions.recreateProductsList(decoItem))
+                    navigate('/collections/decorations')
                 }
-                else{
-                    // go to details for deco
-                    let decoItem = decoItemsDetails.filter(item => (
-                        item.decoId === prds
-                    ))
-                    dispatch(productActions.updateDecoSelected(prds))
-    
-                    dispatch(productActions.updateDecoDetails(decoItem?.[0] ?? {}))
 
-                    navigate('/balloons/contacts')
-                    // navigate('/decorations/details')
-                }
+                // if(prds === "nadiapicks" ){
+                //     //goto list with wide clmns
+                //     dispatch(productActions.recreateProductsList(data.nadiapicks))
+                //     navigate('/collections/decorations')
+
+                // }else if(prds === "setups"){
+                //     dispatch(productActions.recreateProductsList(data.setups))
+                //     navigate('/collections/decorations')
+                // }
+                // else{
+                //     // go to details for deco
+                //     let decoItem = data.decorations.filter(item => (
+                //         item.image === prds
+                //     ))
+                //     console.log('decoItem', decoItem)
+                //     if(decoItem.length === 0){
+                //         console.log('nothing found')
+                //     }else if(decoItem.length === 1){
+                //         dispatch(productActions.handleProductSelected(decoItem[0]))
+                //         navigate(`/decorations/details`)
+                //     }else{
+                //         dispatch(productActions.recreateProductsList(decoItem))
+                //         navigate('/collections/decorations')
+                //     }
+
+                // }
 
             
-            }else{
-                // to show products for cart and checkout delivery
-                if(prds === 'bouquets' || bouquetsList.includes(prds)) {
-                    console.log('products list updated to bouquests')
-                    dispatch(productActions.recreateProductsList(data.products))
-                    return navigate('/collections/boquests')
-                }
-                else navigate('/')
             }
+            // else if(rentalList.includes(prds)){
+
+            // }
+            else if(prds === 'jbounce') {
+                console.log('products list updated to inflatables')
+                dispatch(productActions.recreateProductsList(data.inflatables))
+                return navigate('/collections/inflatables')
+            }
+            else if(prds === 'bouquets' || bouquetsList.includes(prds)) {
+                console.log('products list updated to bouquests')
+                dispatch(productActions.recreateProductsList(data.products))
+                return navigate('/collections/boquests')
+            }
+            else navigate('/')
+
             // if(prds === "setups"){
             //     console.log('products list updated to setups')
             //     dispatch(productActions.recreateProductsList(data.setups))
@@ -106,7 +134,7 @@ const LayoutProducts = () => {
 
     useEffect(() => {
       callDisplayProducts();
-    }, [])
+    }, [prds])
 
 }
  

@@ -63,7 +63,8 @@ const Product = ({product}) => {
                     
                 </div> */}
                 <div className="main-item">
-                    <img src={getImportedImage('collections/'+product._id)} alt=""/>
+                    {/* <img src={getImportedImage('collections/'+product._id)} alt=""/> */}
+                    <img src={require(`../../assets/images/balloons/${product.folderName}/${product.srcUrl}`)} alt=""/>
                 </div>
                 <h3 className="item-heading">
                     {product.title} 

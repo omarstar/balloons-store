@@ -178,12 +178,15 @@ export const RoutesElement = () => {
             <Route path="/category" element={<LayoutCategories />} />
             <Route path="/redirect/collections/:prds" element={<LayoutProducts />} />
             <Route path="/collections/boquests" element={<Products />} />
+            <Route path="/collections/inflatables" element={<Products />} />
+            
             <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
-            <Route path="/collections/setups" element={<ProductsWide />} />
-            <Route path="/collections/nadia-picks" element={<ProductsWide />} />
-            <Route path="/decorations/details" element={<DecorationDetails />} />
             <Route path="/balloons/cart" element={<LayoutCart />} />
             <Route path="/balloons/Checkout" element={<Checkout />} />
+            {/* <Route path="/collections/setups" element={<ProductsWide />} />
+            <Route path="/collections/nadia-picks" element={<ProductsWide />} /> */}
+            <Route path="/collections/decorations" element={<ProductsWide />} />
+            <Route path="/decorations/details" element={<DecorationDetails />} />
             <Route path="/decorations" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.MenuDecorationItems} />} />
             <Route path="/party-rentals" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.rentalItems} />} />
             <Route path="/*" element={<NotFound />} />

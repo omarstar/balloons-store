@@ -16,7 +16,7 @@ export default function ProductsWide(params) {
     const [products, setProducts] = useState(productsList)
     console.log('products', products)
 
-    let folderName = "balloons/setups"
+    // let folderName = "balloons/setups"
 
     const handleProductDetailsSelected = (prd) => {
         dispatch(productActions.handleProductSelected(prd))
@@ -29,8 +29,6 @@ export default function ProductsWide(params) {
         dispatch(productActions.handleProductSelected(prd))
         navigate('/balloons/contacts')
     }
-
-    let img = "../../assets/images/balloons/setups/101.jpg"
 
     return(
         <div className="content">
@@ -50,9 +48,7 @@ export default function ProductsWide(params) {
                                     <div onClick={()=>handleProductDetailsSelected(product)} className="deco-container item-inner balloon-item">
                                         
                                         <div className="deco-item">
-                                            {/* <img src={setupimg} alt=""/> */}
-                                            {/* <img src={require(img)} alt=""/> */}
-                                            <img src={require(`../../assets/images/${folderName}/${product.srcUrl}`)} alt=""/>
+                                            <img src={require(`../../assets/images/balloons/${product.folderName}/${product.srcUrl}`)} alt=""/>
                                         </div>
 
                                         <div class="text-rwrapper">

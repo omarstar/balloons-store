@@ -9,8 +9,8 @@ import { decorationPageLibrary, homePageLibrary, imagesLibrary, otherLibrary } f
 export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
 //the list of menu items for the decorations category
 export const decorationList = ['centerpieces','arches','columns','garlands','sculptures','ceilings','setups','nadiapicks']
-export const rentalList = ['jbounce','popcorn','cottoncandy','beautybar','bubble']
-
+export const rentalList = ['popcorn','cottoncandy','beautybar','bubble','ballpit']
+// 'jbounce',
 
 export const MenuItems = [
     {
@@ -78,22 +78,7 @@ export const menuSmallItems = [
         cName:'menu-item'
     },
 ]
-// considered as DB
-// decoration details table
-export const decoItemsDetails = [
-    {
-        decoId: "centerpieces",
-        imgSlides: ["","","","",""],
-        desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come!",
-        title: "Balloon Centerpieces",
-    },
-    {
-        decoId: "setups",
-        imgSlides: ["101.jpg","103.jpg","104.jpg","106.jpg","107.jpg","108.jpg","110.jpg"],
-        desc: "Decorate your table with gorgeous balloon setups!",
-        title: "Balloon Full Setups",
-    }
-]
+
 // decoration category list
 export const decoItemsCollection = {
     "HomeDecorationItems":[
@@ -153,6 +138,16 @@ export const decoItemsCollection = {
         
     ],
     "MenuDecorationItems":[
+        {
+            title: "Nadia's Picks",
+            srcUrl: decorationPageLibrary.decoFullSetup,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/redirect/collections/nadiapicks",
+            decoKeyId: "nadiapicks",
+            desc: "Balloon Naida's picks are special design and art melding together to become one and create invigorating beautiful spaces for your celebration! that can be made in any size, shape or take the form of any character of choice."
+        },
         {
             title: "Balloon Centerpieces",
             srcUrl: decorationPageLibrary.decoCenterpieces,
@@ -230,38 +225,40 @@ export const decoItemsCollection = {
         
         
     ],
+    "others":{
+        rentalInflatable: ""
+    },
     "rentalItems":[
         {
-            title: "Inflatable Jumping Bouncy",
+            title: "Inflatable Bouncy Castle",
             srcUrl: imagesLibrary.ribouncy,
             btnColor:"#0078bd",
             bgColor:"rgb(195, 227, 101, 0.3)",
             txtColor:"#fff",
-            linkPath: "/balloons/contacts",
+            linkPath: "/redirect/collections/jbounce",
             decoKeyId: "jbounce",
-            desc: "Bouncy rental desc"
+            desc: "A bouncy castle available in various shapes, themes & sizes. An excellent choice for any party."
     
         },
         {
-            title: "Popcorn Station Machine",
+            title: "Popcorn Machine",
             srcUrl: imagesLibrary.ricorn,
             btnColor:"#fe0b2b",
             bgColor:"rgb(248, 230, 105, 0.4)",
             txtColor:"#fff",
-            linkPath: "/balloons/contacts",
+            linkPath: "/redirect/collections/popcorn",
             decoKeyId: "popcorn",
-            desc: "Popcorn station rental desc"
-    
+            desc: "Popcorn maker is large enough to take on events and gatherings. Great for use at a school, sports centres, bars, parties and occasions"
         },
         {
-            title: "Cotton Candy Station Machine",
+            title: "Cotton Candy Machine",
             srcUrl: imagesLibrary.ricandy,
             btnColor:"#ec9da8",
             bgColor:"rgb(204, 211, 157, 0.4)",
             txtColor:"#000",
-            linkPath: "/balloons/contacts",
+            linkPath: "/redirect/collections/cottoncandy",
             decoKeyId: "cottoncandy",
-            desc: "Cotton candy rental desc"
+            desc: "Perfect for carnivals and festivals attendant, and materials inclusive with rental duration customizable."
     
         },
         {
@@ -270,9 +267,9 @@ export const decoItemsCollection = {
             btnColor:"#752f2d",
             bgColor:"rgb(254, 179, 175, 0.3)",
             txtColor:"#fff",
-            linkPath: "/balloons/contacts",
+            linkPath: "/redirect/collections/beautybar",
             decoKeyId: "beautybar",
-            desc: "Beauty Bar rental desc"
+            desc: "Classic design for portable makeup station."
     
         },
         {
@@ -281,10 +278,20 @@ export const decoItemsCollection = {
             btnColor:"#f7f7f7",
             bgColor:"rgb(144, 143, 151, 0.4)",
             txtColor:"#000",
-            linkPath: "/balloons/contacts",
+            linkPath: "/redirect/collections/bubble",
             decoKeyId: "bubble",
-            desc: "Bubble Machine rental desc"
+            desc: "Professional high output automatic bubble maker with an automatic rotating bubble flower fan"
     
+        },
+        {
+            title: "Ball Pit",
+            srcUrl: imagesLibrary.ribubble,
+            btnColor:"#f7f7f7",
+            bgColor:"rgb(144, 143, 151, 0.4)",
+            txtColor:"#000",
+            linkPath: "/redirect/collections/ballpit",
+            decoKeyId: "ballpit",
+            desc: "have fun in a pool filled with small colorful hollow plastic balls generally no larger than 3 inches"
         },
     ]
 }

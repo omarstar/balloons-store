@@ -348,10 +348,10 @@
 #header .navigation-main .menu>.menu-item>a {
 	color: #000;
 	display: block;
-	/* font-family: "Poppins-Medium", helvetica, arial sans-serif;
+	font-family: "Poppins-Regular", helvetica, arial sans-serif;
 	font-size: 14px;
-	font-weight: 700; */
-	font: 600 14px "Poppins-Regular";
+	font-weight: 600;
+	/* font: 600 14px "Poppins-Regular"; */
 	height: 55px;
 	line-height: 55px;
 	letter-spacing: .05em;
