@@ -93,7 +93,7 @@ useEffect(() => {
 
 
 
-                {/* more options */}
+                {/* more options to add by user if this flag exist for the product */}
                 {/* {
                 productsSelected.moreOptions.length !== 0 && (
                     <div className='form__more-details-container'>

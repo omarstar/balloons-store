@@ -37,6 +37,7 @@
 }
 .item-inner:hover {
     box-shadow: 0 3px 10px #0003;
+    cursor: pointer;
 }
 .item-image_wrapper {
     display: block;
@@ -160,10 +161,28 @@
     height: 40vh;
     max-width: 100%;
   }
+
+  /* .deco-item {
+    padding-bottom: 1rem;
+  } */
+  .deco-item img {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    height: 40vh;
+    width: 90%;
+    object-fit: cover;
+    box-shadow: 0 0px 5px var(--classic-gold);
+  }
+  .text-rwrapper {
+    padding: 1rem;
+  }
+  
   
   .item-heading {
     text-transform: capitalize;
     font-size: 1.1rem;
+    font-weight: bold;
   }
   
   .item-description {
@@ -171,6 +190,17 @@
     font-size: .9rem;
     font-weight: 200;
   }
+  .decoitem-description {
+    margin: .5rem 0;
+    font-size: .9rem;
+    font-weight: 200;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  /* .decoitem-description::before {
+    content: "Explore More";
+  } */
   
   .item-price {
     text-align: center;

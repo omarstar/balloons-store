@@ -55,8 +55,6 @@ const LayoutProducts = () => {
     
                     dispatch(productActions.updateDecoDetails(decoItem?.[0] ?? {}))
 
-                    // dispatch(productActions.recreateProductsList(decoItem?.[0] ?? {}))
-
                     navigate('/balloons/contacts')
                     // navigate('/decorations/details')
                 }

@@ -49,19 +49,20 @@ export default function ProductsWide(params) {
                                 <li key={product._id} className='col-12 col-md-6'>
                                     <div onClick={()=>handleProductDetailsSelected(product)} className="deco-container item-inner balloon-item">
                                         
-                                        <div className="main-item">
+                                        <div className="deco-item">
                                             {/* <img src={setupimg} alt=""/> */}
                                             {/* <img src={require(img)} alt=""/> */}
                                             <img src={require(`../../assets/images/${folderName}/${product.srcUrl}`)} alt=""/>
                                         </div>
 
-                                        <h3 className="item-heading">
-                                            {product.title} 
-                                        </h3>
-
-                                        <p className="item-description">
-                                            {product.description}
-                                        </p>
+                                        <div class="text-rwrapper">
+                                            <h3 className="item-heading">
+                                                {product.title}
+                                            </h3>
+                                            <p className="decoitem-description">
+                                                {product.description}
+                                            </p>
+                                        </div>
 
                                         {/* <p className="item-price">{formatCurrency(product.price)} <sup>AED</sup></p> */}
                                         
