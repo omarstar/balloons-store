@@ -179,6 +179,9 @@ export const RoutesElement = () => {
             <Route path="/redirect/collections/:prds" element={<LayoutProducts />} />
             <Route path="/collections/boquests" element={<Products />} />
             <Route path="/collections/inflatables" element={<Products />} />
+            {/* Products will be other comp to select and add bouquet to cart */}
+            <Route path="/collections/create-your-bouquet" element={<Products />} />
+
             
             <Route path="/balloons/details/:cat" element={<ProductDetailsPage />} />
             <Route path="/balloons/cart" element={<LayoutCart />} />

@@ -669,6 +669,54 @@
         }
     ],
     
+    "bulkballoon":[
+        {
+            "_id":1,
+            "folderName":"bulk/Latex",
+            "srcUrl":"43572B_P.png",
+            "srcUrlCartIcon": "",
+            "image":"bbc",
+            "title":"Black Bday Sparkles, Silver any Number Baloons",
+            "description":"no desc",
+            "availableSizes": ["2pcs x11\" Latex Black","2pcs x11\" Latex Silver","1pc x18\" Happy Birthday Black Square Microfoil","1pc x4\" Silver Jumbo Number Balloons"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "detailsDesc": [{"title":"custom note 1","desc":"weather, outside, days, garantee, charges, delivery, order note,care instructions, float time, voltage..."},{"title":"custom note 2","desc":"available only durin day, warnings, dont change voltage, eat drink, hurt, destroy, scratch, expose, fix aparts, swallow, .."}],
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "select options",
+            "moreOptions": [{
+                "type": "number",
+                "text": "add age",
+                "placeholder": "1"
+            }
+            ]
+        },
+        {
+            "_id":1,
+            "folderName":"bulk/Qualitex/Pastel Pearl",
+            "srcUrl":"43566B_PLC.png",
+            "srcUrlCartIcon": "",
+            "image":"bbc",
+            "title":"Black Bday Sparkles, Silver any Number Baloons",
+            "description":"no desc",
+            "availableSizes": ["2pcs x11\" Latex Black","2pcs x11\" Latex Silver","1pc x18\" Happy Birthday Black Square Microfoil","1pc x4\" Silver Jumbo Number Balloons"],
+            "price":29.95,
+            "path": "/collections/custom-name?variant=123",
+            "inCart": false,
+            "quantity": 0,
+            "detailsDesc": [{"title":"custom note 1","desc":"weather, outside, days, garantee, charges, delivery, order note,care instructions, float time, voltage..."},{"title":"custom note 2","desc":"available only durin day, warnings, dont change voltage, eat drink, hurt, destroy, scratch, expose, fix aparts, swallow, .."}],
+            "floatTime": "Foil Balloon - (2-3) days if used indoors.",
+            "buttonOption": "select options",
+            "moreOptions": [{
+                "type": "number",
+                "text": "add age",
+                "placeholder": "1"
+            }
+            ]
+        }
+    ],
     
     "notes": "update the availableSizes / baloon bunch with desc",
     "products": [

@@ -52,7 +52,7 @@ const Footer = () => {
 									<li><Link to="/decorations">Setups & Decorations</Link></li>
 									<li><Link to="/redirect/collections/bouquets">Holidays & occasion Bouquets</Link></li>
 									<li><Link to="/redirect/collections/jbounce">Inflatables Bouncy Castles</Link></li>
-									<li><Link to="/create-bouquet/">Create your own</Link></li>
+									<li><Link to="/redirect/collections/create-bouquet">Create your own</Link></li>
 									<li><Link to="/party-rentals">Party Rentals</Link></li>
 								</ul>
 							</section>

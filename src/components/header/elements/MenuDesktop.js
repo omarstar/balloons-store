@@ -90,7 +90,7 @@ const MenuDesktop = () => {
                 <Link to="/redirect/collections/jbounce">Inflatables</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <Link to="/create-bouquet/">Create your own Bouquet</Link>
+                <Link to="/redirect/collections/create-bouquet">Create your own</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Party rentals</Link>

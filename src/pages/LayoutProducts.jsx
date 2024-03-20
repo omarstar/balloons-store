@@ -62,6 +62,12 @@ const LayoutProducts = () => {
                 dispatch(productActions.recreateProductsList(data.inflatables))
                 return navigate('/collections/inflatables')
             }
+            else if(prds === 'create-bouquet') {
+                console.log('products list updated to bouquests')
+                dispatch(productActions.recreateProductsList(data.bulkballoon))
+                return navigate('/collections/create-your-bouquet')
+                
+            }
             else if(prds === 'bouquets' || bouquetsList.includes(prds)) {
                 console.log('products list updated to bouquests')
                 dispatch(productActions.recreateProductsList(data.products))
