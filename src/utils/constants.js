@@ -146,7 +146,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/nadiapicks",
             decoKeyId: "nadiapicks",
-            desc: "Balloon Naida's picks are special design and art melding together to become one and create invigorating beautiful spaces for your celebration! that can be made in any size, shape or take the form of any character of choice."
+            desc: "**Balloon Naida's picks are special design and art melding together to become one and create invigorating beautiful spaces for your celebration! that can be made in any size, shape or take the form of any character of choice."
         },
         {
             title: "Balloon Centerpieces",
@@ -210,7 +210,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/ceilings",
             decoKeyId: "ceilings",
-            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+            desc: "a brief desc for ceilings"
         },
         {
             title: "Balloon Full Setups",
@@ -220,7 +220,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/setups",
             decoKeyId: "setups",
-            desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
+            desc: "a brief desc for setups"
         },
         
         

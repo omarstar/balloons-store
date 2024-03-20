@@ -2,10 +2,9 @@ import React from 'react'
 import Promobar from '../header/Promobar'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
-import formatCurrency, { getImportedImage } from '../../utils/helpers'
+// import formatCurrency, { getImportedImage } from '../../utils/helpers'
 import { productActions } from '../../store/product/product-slice'
 import { useNavigate } from 'react-router-dom'
-import setupimg from "../../assets/images/balloons/setups/101.jpg"
 export default function ProductsWide(params) {
 
     const dispatch = useDispatch();
@@ -21,8 +20,6 @@ export default function ProductsWide(params) {
     const handleProductDetailsSelected = (prd) => {
         dispatch(productActions.handleProductSelected(prd))
         navigate(`/decorations/details`)
-        // navigate(`/balloons/details/${prd._id}`)
-
     }
 
     const handleQetQuote = (prd) => {

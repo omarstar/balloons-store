@@ -73,6 +73,7 @@ const Products = () => {
                                 <p>no results using this filter</p>
                             :
                             products.map(product => {
+                                
                                 return (
                                 <li key={product._id}>
                                     <Product product={product} addtoCart={handleAddtoCart} />

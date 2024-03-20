@@ -187,8 +187,8 @@ export const RoutesElement = () => {
             <Route path="/collections/nadia-picks" element={<ProductsWide />} /> */}
             <Route path="/collections/decorations" element={<ProductsWide />} />
             <Route path="/decorations/details" element={<DecorationDetails />} />
-            <Route path="/decorations" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.MenuDecorationItems} />} />
-            <Route path="/party-rentals" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/Slides'}} decorationData={decoItemsCollection.rentalItems} />} />
+            <Route path="/decorations" element={<QuoteRental slidesData={{imgs:carouselData.DecorationSlides,folder:'decorations/slides'}} decorationData={decoItemsCollection.MenuDecorationItems} />} />
+            <Route path="/party-rentals" element={<QuoteRental slidesData={{imgs:carouselData.rentals,folder:'rentals/slides'}} decorationData={decoItemsCollection.rentalItems} />} />
             <Route path="/*" element={<NotFound />} />
         </Routes>
     )

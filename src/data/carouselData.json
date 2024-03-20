@@ -17,6 +17,28 @@
             "alt": "slide-img1"
         }
     ],
+    "DecorationSlides": [
+        {
+            "src": "deco_music.jpg",
+            "alt": "slide-img4"
+        },
+        {
+            "src": "deco-columns.jpg",
+            "alt": "slide-img3"
+        },
+        {
+            "src": "mirnade.jpg",
+            "alt": "slide-img6"
+        },
+        {
+            "src": "unicorn.jpg",
+            "alt": "slide-img1"
+        },
+        {
+            "src": "Event_graduation_720x.webp",
+            "alt": "slide-img2"
+        }
+    ],
     "rentals": [
         {
             "src": "1-Bouncy-Rental-Slide.jpg",

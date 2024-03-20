@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import './ProductDetails.css'; // Import the CSS file for styling
+import './ProductDetails.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../store/cart/cart-slice';
-import { getImportedImage } from '../../utils/helpers';
+// import { getImportedImage } from '../../utils/helpers';
 import { getCartItemQuantity } from '../../store/selectors';
-import DetailForm from './DetailsForm';
+// import DetailForm from './DetailsForm';
 import { toast } from 'react-toastify';
 import { staticInfo, toastOption } from '../../utils/constants';
 
 const ProductDetails = () => {
   const productsSelected = useSelector(state => state.product.detailProduct)
   console.log('productsSelected ', productsSelected)
-  const { _id, title, price, description, image, availableSizes, floatTime } = productsSelected;
+  const { _id, title, price, description, srcUrl,folderName, availableSizes, floatTime, detailsDesc } = productsSelected;
 
   console.log('descriptionin details', description)
   console.log('av sizes details', availableSizes)
@@ -24,8 +24,6 @@ const ProductDetails = () => {
 
   const handlDetailsToCart = (prd) => {
     console.log('Product added to cart:', title);
-    //with more details to have new object saved in cart
-    // dispatch(cartActions.addToCart(prd))
     dispatch(cartActions.addToCartQty({prd,itemQuantity}))
     dispatch(cartActions.setShowCartView())
   };
@@ -42,15 +40,13 @@ const handleDecreaseQty = () => {
   }
 };
 
-console.log('product detail img id', [image, _id])
-
 
   return (
     <>
     <div className="product-detail-container">
-      <div className="image-container">
-        {/* Image goes here */}
-        <img src={getImportedImage('collections/'+_id)} alt={title} />
+      <div className="image-container d-flex">
+        {/* <img src={getImportedImage('collections/'+_id)} alt={title} /> */}
+        <img src={require(`../../assets/images/balloons/${folderName}/${srcUrl}`)} alt=""/>
       </div>
       
       <div className="details-container">
@@ -71,12 +67,11 @@ console.log('product detail img id', [image, _id])
             }
           </div>
         </div>
-
-        {/* add quantity cart */}
-        <h5 className='fs-title row justify-content-start'>Quantity</h5>
+        
         <div className="cart-item d-flex justify-content-between align-items-center w-100">
+          
           <div class="col-4 quantity-box">
-            
+            <h5 className='fs-title row justify-content-start'>Quantity</h5>
             <div class="">
               <div className="cart-product-quantity">
                 <button className='p-less' onClick={handleDecreaseQty}>
@@ -89,7 +84,8 @@ console.log('product detail img id', [image, _id])
               </div>
             </div>
           </div>
-          <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn col-8 d-flex justify-content-between align-items-center">
+
+          <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn col-8 d-flex justify-content-between align-items-center align-self-end">
               <p className="text-addcart">Add To Cart</p>
               <div className="top-right-cart">
                   <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
@@ -119,7 +115,24 @@ console.log('product detail img id', [image, _id])
         <div className="desc_section">
           <div className='desc-content rte'>
             {description}
+            <br/>
+
             <p>Microfoil Balloon Count: 1 Supersize 36" plus 4 x 18" Foil balloons with weight Height/Size: 1.5 Mtr</p>
+            <br/>
+            
+            {detailsDesc && detailsDesc.map((descLine, index)=>{
+                        return(
+                            <p className='' key={index}>
+                                <strong>{descLine.title}: </strong>
+                                {descLine.desc}
+                            </p>
+                            // <div className='' key={index}>
+                            //     <strong>{descLine.title}</strong>
+                            //     <p>{descLine.desc}</p>
+                            // </div>
+                        )
+                    })}
+
             <p><strong>Float Time: </strong> {floatTime}</p>
             <p><strong>Order note: </strong>{staticInfo.ordernote}</p>
             <p><strong>Delivery info: </strong>{staticInfo.delivery}</p>
@@ -133,7 +146,6 @@ console.log('product detail img id', [image, _id])
 
           </div>
         </div>
-          
         <div class="item-description_box">
           <p></p>
           

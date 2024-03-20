@@ -27,11 +27,11 @@ const Product = ({product}) => {
         if(prd.buttonOption === "add to cart"){
             handleAddToCart(prd)
         }else if(prd.buttonOption === "select options"){
-            handleProductDetailsSelected(prd);
+            dispatch(productActions.handleProductSelected(prd))
+            navigate(`/balloons/details/${prd._id}`)
         }else if(prd.buttonOption === "get quote"){
             dispatch(productActions.handleProductSelected(prd))
             navigate('/balloons/contacts')
-            // navigate('/balloons/contacts#contactus')
         }
     }
 

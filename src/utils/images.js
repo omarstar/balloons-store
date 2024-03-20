@@ -1,10 +1,10 @@
 // rentals slides
-import rBouncy from "../assets/images/rentals/Slides/1-Bouncy-Rental-Slide.jpg"
-import rPopcorn from "../assets/images/rentals/Slides/2-Popcorn-Station-Rental-Slide.jpg"
-import rBallPit from "../assets/images/rentals/Slides/3-Ball-Pit-Rental-Slide.jpg"
-import rCottonCandy from "../assets/images/rentals/Slides/4-Cotton-Candy-Station-Rental.jpg"
-import rBeautyBar from "../assets/images/rentals/Slides/5-Beauty-Bar-Rental.jpg"
-import rBubbleMachine from "../assets/images/rentals/Slides/6-Bubble-Machine-Rental.jpg"
+import rBouncy from "../assets/images/rentals/slides/1-Bouncy-Rental-Slide.jpg"
+import rPopcorn from "../assets/images/rentals/slides/2-Popcorn-Station-Rental-Slide.jpg"
+import rBallPit from "../assets/images/rentals/slides/3-Ball-Pit-Rental-Slide.jpg"
+import rCottonCandy from "../assets/images/rentals/slides/4-Cotton-Candy-Station-Rental.jpg"
+import rBeautyBar from "../assets/images/rentals/slides/5-Beauty-Bar-Rental.jpg"
+import rBubbleMachine from "../assets/images/rentals/slides/6-Bubble-Machine-Rental.jpg"
 // rentals dec-cat
 import ribeauty from "../assets/images/rentals/Rentals/1. Beauty Bar/6.jpg"
 import ribouncy from "../assets/images/rentals/Rentals/2. Bouncy Houses/Overview 3.jpg"

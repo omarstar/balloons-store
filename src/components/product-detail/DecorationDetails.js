@@ -12,17 +12,15 @@ import { useNavigate } from 'react-router-dom';
 import { productActions } from '../../store/product/product-slice';
 
 const DecorationDetails = () => {
-//   const productsSelected = useSelector(state => state.product.detailsDeco)
-//   console.log('productsSelected ', productsSelected)
-// const { decoId, imgSlides, desc, title } = productsSelected;
 
 const productsSelected = useSelector(state => state.product.detailProduct)
   console.log('productsSelected ', productsSelected)
-  const { _id, title, srcUrl,folderName, description, floatTime } = productsSelected;
-
+  const { title, srcUrl,folderName, description, floatTime, detailsDesc } = productsSelected;
 
   const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const [isFixed, setIsFixed] = useState(false);
 
   const handleQetQuote = (prd) => {
     dispatch(productActions.handleProductSelected(prd))
@@ -30,8 +28,30 @@ const productsSelected = useSelector(state => state.product.detailProduct)
 }
 
 
+
 useEffect(() => {
-    window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+    window.scrollTo(0, 0);
+
+    // function handleScroll() {
+    //     const container = document.getElementById('des-full');
+    //     const row = document.querySelector('.deco-row');
+    //     const header = document.querySelector('.desc_header');
+    //     const containerRect = container.getBoundingClientRect();
+    //     const rowRect = row.getBoundingClientRect();
+  
+    //     if (window.scrollY >= containerRect.top) {
+    //       setIsFixed(true);
+    //       header.style.marginBottom = row.offsetHeight + 'px';
+    //     } else {
+    //       setIsFixed(false);
+    //       header.style.marginBottom = '0';
+    //     }
+    //   }
+  
+    //   window.addEventListener('scroll', handleScroll);
+      
+    //   return () => window.removeEventListener('scroll', handleScroll);
+
   }, []);
 
   return (
@@ -108,7 +128,7 @@ useEffect(() => {
             
             {/* description box */}
             <div id="des-full" className="description-container">
-                <div className='row deco-row'>
+                <div className={`row deco-row ${isFixed ? 'fixed' : ''}`}>
                     <div className="col-6 decotitle">{title}</div>
                     <div className="col-6">
                         <button onClick={()=>handleQetQuote(productsSelected)} className="item-cart-btn col-8 d-flex justify-content-between align-items-center">
@@ -123,7 +143,25 @@ useEffect(() => {
                 <div className='desc-content rte'>
                     <p>{description}</p>
                     <br/>
-                    <p>Microfoil Balloon Count: 1 Supersize 36" plus 4 x 18" Foil balloons with weight Height/Size: 1.5 Mtr</p>
+                    
+                    <p>ex: <strong>Microfoil Balloon Count:</strong> 1</p>
+                    <p>ex: <strong>size:</strong> Supersize 36" plus 4 x 18" Foil balloons</p>
+                    <br/>
+
+
+                    {detailsDesc && detailsDesc.map((descLine, index)=>{
+                        return(
+                            <p className='' key={index}>
+                                <strong>{descLine.title}: </strong>
+                                {descLine.desc}
+                            </p>
+                            // <div className='' key={index}>
+                            //     <strong>{descLine.title}</strong>
+                            //     <p>{descLine.desc}</p>
+                            // </div>
+                        )
+                    })}
+
                     <p><strong>Float Time: </strong> {floatTime}</p>
                     <p><strong>Order note: </strong>{staticInfo.ordernote}</p>
                     <p><strong>Delivery info: </strong>{staticInfo.delivery}</p>
