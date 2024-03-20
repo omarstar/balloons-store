@@ -1,17 +1,19 @@
 import "./contactForms.css"
 import "../contact-us/contactus.css"
 
-import carouselData from "../../data/carouselData.json"
+// import carouselData from "../../data/carouselData.json"
 import Carousel from "../carousel/Carousel";
 // import QuoteForm from "./QuoteForm";
 import DecorationList from "../card-decoration/DecorationList";
-import { decoItemsCollection } from "../../utils/constants";
-
-// validate the input form
-// dispatch the form data to Quote store
-// call api to send email
+// import { decoItemsCollection } from "../../utils/constants";
+import { useEffect } from "react";
 
 const QuoteRental = ({slidesData, decorationData}) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    
+      }, [decorationData]);
     
     return ( 
         <section className="">

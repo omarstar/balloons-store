@@ -51,7 +51,7 @@ const MenuDesktop = () => {
                                     <li><Link to="/redirect/collections/congratulations">CONGRATULATIONS</Link></li>
                                     <li><Link to="/redirect/collections/valentine">valentine</Link></li>
                                     <li><Link to="/redirect/collections/wedding-anniversary">anniversary</Link></li> */}
-                                    <li><Link to="#">CREATE YOUR OWN</Link></li>
+                                    <li><Link to="/create-bouquet/">CREATE YOUR OWN</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ const MenuDesktop = () => {
                 <Link to="/redirect/collections/jbounce">Inflatables</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
-                <Link to="/party-rentals">Create your own Bouquet</Link>
+                <Link to="/create-bouquet/">Create your own Bouquet</Link>
             </li>
             <li id="menu-item" className="menu-item menu-item-type-post_type menu-item-object-page">
                 <Link to="/party-rentals">Party rentals</Link>

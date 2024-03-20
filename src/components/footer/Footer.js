@@ -36,8 +36,6 @@ const Footer = () => {
 								<h2 className="">Site map</h2>
 								<ul className="divided">
 									<li><Link to="/" onClick={scrollToTop}>HOME</Link></li>
-									{/* <li><Link to="/#aboutus">ABOUT US</Link></li>
-									<li><Link to="/#contactus">CONTACT US</Link></li> */}
 									<li><Link to="/#aboutus" onClick={() => handleNavigation('aboutus')}>ABOUT US</Link></li>
 									<li><Link to="/#contactus" onClick={() => handleNavigation('contactus')}>CONTACT US</Link></li>
 									
@@ -50,11 +48,11 @@ const Footer = () => {
 							<section>
 								<h2 className="">BALLOONS</h2>
 								<ul className="divided">
-									<li><Link to="category">Nadia Picks</Link></li>
-									<li><Link to="category">Balloon Decorations</Link></li>
-									<li><Link to="category">Holidays & events</Link></li>
-									<li><Link to="category">Bouquets & setups</Link></li>
-									<li><Link to="/create-bouquet/">Create your won Bouquet</Link></li>
+									<li><Link to="/redirect/collections/nadiapicks">Nadia's Picks</Link></li>
+									<li><Link to="/decorations">Setups & Decorations</Link></li>
+									<li><Link to="/redirect/collections/bouquets">Holidays & occasion Bouquets</Link></li>
+									<li><Link to="/redirect/collections/jbounce">Inflatables Bouncy Castles</Link></li>
+									<li><Link to="/create-bouquet/">Create your own</Link></li>
 									<li><Link to="/party-rentals">Party Rentals</Link></li>
 								</ul>
 							</section>
@@ -92,7 +90,7 @@ const Footer = () => {
 														<a href="tel:+971551739652">+971 55 173 9652</a>
 													</dd>
 													<dt>Email Us <span>✉️</span></dt>
-													<dd className="text-gray"><a href="mailto:omar@infracom.me">customer service</a></dd>
+													<dd className="text-gray"><a href="mailto:omar.barakat@infracom.me">orders | Funkyballoons</a></dd>
 												</dl>
 											</div>
 										</div>
@@ -103,7 +101,7 @@ const Footer = () => {
 							<div id="copyright">
 								<ol className="menu">
 									<li>&copy; Funky Balloons by Nadia 2024. All rights reserved</li>
-                                    <li>Design: <a href="https://funkyballoons.me">funky balloons</a></li>
+                                    <li className="my-2">Design: <a href="https://funkyballoons.me">funky balloons</a></li>
 								</ol>
 							</div>
 						</div>

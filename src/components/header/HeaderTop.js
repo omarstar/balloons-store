@@ -6,7 +6,7 @@ import cartIcon from "../../assets/images/icons/icons8-shopping-cart-50.png"
 import { Link } from "react-router-dom";
 import HeaderBottom from "./HeaderBottom";
 import { useEffect, useState } from "react";
-import { scrollToSection, scrollToTop } from "../../utils/helpers";
+import { scrollToTop } from "../../utils/helpers";
 // import "./header.css"
 
 const HeaderTop = () => {
@@ -49,7 +49,7 @@ const HeaderTop = () => {
                 */}
                     <div className="navigation-small clearfix">
                         <div className="menu-header-menu-small-container">
-                            <MenuSmall scrollToSection={scrollToSection} />
+                            <MenuSmall />
                             
                         </div>
                     </div>

@@ -164,7 +164,7 @@ const ContactUs = () => {
                                             <i class="fa fa-envelope" style={{"margin": "auto 20px"}} aria-hidden="true"></i>
                                             <h3>Email Us</h3>
                                         </div>
-                                            <a href="mailto:">funkymonkeyuae</a>
+                                            <a href="mailto:omar.barakat@infracom.me">orders | Funkyballoons</a>
                                     </dl>
                                 </div>
                             </div>
