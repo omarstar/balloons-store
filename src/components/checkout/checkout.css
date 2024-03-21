@@ -21,7 +21,7 @@ p {
     max-width: 900px;
     margin: 20px auto;
     overflow: hidden;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
 }
 
 .box-1 {
@@ -278,6 +278,16 @@ input[type="radio"] {
 
 ::placeholder {
     font-size: 12px;
+}
+
+.chk-title h3{
+    color: #000;
+  text-align: center;
+  font-family: Italianno;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 @media (max-width:768px) {

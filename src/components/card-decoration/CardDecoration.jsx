@@ -56,7 +56,7 @@ const CardDecoration = ({data, align}) => {
                     </div> */}
                     <img className=" mx-auto d-block img-box" src={data.srcUrl} alt="img"/>
                 </div>
-                <div className="col-12 col-lg-5 position-relative pt-4">
+                <div className="col-12 col-lg-5 position-relative pt-4 deco-content-clmn">
                     <div className="row h-15 deco-title ff-itali">{data.title}</div>
                     <div className="row px-4 deco-desc m-hide">
                         <div className="col">

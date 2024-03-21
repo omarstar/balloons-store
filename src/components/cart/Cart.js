@@ -88,7 +88,7 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="cart-product-price">AED {cartItem.price}</div>
+                  <div className="cart-product-price">AED {cartItem.price} / item</div>
                   <div className="cart-product-quantity">
                     <button onClick={() => handleDecreaseCart(cartItem)}>
                       -

@@ -45,6 +45,9 @@
         width: 66%;
         max-width: 66%;
     }
+    .mobile-deco-container .deco-content-clmn {
+        padding-top: 0 !important;
+    }
     .mobile-deco-container {
         height: auto;
     }
