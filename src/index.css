@@ -203,4 +203,34 @@ main {
 .button-default-style {
   
 }
+/* m-hide display coud be not flex */
+/* .m-hide {
+  display: flex;
+} */
 
+.m-show {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .grid-container{
+    grid-template-rows: 6rem 1fr 5rem;
+  }
+  #header-wrapper {
+    height: 15vh;
+  }
+  .m-hide {
+    display: none;
+  }
+  .m-show {
+    display: flex;
+  }
+
+  .m-title-h2{
+    font-size: 21px !important;
+    font-weight: 400;
+  }
+  .m-title-h3{
+    font-size: 3rem !important;
+  }
+}

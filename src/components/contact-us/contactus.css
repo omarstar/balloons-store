@@ -159,6 +159,10 @@ form.contact-form {
 	/* max-width: 400px; */
 	margin: 0 auto;
     padding: 0 2.5rem;
+    
+  }
+  .form-control::placeholder{
+    font-family: "Poppins-Italic";
   }
   
   form.contact-form .form-group {
@@ -280,4 +284,10 @@ ul.actions li {
     justify-content: space-evenly;
     align-items: baseline;
     width: 100%;
+}
+
+@media only screen and (max-width: 760px){
+    .mobile-address-part {
+        height: 50vh;
+    }
 }

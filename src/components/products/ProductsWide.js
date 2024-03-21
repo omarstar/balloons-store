@@ -29,7 +29,7 @@ export default function ProductsWide(params) {
 
     return(
         <div className="content">
-            <div className="promobar-wrapper">
+            <div className="promobar-wrapper m-hide">
                 <Promobar />
             </div>
             <div className="main">
@@ -52,9 +52,10 @@ export default function ProductsWide(params) {
                                             <h3 className="item-heading">
                                                 {product.title}
                                             </h3>
-                                            <p className="decoitem-description">
+                                            <p className="decoitem-description m-hide">
                                                 {product.description}
                                             </p>
+                                            <p className='m-show text-explore'>Explore More</p>
                                         </div>
 
                                         {/* <p className="item-price">{formatCurrency(product.price)} <sup>AED</sup></p> */}

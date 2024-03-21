@@ -14,7 +14,7 @@ const AboutUs = () => {
                     </div> */}
                     <div className="col-12">
                         <div className="row ff-itali aboutus-title">
-                            <h3>About Us</h3>
+                            <h3 className="m-title-h3">About Us</h3>
                         </div>
                         <div className="row flex-column aboutus-desc">
                             <h3>Quality Priced Balloons! Delivered!</h3>

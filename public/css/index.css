@@ -25,19 +25,19 @@
 @font-face {
     font-family: 'Poppins-Medium';
        src: url('../fonts/Poppins/Poppins-Medium.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
   }
 @font-face {
     font-family: 'Poppins-Bold';
        src: url('../fonts/Poppins/Poppins-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
   }
 @font-face {
     font-family: 'Poppins-Black';
        src: url('../fonts/Poppins/Poppins-Black.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 900;
     font-style: normal;
   }
 
@@ -46,4 +46,13 @@
 }
 html, body{
     font-family: 'Poppins-Regular' , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.ff-pop-reg {
+  font-family: 'Poppins-Regular' , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.ff-pop-med {
+  font-family: 'Poppins-Medium' , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+.ff-pop-bold {
+  font-family: 'Poppins-Bold' , -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }

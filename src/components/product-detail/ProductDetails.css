@@ -58,10 +58,10 @@
   }
   
   .image-container img {
-    height: 80vh;
+    height: 70vh;
     display: block;
     width: auto;
-    /* aspect-ratio: 1; */
+    aspect-ratio: 3/4;
     object-fit: cover;
   }
 
@@ -264,7 +264,7 @@ section#product-details{
         width: 100%;
     }
     .image-container img {
-      width: 100%;
+      width: 90%;
     }
     #product-info {
       margin-top: 1.6rem;

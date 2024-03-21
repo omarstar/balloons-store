@@ -143,7 +143,7 @@ const ContactUs = () => {
                                         </form>
                                     </div>
                                 </div>
-                                <div className="col-12 col-lg-5">
+                                <div className="col-12 col-lg-5 mobile-address-part">
                                     <dl className="contact address-part">
                                         <div className="d-flex justify-content-center" style={{"margin": "auto 20px"}}>
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>

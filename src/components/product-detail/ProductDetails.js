@@ -44,6 +44,17 @@ const handleDecreaseQty = () => {
   return (
     <>
     <div className="product-detail-container">
+      <div id="mobile-details-top-title" className="details-container m-show">
+        <div id="product-info">
+            <div id="product-info-header">
+                <h2>{title}</h2>
+                <div>
+                    <h6>item: </h6>
+                    <p>1024</p>
+                </div>
+            </div>
+        </div>
+      </div>
       <div className="image-container d-flex">
         {/* <img src={getImportedImage('collections/'+_id)} alt={title} /> */}
         <img src={require(`../../assets/images/balloons/${folderName}/${srcUrl}`)} alt=""/>
@@ -52,8 +63,8 @@ const handleDecreaseQty = () => {
       <div className="details-container">
         <div id="product-info">
           <div id="product-info-header">
-              <h2>{title}</h2>
-              <div>
+              <h2 className='m-hide'>{title}</h2>
+              <div className='m-hide'>
                   <h6>item: </h6>
                   <p>1024</p>
               </div>

@@ -75,4 +75,13 @@
     .banner {
         font-size: 1.4rem;
     }
+    
+}
+@media only screen and (max-width: 760px){
+    .welcome-text {
+        font-size: 0.7rem;
+    }
+    .welcome-box {
+        font-size: 2rem;
+    }
 }

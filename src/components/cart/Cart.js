@@ -41,8 +41,8 @@ const Cart = () => {
     }, []);
 
     return ( 
-        <div className="cart-container">
-      <h2>Shopping Cart</h2>
+      <div className="cart-container">
+      <h2 className="ff-pop-med m-title-h2">Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className="cart-empty">
           <p>Your cart is currently empty</p>
@@ -78,7 +78,8 @@ const Cart = () => {
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem._id}>
                   <div className="cart-product">
-                    <img src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.name} />
+                    {/* <img src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.name} /> */}
+                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${cartItem.srcUrl}`)} alt=""/>
                     <div>
                       <h3>{cartItem.title}</h3>
                       <p>{cartItem.description}</p>

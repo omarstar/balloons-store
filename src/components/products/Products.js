@@ -47,7 +47,7 @@ const Products = () => {
 
     return ( 
         <div className="content">
-            <div className="promobar-wrapper">
+            <div className="promobar-wrapper m-hide">
                 <Promobar />
             </div>
             <div className="main">

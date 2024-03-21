@@ -1,13 +1,15 @@
 import { getFormatAmount, getImportedImage } from "../../utils/helpers";
 
 const CartItem = ({product}) => {
-    const {image, title, description, price = 0, cartQuantity = 0} = product;
+    const { title, image, description, folderName, srcUrl, price = 0, cartQuantity = 0} = product;
 
     
     return ( 
         <div key={product._id} className="row mb-1 p-3 text-capitalize text-center cart_item-wrapper">
             <div className="col-10 mx-auto col-lg-2 cart-image">
-                <img src={getImportedImage('collections/'+image)} style={imgDesign} alt={title} className="img-fluid" />
+                {/* <img src={getImportedImage('collections/'+image)} style={imgDesign} alt={title} className="img-fluid" /> */}
+                <img src={require(`../../assets/images/balloons/${folderName}/${srcUrl}`)}  style={imgDesign} className="img-fluid" alt=""/>
+
             </div>
             <div className="col-10 mx-auto col-lg-4 cart-name">
                 <div className="row">

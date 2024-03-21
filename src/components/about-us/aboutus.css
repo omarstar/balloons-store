@@ -30,3 +30,12 @@
 .aboutus-wrapper {
     margin: 3vh 0;
 }
+
+
+@media only screen and (max-width: 760px){
+    .aboutus-desc h3 {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+    }
+}

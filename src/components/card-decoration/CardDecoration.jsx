@@ -49,8 +49,8 @@ const CardDecoration = ({data, align}) => {
         {/* <div className="container"> */}
         <ContainerDeco theme={{bgcolor: data.bgColor}} br={borderRadiusSide}>
 
-            <div className="row h-70">
-                <div className={"col-12 col-lg-7 h-100 "+ alignOrder}>
+            <div className="row h-70 mobile-deco-container">
+                <div className={"col-12 col-lg-7 h-100 "+ (alignOrder && 'lg-' + alignOrder)}>
                     {/* <div className="image-wrapper">
                         <div className="image-deco"/>
                     </div> */}
@@ -58,7 +58,7 @@ const CardDecoration = ({data, align}) => {
                 </div>
                 <div className="col-12 col-lg-5 position-relative pt-4">
                     <div className="row h-15 deco-title ff-itali">{data.title}</div>
-                    <div className="row px-4 deco-desc">
+                    <div className="row px-4 deco-desc m-hide">
                         <div className="col">
                             <ul>
                                 <p>{data.desc}</p>

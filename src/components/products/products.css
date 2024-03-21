@@ -183,6 +183,7 @@
     text-transform: capitalize;
     font-size: 1.1rem;
     font-weight: bold;
+    margin-top: 1rem;
   }
   
   .item-description {
@@ -205,6 +206,7 @@
   .item-price {
     text-align: center;
     font-size: 1.3rem;
+    margin-top: 0.6rem;
     margin-bottom: 1rem;
   }
   
@@ -327,4 +329,8 @@
     color: #fff;
     margin: 0 1rem;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .text-explore {
+    margin: 0.5rem 0 0;
   }

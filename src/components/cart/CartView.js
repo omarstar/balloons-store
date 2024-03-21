@@ -73,14 +73,12 @@ console.log('showCartView', showCartView)
                             <div className="cart-drawer-item__single" data-line={cid} key={cid}>
                                 {/* link to product detail */}
                                 <div className="cart-item__image">
-                                    <a href="/products/giant-gold-latex-color-latex-balloon-helium-inflated-1?variant=43503323349214">
-                                        <img class="cart-item__image" src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.title} />
-                                    </a>
+                                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${cartItem.srcUrl}`)} class="cart-item__image" alt={cartItem.title}/>
                                 </div>
                                 <div class="cart-item__content">
                                 {/* link to product detail */}
                                     <div class="cart-item__title">
-                                        <a href="/products/giant-gold-latex-color-latex-balloon-helium-inflated-1?variant=43503323349214">{cartItem.title} </a>
+                                        {cartItem.title}
                                     </div>
                                     <div class="innerwrap">
                                         <div class="cart-item_priceRemove">

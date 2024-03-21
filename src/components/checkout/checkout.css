@@ -293,6 +293,9 @@ input[type="radio"] {
         margin: 20px auto;
     }
 
+    .carousel, .slides {
+        height: 21rem !important;
+    }
 }
 
 @media (max-width:426px) {
