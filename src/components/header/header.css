@@ -537,6 +537,24 @@
 		padding: 0;
 	  }
 
+	  #mobile-navigation .slick-slide {
+		padding: 30px 0 0 0;
+		position: relative;
+	  }
+
+	  #mobile-navigation .slick-track{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	  }
+	  #mobile-navigation #menu-header-menu{
+		margin: 1rem 0;
+		text-align: center;
+		font-weight: bold;
+		font-family: "Poppins-Bold";
+	  }
+
 	#mobile-navigation .slider {
 		margin: 0;
 		padding: 0 15px;
@@ -562,7 +580,7 @@
 		border-top: 1px solid #ccc;
 		display: block;
 		margin: 0;
-		padding: 0;
+		padding: 0.5rem;
 		position: relative;
 	  }
 
@@ -888,3 +906,8 @@ button {
 	line-height: 2.5em;
 	box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 14px 0px rgba(0, 0, 0, 0.4);
   }
+@media only screen and (min-width: 768px){
+	#mobile-navigation.visible {
+		display: none;
+	}
+}

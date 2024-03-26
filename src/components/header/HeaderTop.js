@@ -8,7 +8,6 @@ import HeaderBottom from "./HeaderBottom";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "../../utils/helpers";
 import { cartActions } from "../../store/cart/cart-slice";
-import MobileMenu from "./MobileMenu";
 // import "./header.css"
 
 const HeaderTop = () => {

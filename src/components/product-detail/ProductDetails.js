@@ -103,16 +103,18 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn col-8 d-flex justify-content-between align-items-center align-self-end">
-              <p className="text-addcart">Add To Cart</p>
-              <div className="top-right-cart">
-                  <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
-                  {
-                    cartItemQuantity !== 0 && (
-                    <span className="icon-product-qty-bubble"> {cartItemQuantity} </span>
-                  )}
-              </div>
-          </button>
+          <div class="col-8">
+            <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn d-flex justify-content-between align-items-center align-self-end">
+                <p className="text-addcart">Add To Cart</p>
+                <div className="top-right-cart">
+                    <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
+                    {
+                      cartItemQuantity !== 0 && (
+                      <span className="icon-product-qty-bubble"> {cartItemQuantity} </span>
+                    )}
+                </div>
+            </button>
+          </div>
         </div>
         {/* more options */}
         {/* {

@@ -212,7 +212,7 @@ main {
   display: none !important;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   .grid-container{
     grid-template-rows: 6rem 1fr 5rem;
   }

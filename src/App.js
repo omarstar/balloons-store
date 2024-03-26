@@ -14,16 +14,37 @@ import { ToastContainer } from 'react-toastify'
 import { cartActions } from "./store/cart/cart-slice";
 import { RoutesElement } from "./routes";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MobileMenu from "./components/header/MobileMenu";
 
 
 function App() {
 
   store.dispatch(cartActions.getTotals());
-
-  const isShowMenu = useSelector(state => state.cart.showMobileMenu)
+  
+  const dispatch = useDispatch();
+  const isShowMenu = useSelector(state => state.cart.showMobileMenu);
   console.log('isShowMenu in app', isShowMenu);
+
+  const updateShowMenu = () => {
+    console.log('window.innerWidth', window.innerWidth)
+    if (window.innerWidth >= 768) {
+      // If window width is 768 pixels or larger (desktop view), hide the mobile menu
+      dispatch(cartActions.hideMobileMenu());
+    } 
+  };
+
+  // UseEffect hook to add event listener for window resize
+  useEffect(() => {
+    // Call updateShowMenu function when component mounts and window resizes
+    updateShowMenu();
+    window.addEventListener('resize', updateShowMenu);
+
+    // Cleanup function to remove event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', updateShowMenu);
+    };
+  }, []);
   
 
     return (
