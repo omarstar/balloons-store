@@ -17,12 +17,20 @@ const AboutUs = () => {
                             <h3 className="m-title-h3">About Us</h3>
                         </div>
                         <div className="row flex-column aboutus-desc">
-                            <h3>Quality Priced Balloons! Delivered!</h3>
-                            <p>At FunkyBalloons.me we offer great prices and great service. We are the one stop for all your balloon needs. Let us make your next celebration special!</p>
-                            <h3>Order Online for any Occasion or Holiday</h3>
-                            <p>It's so easy! No need to go into the store anymore! It doesn't get any more convenient than that! Just choose your delivery date and time and we will show up with your inflated balloons, always with a smile. Questions? Just give us a call.</p>
-                            <h3>Send a Bouquet to Brighten up the day</h3>
-                            <p>Send one of our amazing bouquets to a friend, family member or co-worker! We have the best bouquets for all occasions. We deliver to homes and businesses!</p>
+                            <h3>Quality!</h3>
+                            <p>Funky Balloons is a one stop shop that provides you with both great price rates
+                            and a quality guaranteed products for any of the balloon essentials perfectly
+                            suited to make you celebration a moment to remember.</p>
+                            
+                            <h3>Special Bouquet Surprises!</h3>
+                            <p>end a balloon bouquet for every event, occasion or miles stones to help
+                            celebrate, be it a family member, a colleague, a friend or that remarkable
+                            someone and commemorate their special day.</p>
+
+                            <h3>Convenience For Every Occassion!</h3>
+                            <p>With just a few clicks or taps on your screen choose the delivery date and time
+                            and have all your orders delivered directly to you and yours, avoiding the hassle
+                            of an in store visit as we deliver your balloons to your desired location.</p>
                         </div>
                     </div>
                 </div>
