@@ -17,9 +17,20 @@ const deliverySchedule = {
 };
 
 const initialState = {
-    personalinfo: {
+    personalData: {
+      email: "",
+      phone: "",
+      fullname: "",
     },
     deliveryData: {
+      "date": "",
+      "decortime": "",
+      "starttime": "",
+      "endtime": "",
+      "locationEvent": "",
+      "messagenote": "",
+      "address": "",
+      "isDelivery": false
     },
     selectedDate: null,
     availableTimeSlots: [],
@@ -27,12 +38,12 @@ const initialState = {
 }
 
 const checkOrderSlice = createSlice({
-    name: 'checkoutorder',
+    name: 'checkout',
     initialState,
     reducers: {
         updatePersonalData(state, action) {
             const { field, value } = action.payload;
-            state.personalinfo[field] = value;
+            state.personalData[field] = value;
           },
         updateDeliveryData(state, action) {
             const { field, value } = action.payload;
@@ -45,17 +56,16 @@ const checkOrderSlice = createSlice({
           state.selectedDate = action.payload;
           },
           updateAvailableTimeSlots: (state, action) => {
-          // Use the selected date to filter and update available time slots
-          const selectedDate = action.payload;
-          const selectedDay = selectedDate.getDay();//
-          console.log('selectedDate in func state.payload', selectedDate)
-          console.log('selectedDay', selectedDay)
-          if (deliverySchedule.hasOwnProperty(selectedDay)) {
-            state.availableTimeSlots = deliverySchedule[selectedDay];
-          } else {
-            state.availableTimeSlots = [];
-          }
-          // state.availableTimeSlots = timeSlotsData[selectedDate] || [];
+            // Use the selected date to filter and update available time slots
+            const selectedDate = action.payload;
+            const selectedDay = selectedDate.getDay();//
+            console.log('selectedDate in func state.payload', selectedDate)
+            console.log('selectedDay.getday', selectedDay)
+            if (deliverySchedule.hasOwnProperty(selectedDay)) {
+              state.availableTimeSlots = deliverySchedule[selectedDay];
+            } else {
+              state.availableTimeSlots = [];
+            }
           },
     }
 })

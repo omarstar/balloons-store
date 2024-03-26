@@ -18,7 +18,7 @@ const combinedReducer = combineReducers({
     product: productSlice.reducer,
     breadcrumbs: breadcrumbsSlice.reducer,
     quoterequest: qouteRequestsSlice.reducer,
-    checkoutorder: checkOrderSlice.reducer
+    checkout: checkOrderSlice.reducer
 })
 
 const persistedReducer = persistReducer(persistConfig, combinedReducer)

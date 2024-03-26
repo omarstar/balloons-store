@@ -9,7 +9,7 @@ export const getCartItemQuantity = (productId) => (state) => {
   };
 // TIME SLOTS
 export const getAvailableTimeSlots = () => (state) => {
-  return state.checkoutorder.availableTimeSlots;
+  return state.checkout.availableTimeSlots;
 }
 
 export const isSelectAgreement = () => (state) => state.checkout.agreeToTerms;
