@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import logoHeader from "../../assets/images/icons/balloon logo decor bynadia.jpg"
 import MenuSmall from "./elements/MenuSmall";
 import cartAIcon from "../../assets/images/icons/icons8-cart.gif"
@@ -7,9 +7,14 @@ import { Link } from "react-router-dom";
 import HeaderBottom from "./HeaderBottom";
 import { useEffect, useState } from "react";
 import { scrollToTop } from "../../utils/helpers";
+import { cartActions } from "../../store/cart/cart-slice";
+import MobileMenu from "./MobileMenu";
 // import "./header.css"
 
 const HeaderTop = () => {
+
+    const dispatch = useDispatch();
+
     const [hasBoxShadow, setHasBoxShadow] = useState(false);
     const {cartTotalQuantity} = useSelector(state=> state.cart)
 
@@ -20,6 +25,10 @@ const HeaderTop = () => {
     
         setHasBoxShadow(scrolled);
       };
+
+      const toggleMenu = () => {
+        dispatch(cartActions.toggleMobileMenu())
+      }
     
       useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -33,7 +42,9 @@ const HeaderTop = () => {
         boxShadow: hasBoxShadow ? '0px 2px 2px rgb(186, 147, 72)' : 'none',
       };
 
+
     return ( 
+        <>
         <header id="header" style={headerStyle}>
 
             <div className="header-top">
@@ -66,7 +77,7 @@ const HeaderTop = () => {
                         <a href="tel:+971553208899" className="cta"><i>📞</i>+971 55 320 88 99</a> */}
                     </div>
                     <div className="icons">
-                        <button className="mobile-menu-button hidden-md hidden-lg" id="mobile-menu-button">
+                        <button className="mobile-menu-button hidden-md hidden-lg" id="mobile-menu-button" onClick={toggleMenu}>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -88,6 +99,7 @@ const HeaderTop = () => {
                 </div>
             </div>
         </header>
+        </>
      );
 }
  

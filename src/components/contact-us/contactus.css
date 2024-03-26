@@ -290,4 +290,7 @@ ul.actions li {
     .mobile-address-part {
         height: 50vh;
     }
+    .contactus-desc p {
+        font-size: 0.9rem;
+    }
 }

@@ -91,7 +91,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/centerpieces",
             decoKeyId: "centerpieces",
-            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
+            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come!"
     
         },
         {
@@ -125,6 +125,16 @@ export const decoItemsCollection = {
             desc: "Balloon sculptures are design and art melding together to become one and create invigorating beautiful spaces for your celebration! Decorate your events with a beautiful balloon sculptures that can be made in any size, shape or take the form of any character of choice."
         },
         {
+            title: "Balloon Ceiling & Walls",
+            srcUrl: decorationPageLibrary.decoCeilings,
+            btnColor:"#7e416f",
+            bgColor:"rgb(251, 222, 226, 0.3)",
+            txtColor:"#fff",
+            linkPath: "/redirect/collections/ceilings",
+            decoKeyId: "ceilings",
+            desc: "Make a huge statement and transform any space instantly with ceiling and wall decorations, frame out your walls and drape your ceilings with our beautiful balloons to add depth that can have your party space feel like a different dimension entirely."
+        },
+        {
             title: "Balloon Arches",
             srcUrl: homePageLibrary.hmArches,
             btnColor:"#c7b591",
@@ -136,6 +146,7 @@ export const decoItemsCollection = {
             desc: "Balloon arches are an easy way to enhance and create an inviting focal entrance for your events, special occasion or festivals. Available in various shapes and sizes you'll find that they can work splendidly both indoors and outdoors."
         },
         
+        
     ],
     "MenuDecorationItems":[
         {
@@ -146,7 +157,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/nadiapicks",
             decoKeyId: "nadiapicks",
-            desc: "**Balloon Naida's picks are special design and art melding together to become one and create invigorating beautiful spaces for your celebration! that can be made in any size, shape or take the form of any character of choice."
+            desc: "a desc needed for picks"
         },
         {
             title: "Balloon Centerpieces",
@@ -157,7 +168,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/centerpieces",
             decoKeyId: "centerpieces",
-            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come! "
+            desc: "Decorate your table with gorgeous balloon centerpieces and let the eclectic style of your theme of choice have everyone talking about your party for years to come!"
     
         },
         {
@@ -210,7 +221,7 @@ export const decoItemsCollection = {
             txtColor:"#fff",
             linkPath: "/redirect/collections/ceilings",
             decoKeyId: "ceilings",
-            desc: "a brief desc for ceilings"
+            desc: "Make a huge statement and transform any space instantly with ceiling and wall decorations, frame out your walls and drape your ceilings with our beautiful balloons to add depth that can have your party space feel like a different dimension entirely."
         },
         {
             title: "Balloon Full Setups",
@@ -225,9 +236,6 @@ export const decoItemsCollection = {
         
         
     ],
-    "others":{
-        rentalInflatable: ""
-    },
     "rentalItems":[
         {
             title: "Inflatable Bouncy Castle",
@@ -733,7 +741,7 @@ cartItems: [{
 }],
 cartTotalQuantity: 0,
 cartTotalAmount: 0,
-personalinfo: {
+personalData: {
     name: "",
     email: "",
     phone: "",

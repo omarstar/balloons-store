@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const MenuDesktop = () => {
 
     const [hoveredItem, setHoveredItem] = useState(null);
-    
+
     const handleMouseEnter = (itemId) => {
         setHoveredItem(itemId);
       };

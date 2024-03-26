@@ -11,7 +11,8 @@ const initialState = {
     cartTotalQuantity: 0,
     cartTotalAmount: 0,
     showCart: false,
-    showCartView: false
+    showCartView: false,
+    showMobileMenu: false
 }
 const cartSlice = createSlice({
     name: 'cart',
@@ -116,6 +117,17 @@ const cartSlice = createSlice({
 
             toast.error(`${action.payload.title} removed from cart!`, toastOption)
         },
+        showMobileMenu(state) {
+            console.log('show menu init', state.showMobileMenu)
+            state.showMobileMenu = true
+        },
+        hideMobileMenu(state) {
+            console.log('hide menu init', state.showMobileMenu)
+            state.showMobileMenu = false
+        },
+        toggleMobileMenu(state){
+            state.showMobileMenu = !state.showMobileMenu
+        }
     }
 })
 

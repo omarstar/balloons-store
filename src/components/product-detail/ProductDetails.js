@@ -11,14 +11,16 @@ import { staticInfo, toastOption } from '../../utils/constants';
 const ProductDetails = () => {
   const productsSelected = useSelector(state => state.product.detailProduct)
   console.log('productsSelected ', productsSelected)
-  const { _id, title, price, description, srcUrl,folderName, availableSizes, floatTime, detailsDesc } = productsSelected;
+  const { _id, title, price, description, srcUrl,folderName, availableSizes, detailsDesc } = productsSelected;
 
   console.log('descriptionin details', description)
   console.log('av sizes details', availableSizes)
 
   const cartItemQuantity = useSelector(getCartItemQuantity(_id));
-
+  console.log('cartItemQuantity', cartItemQuantity)
+  
   const [itemQuantity, setitemQuantity] = useState(cartItemQuantity);
+  console.log('itemQuantity', itemQuantity)
 
   const dispatch = useDispatch();
 
@@ -29,16 +31,21 @@ const ProductDetails = () => {
   };
 
   const handleAddQty = () => {
-    setitemQuantity(itemQuantity+1)
-};
-const handleDecreaseQty = () => {
-  if(itemQuantity > 1) {
-    setitemQuantity(itemQuantity-1)
-  }
-  else {
-    toast.info(`at least one item should be selected`, toastOption)
-  }
-};
+    setitemQuantity(itemQuantity=>(
+      itemQuantity + 1
+    ))
+  };
+  
+  const handleDecreaseQty = () => {
+    if(itemQuantity > 1) {
+      setitemQuantity(itemQuantity => (
+        itemQuantity - 1
+      ))
+    }
+    else {
+      toast.info(`at least one item should be selected`, toastOption)
+    }
+  };
 
 
   return (
@@ -47,8 +54,8 @@ const handleDecreaseQty = () => {
       <div id="mobile-details-top-title" className="details-container m-show">
         <div id="product-info">
             <div id="product-info-header">
-                <h2>{title}</h2>
-                <div>
+              <h2 className='m-show'>{title}</h2>
+              <div className='m-show'>
                     <h6>item: </h6>
                     <p>1024</p>
                 </div>
@@ -125,11 +132,7 @@ const handleDecreaseQty = () => {
         </div>
         <div className="desc_section">
           <div className='desc-content rte'>
-            {description}
-            <br/>
-
-            <p>Microfoil Balloon Count: 1 Supersize 36" plus 4 x 18" Foil balloons with weight Height/Size: 1.5 Mtr</p>
-            <br/>
+            {/* {description} */}
             
             {detailsDesc && detailsDesc.map((descLine, index)=>{
                         return(
@@ -137,14 +140,9 @@ const handleDecreaseQty = () => {
                                 <strong>{descLine.title}: </strong>
                                 {descLine.desc}
                             </p>
-                            // <div className='' key={index}>
-                            //     <strong>{descLine.title}</strong>
-                            //     <p>{descLine.desc}</p>
-                            // </div>
                         )
                     })}
 
-            <p><strong>Float Time: </strong> {floatTime}</p>
             <p><strong>Order note: </strong>{staticInfo.ordernote}</p>
             <p><strong>Delivery info: </strong>{staticInfo.delivery}</p>
             <p><strong>Care instructions: </strong>{staticInfo.care}</p>

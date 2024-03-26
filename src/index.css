@@ -209,7 +209,7 @@ main {
 } */
 
 .m-show {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (max-width: 760px) {
@@ -220,10 +220,15 @@ main {
     height: 15vh;
   }
   .m-hide {
-    display: none;
+    display: none !important;
   }
+
+  #product-info #product-info-header{
+    border: none !important;
+  }
+
   .m-show {
-    display: flex;
+    display: flex !important;
   }
 
   .m-title-h2{
