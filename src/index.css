@@ -25,10 +25,14 @@ body {
 
 :root {
   --primary-color: #405;
-  --pink-color: #ff3e6c;
+  --pink-color: #F9BFC1;
+  --pink-middle: #FDD9D7;
+  --pink-light: #FBE3E2;
   --primary-light-color: #43ff64;
+
   --classic-blue: #17a2b8;
   --classic-gold: #ba9348;
+  
   --decor-blue: #1376d1;
   --decor-sky: #00bad0;
   --decor-gray: #f3f3f3;
@@ -212,13 +216,16 @@ main {
   display: none !important;
 }
 
+@media only screen and (max-width: 991px) {
+  #header-wrapper {
+    height: 15vh;
+  }
+}
 @media only screen and (max-width: 768px) {
   .grid-container{
     grid-template-rows: 6rem 1fr 5rem;
   }
-  #header-wrapper {
-    height: 15vh;
-  }
+  
   .m-hide {
     display: none !important;
   }

@@ -8,6 +8,9 @@ import { getCartItemQuantity } from '../../store/selectors';
 import { toast } from 'react-toastify';
 import { staticInfo, toastOption } from '../../utils/constants';
 
+import plusIcon from "../../assets/images/icons/icons8-plus-100.png"
+import minusIcon from "../../assets/images/icons/icons8-minus-100.png"
+
 const ProductDetails = () => {
   const productsSelected = useSelector(state => state.product.detailProduct)
   console.log('productsSelected ', productsSelected)
@@ -16,36 +19,44 @@ const ProductDetails = () => {
   console.log('descriptionin details', description)
   console.log('av sizes details', availableSizes)
 
-  const cartItemQuantity = useSelector(getCartItemQuantity(_id));
+  let cartItemQuantity = useSelector(getCartItemQuantity(_id));
   console.log('cartItemQuantity', cartItemQuantity)
+  // if(cartItemQuantity === 0){
+  //   cartItemQuantity = 1
+  // }
   
-  const [itemQuantity, setitemQuantity] = useState(cartItemQuantity);
-  console.log('itemQuantity', itemQuantity)
+  // const [itemQuantity, setitemQuantity] = useState(cartItemQuantity);
+  // console.log('itemQuantity', itemQuantity)
 
   const dispatch = useDispatch();
 
-  const handlDetailsToCart = (prd) => {
-    console.log('Product added to cart:', title);
-    dispatch(cartActions.addToCartQty({prd,itemQuantity}))
-    dispatch(cartActions.setShowCartView())
-  };
+  // const handlDetailsToCart = (prd) => {
+  //   console.log('Product added to cart:', title);
+  //   dispatch(cartActions.addToCart(prd))
+  //   dispatch(cartActions.addToCartQty({prd,itemQuantity}))
+  // };
 
-  const handleAddQty = () => {
-    setitemQuantity(itemQuantity=>(
-      itemQuantity + 1
-    ))
-  };
+  const handleDecrementCartQty = (prd) => {
+    dispatch(cartActions.decreaseCart(prd));
+}
+
+const handleAddToCart = (pr) => {
+  dispatch( cartActions.addToCart(pr) )
+  dispatch(cartActions.setShowCartView())
+}
+
+  // const handleAddQty = () => {
+  //   setitemQuantity( itemQuantity + 1)
+  // };
   
-  const handleDecreaseQty = () => {
-    if(itemQuantity > 1) {
-      setitemQuantity(itemQuantity => (
-        itemQuantity - 1
-      ))
-    }
-    else {
-      toast.info(`at least one item should be selected`, toastOption)
-    }
-  };
+  // const handleDecreaseQty = () => {
+  //   if(itemQuantity > 1) {
+  //     setitemQuantity(itemQuantity - 1)
+  //   }
+  //   else {
+  //     toast.info(`at least one item should be selected`, toastOption)
+  //   }
+  // };
 
 
   return (
@@ -88,7 +99,7 @@ const ProductDetails = () => {
         
         <div className="cart-item d-flex justify-content-between align-items-center w-100">
           
-          <div class="col-4 quantity-box">
+          {/* <div class="col-4 quantity-box">
             <h5 className='fs-title row justify-content-start'>Quantity</h5>
             <div class="">
               <div className="cart-product-quantity">
@@ -101,9 +112,9 @@ const ProductDetails = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div class="col-8">
+          {/* <div class="col-8">
             <button onClick={()=>handlDetailsToCart(productsSelected)} className="item-cart-btn d-flex justify-content-between align-items-center align-self-end">
                 <p className="text-addcart">Add To Cart</p>
                 <div className="top-right-cart">
@@ -114,6 +125,33 @@ const ProductDetails = () => {
                     )}
                 </div>
             </button>
+          </div> */}
+          {/* down replaced the quantity and solid btn */}
+          <div class="col-12 add-cart-btn addcart-btn-bg balloon-item">
+            {
+              cartItemQuantity !== 0 ? (
+                <div class="product-container">
+                    <div onClick={()=>handleDecrementCartQty(productsSelected)} class="quantity-button decrement"><img class="icon-link-image icon-incr-decr" src={minusIcon} alt="Cart icon by Icons8"/></div>
+                    <div class="quantity-info">
+                        <span class="quantity">{cartItemQuantity}</span>
+                        <span class="in-cart-text">in cart</span>
+                    </div>
+                    <div onClick={()=>handleAddToCart(productsSelected)} class="quantity-button increment"><img class="icon-link-image icon-incr-decr" src={plusIcon} alt="Cart icon by Icons8"/></div>
+                </div>
+              ) : (
+                <button onClick={()=>handleAddToCart(productsSelected)} className="item-cart-btn d-flex justify-content-between align-items-center align-self-end">
+                  <p className="text-addcart">Add To Cart</p>
+                  <div className="top-right-cart">
+                      <i className="fas fa-cart-plus" aria-labelledby="plus"></i>
+                      {
+                        cartItemQuantity !== 0 && (
+                        <span className="icon-product-qty-bubble"> {cartItemQuantity} </span>
+                      )}
+                  </div>
+                </button>
+              )
+            }
+            
           </div>
         </div>
         {/* more options */}

@@ -7,6 +7,7 @@ import { getCartItemQuantity, isInCart } from "../../store/selectors";
 
 import plusIcon from "../../assets/images/icons/icons8-plus-100.png"
 import minusIcon from "../../assets/images/icons/icons8-minus-100.png"
+
 import { useEffect } from "react";
 
 const Product = ({product}) => {

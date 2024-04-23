@@ -101,7 +101,14 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  
+  .add-cart-btn {
+    /* background-color: var(--classic-gold); */
+   color: #fff;
+  }
+  /* .addcart-btn-bg{
+    background-color: #fff;
+    color: #fff;
+  } */
   /* Media query for mobile responsiveness */
   @media screen and (max-width: 768px) {
     .product-detail-container {

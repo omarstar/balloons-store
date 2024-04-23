@@ -74,12 +74,13 @@ const Cart = () => {
             <h3 className="total">Total</h3>
           </div>
           <div className="cart-items">
+            {console.log('the cart items: ',cart.cartItems)}
             {cart.cartItems &&
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem._id}>
                   <div className="cart-product">
                     {/* <img src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.name} /> */}
-                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${cartItem.srcUrl}`)} alt=""/>
+                    <img src={require(`../../assets/images/balloons/cart/${cartItem.srcUrlCartIcon}`)} alt=""/>
                     <div>
                       <h3>{cartItem.title}</h3>
                       <p>{cartItem.description}</p>

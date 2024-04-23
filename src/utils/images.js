@@ -65,7 +65,6 @@ export const homePageLibrary = {
 }
 
 
-
 // export const otherLibrary = {
 //     catImg1, catImg2
 // }

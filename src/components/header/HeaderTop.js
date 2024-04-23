@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import logoHeader from "../../assets/images/icons/balloon logo decor bynadia.jpg"
+import logoHeader from "../../assets/images/FUNKY FINAL LOGO-square.png"
+// import logoHeader from "../../assets/images/icons/balloon logo decor bynadia.jpg"
 import MenuSmall from "./elements/MenuSmall";
 import cartAIcon from "../../assets/images/icons/icons8-cart.gif"
 import cartIcon from "../../assets/images/icons/icons8-shopping-cart-50.png"
@@ -36,6 +37,8 @@ const HeaderTop = () => {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
+
+      
     
       const headerStyle = {
         boxShadow: hasBoxShadow ? '0px 2px 2px rgb(186, 147, 72)' : 'none',

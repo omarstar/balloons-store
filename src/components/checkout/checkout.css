@@ -214,7 +214,7 @@ input[type="radio"] {
     color: whitesmoke;
 }
 .carousel, .slides {
-    height: 41rem !important;
+    height: 38rem !important;
 }
 .carousel-indicators [data-bs-target] {
     width: 10px;
@@ -304,7 +304,7 @@ input[type="radio"] {
     }
 
     .carousel, .slides {
-        height: 21rem !important;
+        height: 16rem !important;
     }
 }
 

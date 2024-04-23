@@ -104,7 +104,7 @@
 #header .header-top {
 	display: -ms-flexbox;
 	display: flex;
-	height: 51px;
+	height: 80px;
   width: 100%;
 }
 
@@ -641,7 +641,7 @@ button {
 /* large */
 @media only screen and (min-width: 768px) {
   #header .header-top {
-		height: 51px
+		height: 80px
 	}
 
 	#header .header-bottom {
@@ -726,9 +726,7 @@ button {
 	}
 }
 @media only screen and (min-width: 1200px) {
-  #header .logo img {
-		max-width: 260px
-	}
+  
 
 	#header .navigation-main .menu>.menu-item>a {
 		font-size: 14px;
