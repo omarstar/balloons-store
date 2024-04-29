@@ -2,14 +2,17 @@ import "./products.css"
 import Product from "./Product";
 import CartView from "../cart/CartView";
 import Promobar from "../header/Promobar";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getLocalStorageValue } from "../../utils/helpers";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { cartActions } from "../../store/cart/cart-slice";
 const Products = () => {
 
     
     const productsList = useSelector(state => state.product.products)
     console.log('productsList', productsList)
+
+    const dispatch = useDispatch();
 
     const [products, setProducts] = useState(productsList)
     const [cartItems, setCartItems] = useState(getLocalStorageValue("cartItems") ? JSON.parse(getLocalStorageValue("cartItems")) : [])
@@ -32,6 +35,12 @@ const Products = () => {
         localStorage.setItem("cartItems", JSON.stringify(cart));
         console.log('ls', getLocalStorageValue("cartItems"))
     }
+
+    useEffect(() => {
+        dispatch(cartActions.setHideCartView())
+
+    }, [])
+    
 
         //     const handleRemoveCart = (product) => {
         //     const cart = cartItems.slice();

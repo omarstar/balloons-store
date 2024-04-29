@@ -8,8 +8,9 @@ import { decorationPageLibrary, homePageLibrary, imagesLibrary, otherLibrary } f
 //the list of menu items for bouquets category //missing
 export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
 //the list of menu items for the decorations category
-export const decorationList = ['centerpieces','arches','columns','garlands','sculptures','ceilings','setups','nadiapicks']
+export const decorationList = ['centerpieces','arches','columns','garlands','sculptures','ceilings','setups']
 export const rentalList = ['popcorn','cottoncandy','beautybar','bubble','ballpit']
+// 'nadiapicks'
 // 'jbounce',
 
 export const MenuItems = [
@@ -151,7 +152,7 @@ export const decoItemsCollection = {
     "MenuDecorationItems":[
         {
             title: "Nadia's Picks",
-            srcUrl: decorationPageLibrary.decoFullSetup,
+            srcUrl: decorationPageLibrary.decoNadiaPicks,
             btnColor:"#7e416f",
             bgColor:"rgb(251, 222, 226, 0.3)",
             txtColor:"#fff",

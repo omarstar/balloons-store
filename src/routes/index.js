@@ -177,8 +177,9 @@ export const RoutesElement = () => {
             <Route path="/category/:cat" element={<LayoutCategories />} />
             <Route path="/category" element={<LayoutCategories />} />
             <Route path="/redirect/collections/:prds" element={<LayoutProducts />} />
-            <Route path="/collections/boquests" element={<Products />} />
+            <Route path="/collections/boquets" element={<Products />} />
             <Route path="/collections/inflatables" element={<Products />} />
+            <Route path="/collections/nadiapicks" element={<Products />} />
             {/* Products will be other comp to select and add bouquet to cart */}
             <Route path="/collections/create-your-bouquet" element={<Products />} />
 

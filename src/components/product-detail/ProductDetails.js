@@ -19,6 +19,9 @@ const ProductDetails = () => {
   console.log('descriptionin details', description)
   console.log('av sizes details', availableSizes)
 
+  const cart = useSelector((state) => state.cart);
+    console.log('check the CartView', cart.showCartView)
+
   let cartItemQuantity = useSelector(getCartItemQuantity(_id));
   console.log('cartItemQuantity', cartItemQuantity)
   // if(cartItemQuantity === 0){

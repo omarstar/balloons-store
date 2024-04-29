@@ -26,6 +26,7 @@ import decoGarlands from "../assets/images/decorations/deco-garland.jpg"
 import decoSculptures from "../assets/images/decorations/deco-sculptures.jpg"
 import decoCeilings from "../assets/images/decorations/deco-ceilling.jpg"
 import decoFullSetup from "../assets/images/decorations/deco-setup.jpg"
+import decoNadiaPicks from "../assets/images/decorations/deco-np.jpg"
 
 // products
 // cat imgs // not used
@@ -40,7 +41,8 @@ export const decorationPageLibrary = {
     decoGarlands,
     decoSculptures,
     decoCeilings,
-    decoFullSetup
+    decoFullSetup,
+    decoNadiaPicks
 }
 
 export const imagesLibrary = {

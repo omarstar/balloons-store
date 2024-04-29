@@ -68,10 +68,16 @@ const LayoutProducts = () => {
                 return navigate('/collections/create-your-bouquet')
                 
             }
+            else if(prds === 'nadiapicks') {
+                console.log('products list updated to bouquests')
+                dispatch(productActions.recreateProductsList(data.nadiapicks))
+                return navigate('/collections/nadiapicks')
+                
+            }
             else if(prds === 'bouquets' || bouquetsList.includes(prds)) {
                 console.log('products list updated to bouquests')
                 dispatch(productActions.recreateProductsList(data.products))
-                return navigate('/collections/boquests')
+                return navigate('/collections/boquets')
             }
             else navigate('/')
 

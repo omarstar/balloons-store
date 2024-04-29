@@ -74,13 +74,17 @@ const Cart = () => {
             <h3 className="total">Total</h3>
           </div>
           <div className="cart-items">
-            {console.log('the cart items: ',cart.cartItems)}
+            {console.log('the cart items in cart: ',cart.cartItems)}
             {cart.cartItems &&
-              cart.cartItems.map((cartItem) => (
+              cart.cartItems.map((cartItem) => {
+                // let imageUrl = cartItem.srcUrlCartIcon || cartItem.srcUrl;
+                return (
                 <div className="cart-item" key={cartItem._id}>
                   <div className="cart-product">
                     {/* <img src={getImportedImage('collections/'+cartItem._id)} alt={cartItem.name} /> */}
-                    <img src={require(`../../assets/images/balloons/cart/${cartItem.srcUrlCartIcon}`)} alt=""/>
+                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${cartItem.srcUrl}`)} alt=""/>
+                    {/* <img src={require(`../../assets/images/balloons/cart/${cartItem.srcUrlCartIcon}`)} alt=""/> */}
+                    {/* <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${imageUrl}`)} alt=""/> */}
                     <div>
                       <h3>{cartItem.title}</h3>
                       <p>{cartItem.description}</p>
@@ -101,7 +105,8 @@ const Cart = () => {
                     AED {cartItem.price * cartItem.cartQuantity}
                   </div>
                 </div>
-              ))}
+              )
+              })}
           </div>
           <div className="cart-summary">
             <button className="clear-btn" onClick={() => handleClearCart()}>

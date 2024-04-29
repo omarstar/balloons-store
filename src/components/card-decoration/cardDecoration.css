@@ -6,7 +6,7 @@
     text-align: center;
     font-size: 3.6rem;
     font-weight: 400;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .deco-desc {
@@ -17,6 +17,7 @@
     /* width: 507px; */
     justify-content: center;
 }
+
 .image-deco {
     width: 468px;
     height: 664px;
@@ -39,6 +40,11 @@
     /* margin-top: 5rem; */
 }
 
+@media only screen and (min-width: 992px){
+    .deco-desc ul{
+        padding-left: 0 !important;
+    }
+}
 @media only screen and (max-width: 991px){
     .img-box{
         height: 75%;
@@ -53,6 +59,7 @@
     }
     .deco-title {
         font-size: 2.6rem;
+        justify-content: center;
         height: auto;
     }
     .buttonDeco-wrapper{

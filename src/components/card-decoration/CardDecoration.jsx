@@ -5,6 +5,9 @@ import styled from "styled-components";
 
 
 const CardDecoration = ({data, align}) => {
+
+    console.log('align in deco', align)
+    
     const ButtonDeco = styled.button.attrs(()=>({
         className: 'button'
     }))`

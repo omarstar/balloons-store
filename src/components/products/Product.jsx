@@ -16,6 +16,9 @@ const Product = ({product}) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    const cart = useSelector((state) => state.cart);
+    console.log('check the CartView', cart.showCartView)
+
     const handleAddToCart = (pr) => {
         //do I add to cart or show more options in page details
         console.log('cliked', pr)
@@ -50,7 +53,8 @@ const Product = ({product}) => {
     // const isProductInCart = useSelector(isInCart(product._id));
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+        // window.scrollTo(0, 0); // Scrolls to the top-left corner of the page
+        // dispatch(cartActions.setHideCartView())
       }, []);
 
 //()=> addtoCart(product)
