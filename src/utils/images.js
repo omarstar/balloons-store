@@ -11,6 +11,7 @@ import ribouncy from "../assets/images/rentals/Rentals/2. Bouncy Houses/Overview
 import ricandy from "../assets/images/rentals/Rentals/3. Cotton Candy Machine/ccm.jpg"
 import ricorn from "../assets/images/rentals/Rentals/4. Popcorn Machine/2.jpg"
 import ribubble from "../assets/images/rentals/Rentals/5. Bubble Machine/bubbleM.jpg"
+import riballbit from "../assets/images/rentals/Rentals/ballpitSquare.jpg"
 // home dec-cat
 import hmArches from "../assets/images/decorations/hm-arches.jpg"
 import hmCenterpieces from "../assets/images/decorations/hm-centerpieces.jpg"
@@ -56,7 +57,8 @@ export const imagesLibrary = {
     ribouncy,
     ricandy,
     ricorn,
-    ribubble
+    ribubble,
+    riballbit
 }
 export const homePageLibrary = {
     hmArches,

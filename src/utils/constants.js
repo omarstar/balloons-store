@@ -6,12 +6,15 @@ import {v4 as uuidv4} from 'uuid'
 import { decorationPageLibrary, homePageLibrary, imagesLibrary, otherLibrary } from "./images"
 
 //the list of menu items for bouquets category //missing
-export const bouquetsList = ['haloween','national-flag-day','xmas','new-years-eve','valentine','athers-day','mothers-day','easter','birthday']
-//the list of menu items for the decorations category
+export const bouquetsList = ['bouquets','haloween','national-flag-day','xmas','new-years-eve','valentine','fathers-day','mothers-day','easter','birthday']
+// 'nadiapicks'
+// 'jbounce' == inflatables,
+// 'create-bouquet'
+
+//the list of menu items for the decorations category -> get quote
 export const decorationList = ['centerpieces','arches','columns','garlands','sculptures','ceilings','setups']
 export const rentalList = ['popcorn','cottoncandy','beautybar','bubble','ballpit']
-// 'nadiapicks'
-// 'jbounce',
+
 
 export const MenuItems = [
     {
@@ -294,17 +297,17 @@ export const decoItemsCollection = {
         },
         {
             title: "Ball Pit",
-            srcUrl: imagesLibrary.ribubble,
-            btnColor:"#f7f7f7",
-            bgColor:"rgb(144, 143, 151, 0.4)",
-            txtColor:"#000",
+            srcUrl: imagesLibrary.riballbit,
+            btnColor:"#cc5d28",
+            bgColor:"rgb(232, 218, 207, 0.4)",
+            txtColor:"#fff",
             linkPath: "/redirect/collections/ballpit",
             decoKeyId: "ballpit",
             desc: "have fun in a pool filled with small colorful hollow plastic balls generally no larger than 3 inches"
         },
     ]
 }
-// no longer used here as seperate since added in above object
+// rental & homedecoration lists are no longer used here as seperate since added in above object
 export const rentalItems = [
     {
         title: "Inflatable Jumping Bouncy",
@@ -721,7 +724,7 @@ export const timeSlots = [
     }
 ]
 
-//just notes
+//just notes for collecting the data for the send email after submit form get quote/checkout
 const checkoutPayload = {
 cartItems: [{
     "_id":99,

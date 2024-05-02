@@ -10,7 +10,7 @@ export default function ProductsWide(params) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const productsList = useSelector(state => state.product.products)
-    console.log('productsList', productsList)
+    console.log('productsList for wide', productsList)
 
     const [products, setProducts] = useState(productsList)
     console.log('products', products)

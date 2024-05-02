@@ -71,13 +71,12 @@ console.log('showCartView', showCartView)
                     {
                         cart.cartItems && cartTotalQuantity !== 0 ?
                         cart.cartItems.map((cartItem, cid) => {
-                            let imgFileName = cartItem.srcUrl;
-                            console.log('cartItem ', cartItem)
+                            console.log('cartItem in cartView ', cartItem)
                             return (
                             <div className="cart-drawer-item__single" data-line={cid} key={cid}>
                                 {/* link to product detail */}
                                 <div className="cart-item__image">
-                                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${imgFileName}`)} class="cart-item__image" alt={cartItem.title}/>
+                                    <img src={require(`../../assets/images/balloons/${cartItem.folderName}/${cartItem.srcUrl}`)} class="cart-item__image" alt={cartItem.title}/>
                                     {/* <img src={require(`../../assets/images/balloons/cart/${cartItem.srcUrlCartIcon}`)} class="cart-item__image" alt={cartItem.title}/> */}
                                 </div>
                                 <div class="cart-item__content">

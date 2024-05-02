@@ -38,7 +38,7 @@ const LayoutProducts = () => {
             if(decorationList.includes(prds) || rentalList.includes(prds)){
                 // *** decoration or rental to get quote directly
 
-                // go to details for deco
+                // using cat from data
                 let decoItem = data.decorations.filter(item => (
                     item.cat === prds
                 ))
@@ -46,9 +46,11 @@ const LayoutProducts = () => {
                 if(decoItem.length === 0){
                     console.log('nothing found')
                 }else if(decoItem.length === 1){
+                    //goto details directly, no list to show
                     dispatch(productActions.handleProductSelected(decoItem[0]))
                     navigate(`/decorations/details`)
                 }else{
+                    //goto show list of items to select
                     dispatch(productActions.recreateProductsList(decoItem))
                     navigate('/collections/decorations')
                 }
@@ -74,7 +76,7 @@ const LayoutProducts = () => {
                 return navigate('/collections/nadiapicks')
                 
             }
-            else if(prds === 'bouquets' || bouquetsList.includes(prds)) {
+            else if(bouquetsList.includes(prds)) {
                 console.log('products list updated to bouquests')
                 dispatch(productActions.recreateProductsList(data.products))
                 return navigate('/collections/boquets')

@@ -53,7 +53,7 @@
             ]
         }
     ],
-    "note":"the below setups and picks will no longer be used, since we are using the .cat to filter from decorations, .srurl to get the image, .foldername",
+    "note":"the below setups will no longer be used, since we are using the .cat to filter from decorations, .srurl to get the image, .foldername",
     "setups": [
         {
             "_id":101,

@@ -10,7 +10,7 @@ const Products = () => {
 
     
     const productsList = useSelector(state => state.product.products)
-    console.log('productsList', productsList)
+    console.log('productsList for adding cart', productsList)
 
     const dispatch = useDispatch();
 
